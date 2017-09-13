@@ -8,10 +8,10 @@
 
 import UIKit
 
-class CalculatorViewController: UITableViewController {
+class CalculatorViewController: UITableViewController, UITextFieldDelegate{
 
     let cellName = "CalculatorCell"
-    
+    var dataForm:[Any] = []
     var headerView: UIView = {
         let header = UIView()
         return header
@@ -37,9 +37,6 @@ class CalculatorViewController: UITableViewController {
                                 "10",
                                 "10"]
     
-    func saveAction() {
-        print("Save action")
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,11 +48,11 @@ class CalculatorViewController: UITableViewController {
     
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func saveAction() {
+        view.endEditing(true)
+        print("the data \(dataForm)")
     }
-
+    
     func setupContentView() {
         
         tableView.tableHeaderView = headerView
@@ -89,10 +86,19 @@ extension CalculatorViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellName, for: indexPath) as! CalculatorCell
         
         cell.txtLabel.text = topTitle[indexPath.row]
+        cell.textField.delegate = self
+        cell.textField.tag = indexPath.row
         cell.textField.placeholder = textFieldPlaceholder[indexPath.row]
         
         return cell
     }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        let cell : CalculatorCell = self.tableView.cellForRow(at: IndexPath(row: textField.tag, section: 0)) as! CalculatorCell
+        dataForm.insert(cell.textField.text!, at: textField.tag)
+        print(cell.textField.text!)
+    }
+    
     
 }
 
