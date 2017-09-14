@@ -9,31 +9,45 @@
 import Foundation
 
 struct Biaya {
-    var PPH:Decimal
-    var PPN:Decimal
     var nilaiBarang:Decimal
-    var usd:Decimal
-    var asuransi:Decimal
-    var freight:Decimal
     var kurs:Decimal
     var tarifBeaMasuk:Decimal
-    var tarifPDHI:Decimal
+    var PPN:Decimal
+    var PPnBM:Decimal
+    var PPh:Decimal
+    var pembebasanFOB:Decimal
+    var asuransi:Decimal
+    var freight:Decimal
 }
+
+let topTitle:Array = ["FOB Barang ($)",
+                      "Kurs ($)",
+                      "Tarif Bea Masuk (%)",
+                      "Tarif PPN (%)",
+                      "Tarif PPN BM (%)",
+                      "NPWP - API",
+                      "Pembebasan FOB",
+                      "Asuransi ($)",
+                      "Freight ($)"]
+
+
 
 extension Biaya {
     
-    static func dataBiaya() -> Biaya {
-            
-        return Biaya(PPH: 0.75,
-                     PPN: 01,
-                     nilaiBarang: 250,
-                     usd: 50,
-                     asuransi: 5,
-                     freight: 5,
-                     kurs: 10000,
-                     tarifBeaMasuk: 0,
-                     tarifPDHI: 0.1)
+    static func dataBiaya(data : [Decimal]) -> Biaya {
+        
+        return Biaya(nilaiBarang:data[0],
+                     kurs:data[1],
+                     tarifBeaMasuk:data[2],
+                     PPN:data[3],
+                     PPnBM:data[4],
+                     PPh:data[5],
+                     pembebasanFOB:data[6],
+                     asuransi:data[7],
+                     freight:data[8]
+        )
     }
+    
     
 }
 

@@ -15,6 +15,7 @@
 		654222B11F63E66A00CE3A84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 654222B01F63E66A00CE3A84 /* Assets.xcassets */; };
 		654222BE1F646DA400CE3A84 /* Biaya.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654222BD1F646DA400CE3A84 /* Biaya.swift */; };
 		654222C11F646FE100CE3A84 /* BiayaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654222C01F646FE100CE3A84 /* BiayaViewModel.swift */; };
+		65550A5F1F6AB6BA00F036E9 /* CalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65550A5E1F6AB6BA00F036E9 /* CalculatorViewModel.swift */; };
 		6591ED701F66EE8000A46885 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6591ED6F1F66EE8000A46885 /* CalculatorViewController.swift */; };
 		6591ED721F66EF0500A46885 /* CalculatorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6591ED711F66EF0500A46885 /* CalculatorCell.swift */; };
 /* End PBXBuildFile section */
@@ -30,6 +31,7 @@
 		654222B51F63E66A00CE3A84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		654222BD1F646DA400CE3A84 /* Biaya.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Biaya.swift; sourceTree = "<group>"; };
 		654222C01F646FE100CE3A84 /* BiayaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiayaViewModel.swift; sourceTree = "<group>"; };
+		65550A5E1F6AB6BA00F036E9 /* CalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewModel.swift; sourceTree = "<group>"; };
 		6591ED6F1F66EE8000A46885 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		6591ED711F66EF0500A46885 /* CalculatorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				654222C01F646FE100CE3A84 /* BiayaViewModel.swift */,
+				65550A5E1F6AB6BA00F036E9 /* CalculatorViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6591ED701F66EE8000A46885 /* CalculatorViewController.swift in Sources */,
+				65550A5F1F6AB6BA00F036E9 /* CalculatorViewModel.swift in Sources */,
 				6525CE7C1F6716C900D4BFE2 /* TableViewController.swift in Sources */,
 				654222AC1F63E66A00CE3A84 /* ViewController.swift in Sources */,
 				654222C11F646FE100CE3A84 /* BiayaViewModel.swift in Sources */,

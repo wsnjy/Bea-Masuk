@@ -14,6 +14,16 @@ class CalculatorCell: UITableViewCell {
     @IBOutlet weak var txtLabel: UILabel!
     @IBOutlet weak var textField: UITextField!
     
+    
+    let titleField:Array = {
+        return CalculatorViewModel().topTitle
+    }()
+    
+    let placeholder:Array = {
+        return CalculatorViewModel().placeholder
+    }()
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -23,6 +33,15 @@ class CalculatorCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func setDataCell(indexPath: IndexPath, delegate: UITextFieldDelegate) -> Void {
+        
+        txtLabel.text = titleField[indexPath.row]
+        textField.tag = indexPath.row
+        textField.placeholder = placeholder[indexPath.row]
+        textField.delegate = delegate
+        
     }
 
 }

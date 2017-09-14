@@ -13,8 +13,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let biayaViewModel = BiayaViewModel(biaya: Biaya.dataBiaya())
-        print(biayaViewModel.totalPungutan())
+//        let biayaViewModel = BiayaViewModel(biaya: Biaya.dataBiaya())
+//        print(biayaViewModel.totalPungutan())
         
     }
 }
