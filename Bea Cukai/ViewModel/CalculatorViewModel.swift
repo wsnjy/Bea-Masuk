@@ -16,7 +16,7 @@ struct CalculatorViewModel {
                     "Tarif Bea Masuk (%)",
                     "Tarif PPN (%)",
                     "Tarif PPN BM (%)",
-                    "Tarif PPh pasal 22 (%)    ",
+                    "Tarif PPh pasal 22 (%)",
                     "Pembebasan FOB",
                     "Asuransi ($)",
                     "Freight ($)"]

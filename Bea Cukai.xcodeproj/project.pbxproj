@@ -7,11 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6525CE7C1F6716C900D4BFE2 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6525CE7B1F6716C900D4BFE2 /* TableViewController.swift */; };
 		6525CE7F1F67189400D4BFE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6525CE7E1F67189400D4BFE2 /* Main.storyboard */; };
 		6525CE811F67190F00D4BFE2 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6525CE801F67190F00D4BFE2 /* Launch.storyboard */; };
 		654222AA1F63E66A00CE3A84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654222A91F63E66A00CE3A84 /* AppDelegate.swift */; };
-		654222AC1F63E66A00CE3A84 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654222AB1F63E66A00CE3A84 /* ViewController.swift */; };
 		654222B11F63E66A00CE3A84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 654222B01F63E66A00CE3A84 /* Assets.xcassets */; };
 		654222BE1F646DA400CE3A84 /* Biaya.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654222BD1F646DA400CE3A84 /* Biaya.swift */; };
 		654222C11F646FE100CE3A84 /* BiayaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654222C01F646FE100CE3A84 /* BiayaViewModel.swift */; };
@@ -21,12 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6525CE7B1F6716C900D4BFE2 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		6525CE7E1F67189400D4BFE2 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		6525CE801F67190F00D4BFE2 /* Launch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
 		654222A61F63E66A00CE3A84 /* Bea Cukai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bea Cukai.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		654222A91F63E66A00CE3A84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		654222AB1F63E66A00CE3A84 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		654222B01F63E66A00CE3A84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		654222B51F63E66A00CE3A84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		654222BD1F646DA400CE3A84 /* Biaya.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Biaya.swift; sourceTree = "<group>"; };
@@ -50,6 +46,7 @@
 		6525CE7D1F67176C00D4BFE2 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				654222B01F63E66A00CE3A84 /* Assets.xcassets */,
 				6525CE7E1F67189400D4BFE2 /* Main.storyboard */,
 				6525CE801F67190F00D4BFE2 /* Launch.storyboard */,
 			);
@@ -75,7 +72,6 @@
 		654222A81F63E66A00CE3A84 /* Bea Cukai */ = {
 			isa = PBXGroup;
 			children = (
-				654222B01F63E66A00CE3A84 /* Assets.xcassets */,
 				654222A91F63E66A00CE3A84 /* AppDelegate.swift */,
 				654222BC1F646D7800CE3A84 /* Model */,
 				654222BF1F646FC700CE3A84 /* ViewModel */,
@@ -90,9 +86,7 @@
 		654222BB1F646D6600CE3A84 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				654222AB1F63E66A00CE3A84 /* ViewController.swift */,
 				6591ED6F1F66EE8000A46885 /* CalculatorViewController.swift */,
-				6525CE7B1F6716C900D4BFE2 /* TableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -195,8 +189,6 @@
 			files = (
 				6591ED701F66EE8000A46885 /* CalculatorViewController.swift in Sources */,
 				65550A5F1F6AB6BA00F036E9 /* CalculatorViewModel.swift in Sources */,
-				6525CE7C1F6716C900D4BFE2 /* TableViewController.swift in Sources */,
-				654222AC1F63E66A00CE3A84 /* ViewController.swift in Sources */,
 				654222C11F646FE100CE3A84 /* BiayaViewModel.swift in Sources */,
 				654222BE1F646DA400CE3A84 /* Biaya.swift in Sources */,
 				654222AA1F63E66A00CE3A84 /* AppDelegate.swift in Sources */,
