@@ -81,10 +81,10 @@
             </objects>
             <point key="canvasLocation" x="-634" y="105"/>
         </scene>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="dbz-tS-Ym2">
             <objects>
-                <viewController id="CEr-IV-5fA" sceneMemberID="viewController">
+                <viewController id="CEr-IV-5fA" customClass="HomeViewController" customModule="Bea_Cukai" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OZA-6N-dMB"/>
                         <viewControllerLayoutGuide type="bottom" id="f3Y-Ma-15l"/>
@@ -155,7 +155,7 @@
                                                                 <rect key="frame" x="0.0" y="40" width="175.5" height="39.5"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rp. 13.500" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lr3-8d-Lqr">
-                                                                        <rect key="frame" x="12" y="10" width="155.5" height="20.5"/>
+                                                                        <rect key="frame" x="12" y="10.5" width="155.5" height="20.5"/>
                                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                         <nil key="highlightedColor"/>
@@ -353,7 +353,7 @@
                                                         <rect key="frame" x="0.0" y="67.5" width="169.5" height="67"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rumus" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qwo-bu-leH">
-                                                                <rect key="frame" x="30" y="25.5" width="109.5" height="18"/>
+                                                                <rect key="frame" x="30" y="25" width="109.5" height="18"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -393,7 +393,7 @@
                                                         <rect key="frame" x="0.0" y="67.5" width="169.5" height="67"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cara Hitung" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Izm-on-kRc">
-                                                                <rect key="frame" x="30" y="25" width="109.5" height="18"/>
+                                                                <rect key="frame" x="30" y="25.5" width="109.5" height="18"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -438,7 +438,7 @@
                                                         <rect key="frame" x="0.0" y="67.5" width="169.5" height="67"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Faq" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTA-Tf-gBI">
-                                                                <rect key="frame" x="30" y="25" width="109.5" height="18"/>
+                                                                <rect key="frame" x="30" y="25.5" width="109.5" height="18"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -478,7 +478,7 @@
                                                         <rect key="frame" x="0.0" y="67.5" width="169.5" height="67"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pengaduan" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C0Q-1G-dCc">
-                                                                <rect key="frame" x="30" y="25.5" width="109.5" height="18"/>
+                                                                <rect key="frame" x="30" y="25" width="109.5" height="18"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -526,6 +526,9 @@
                             <constraint firstItem="N5X-hW-QCm" firstAttribute="leading" secondItem="vxd-IV-OIc" secondAttribute="leading" constant="12" id="xWh-bi-JXk"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="stackViewRumus" destination="jM6-kM-7fA" id="7mN-CR-WKo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mw2-pg-2Mc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
