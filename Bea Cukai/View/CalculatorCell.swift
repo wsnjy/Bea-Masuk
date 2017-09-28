@@ -8,12 +8,20 @@
 
 import UIKit
 
-class CalculatorCell: UITableViewCell {
+enum cellCondition {
+    case calculator
+    case tarif
+    case result
+}
 
+class CalculatorCell: UITableViewCell {
     
     @IBOutlet weak var txtLabel: UILabel!
+    @IBOutlet weak var txtPercent: UILabel!
     @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var txtLabelCenter: NSLayoutConstraint!
     
+    var condition:cellCondition = cellCondition.calculator
     
     let titleField:Array = {
         return CalculatorViewModel().topTitle
@@ -37,11 +45,21 @@ class CalculatorCell: UITableViewCell {
     
     func setDataCell(indexPath: IndexPath, delegate: UITextFieldDelegate) -> Void {
         
+        
+        switch condition {
+        case .calculator:
+            textField.placeholder = placeholder[indexPath.row]
+        case .tarif:
+            txtPercent.isHidden = false
+        case .result:
+            txtLabelCenter.isActive = true
+        }
+        
         txtLabel.text = titleField[indexPath.row]
         textField.tag = indexPath.row
-        textField.placeholder = placeholder[indexPath.row]
         textField.delegate = delegate
-        
+
+        //            accessoryType = UITableViewCellAccessoryType.disclosureIndicator
     }
 
 }

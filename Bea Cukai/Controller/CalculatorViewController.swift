@@ -10,6 +10,8 @@ import UIKit
 
 class CalculatorViewController: UITableViewController, UITextFieldDelegate{
 
+    @IBOutlet weak var btnHitung: ButtonCalculate!
+    
     let cellName = "CalculatorCell"
     let heightRow:CGFloat = 70
     let numberOfSection = 1
@@ -21,10 +23,15 @@ class CalculatorViewController: UITableViewController, UITextFieldDelegate{
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        settingButton()
         
-        let btn: UIBarButtonItem = UIBarButtonItem.init(title: "Save", style: .plain, target: self, action: #selector(self.saveAction))
-        navigationItem.rightBarButtonItem = btn
+    }
+    
+    func settingButton() {
         
+        btnHitung.rounded(5)
+        btnHitung.addTarget(self, action: #selector(self.saveAction), for:.touchUpInside)
+
     }
     
     func saveAction() {
@@ -52,6 +59,7 @@ extension CalculatorViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellName, for: indexPath) as! CalculatorCell
         
+        cell.condition = cellCondition.calculator
         cell.setDataCell(indexPath: indexPath, delegate: self)
         
         return cell

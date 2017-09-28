@@ -11,25 +11,25 @@ import Foundation
 
 struct CalculatorViewModel {
     
-    let topTitle:Array = ["FOB Barang ($)",
-                    "Kurs ($)",
+    let topTitle:Array = ["FOB ($)",
+                    "Kurs ($1 USD)",
                     "Tarif Bea Masuk (%)",
                     "Tarif PPN (%)",
                     "Tarif PPN BM (%)",
                     "Tarif PPh pasal 22 (%)",
-                    "Pembebasan FOB",
-                    "Asuransi ($)",
-                    "Freight ($)"]
+                    "Pembebasan FOB ($ USD)",
+                    "Asuransi ($ USD)",
+                    "Freight ($ USD)"]
     
-    let placeholder:Array = ["250",
+    let placeholder:Array = ["Masukan nilai FOB barang",
                              "13000",
-                             "10",
-                             "10",
-                             "10",
+                             "Tap untuk mengetahui tarif bea masuk",
+                             "",
+                             "",
                              "Pilih",
                              "Pilih",
-                             "10",
-                             "10"]
+                             "",
+                             ""]
     
     let dummyData:[Decimal] = [0, 0, 0, 0, 0, 0, 0, 0, 0]
     
