@@ -11,26 +11,30 @@ import Foundation
 
 struct CalculatorViewModel {
     
-    let topTitle:Array = ["FOB ($)",
-                    "Kurs ($1 USD)",
-                    "Tarif Bea Masuk (%)",
-                    "Tarif PPN (%)",
-                    "Tarif PPN BM (%)",
-                    "Tarif PPh pasal 22 (%)",
-                    "Pembebasan FOB ($ USD)",
-                    "Asuransi ($ USD)",
-                    "Freight ($ USD)"]
-    
-    let placeholder:Array = ["Masukan nilai FOB barang",
-                             "13000",
-                             "Tap untuk mengetahui tarif bea masuk",
-                             "",
-                             "",
-                             "Pilih",
-                             "Pilih",
-                             "",
-                             ""]
+    let cellConfigData:[[String:String]] = [
+                                    ["top_title":"FOB ($)","placeholder":"Masukan nilai FOB barang"],
+                                    ["top_title":"Kurs ($1 USD)","placeholder":""],
+                                    ["top_title":"Tarif Bea Masuk (%)","placeholder":"Tap untuk mengetahui tarif bea masuk"],
+                                    ["top_title":"Tarif PPN (%)","placeholder":""],
+                                    ["top_title":"Tarif PPN BM (%)","placeholder":""],
+                                    ["top_title":"Tarif PPh pasal 22 (%)","placeholder":"Pilih"],
+                                    ["top_title":"Pembebasan FOB ($ USD)","placeholder":"Pilih"],
+                                    ["top_title":"Asuransi ($ USD)","placeholder":""],
+                                    ["top_title":"Freight ($ USD)","placeholder":""]
+    ]
     
     let dummyData:[Decimal] = [0, 0, 0, 0, 0, 0, 0, 0, 0]
     
 }
+
+extension CalculatorViewModel {
+    func placeholderText(_ indexPath:IndexPath) -> String {
+        return cellConfigData[indexPath.row]["placeholder"]!
+    }
+    
+    func topTitle(_ indexPath: IndexPath) -> String {
+        return cellConfigData[indexPath.row]["top_title"]!
+    }
+}
+
+

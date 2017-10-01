@@ -23,14 +23,9 @@ class CalculatorCell: UITableViewCell {
     
     var condition:cellCondition = cellCondition.calculator
     
-    let titleField:Array = {
-        return CalculatorViewModel().topTitle
+    let cellConfigData:[[String:String]] = {
+        return CalculatorViewModel().cellConfigData
     }()
-    
-    let placeholder:Array = {
-        return CalculatorViewModel().placeholder
-    }()
-    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -45,21 +40,30 @@ class CalculatorCell: UITableViewCell {
     
     func setDataCell(indexPath: IndexPath, delegate: UITextFieldDelegate) -> Void {
         
-        
         switch condition {
         case .calculator:
-            textField.placeholder = placeholder[indexPath.row]
+            textField.placeholder = placeholderText(indexPath)
+            textField.isEnabled = true
         case .tarif:
             txtPercent.isHidden = false
         case .result:
             txtLabelCenter.isActive = true
         }
         
-        txtLabel.text = titleField[indexPath.row]
+        txtLabel.text = topTitle(indexPath)
         textField.tag = indexPath.row
         textField.delegate = delegate
 
         //            accessoryType = UITableViewCellAccessoryType.disclosureIndicator
+    }
+    
+    
+    func placeholderText(_ indexPath:IndexPath) -> String {
+        return CalculatorViewModel().placeholderText(indexPath)
+    }
+    
+    func topTitle(_ indexPath: IndexPath) -> String {
+        return CalculatorViewModel().topTitle(indexPath)
     }
 
 }

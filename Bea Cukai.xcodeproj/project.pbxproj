@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		6515C32E1F7402400069EBA9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6515C32D1F7402400069EBA9 /* HomeViewController.swift */; };
+		6518CBDE1F7F6AD800A2EBB2 /* BottomBackgrund.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6518CBDD1F7F6AD800A2EBB2 /* BottomBackgrund.swift */; };
+		6518CBE41F7FA0DD00A2EBB2 /* UIViewController+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6518CBE31F7FA0DD00A2EBB2 /* UIViewController+Custom.swift */; };
+		6518CBE61F7FBF4700A2EBB2 /* Tarif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6518CBE51F7FBF4700A2EBB2 /* Tarif.swift */; };
 		6525CE7F1F67189400D4BFE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6525CE7E1F67189400D4BFE2 /* Main.storyboard */; };
 		652940DB1F75FF8800B2B660 /* ViewShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652940DA1F75FF8800B2B660 /* ViewShadow.swift */; };
 		6532FCFD1F77FFFC00459DA4 /* Kurs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6532FCFC1F77FFFC00459DA4 /* Kurs.swift */; };
@@ -31,6 +34,9 @@
 
 /* Begin PBXFileReference section */
 		6515C32D1F7402400069EBA9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		6518CBDD1F7F6AD800A2EBB2 /* BottomBackgrund.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBackgrund.swift; sourceTree = "<group>"; };
+		6518CBE31F7FA0DD00A2EBB2 /* UIViewController+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Custom.swift"; sourceTree = "<group>"; };
+		6518CBE51F7FBF4700A2EBB2 /* Tarif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tarif.swift; sourceTree = "<group>"; };
 		6525CE7E1F67189400D4BFE2 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		652940DA1F75FF8800B2B660 /* ViewShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewShadow.swift; sourceTree = "<group>"; };
 		6532FCFC1F77FFFC00459DA4 /* Kurs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kurs.swift; sourceTree = "<group>"; };
@@ -80,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				652940DA1F75FF8800B2B660 /* ViewShadow.swift */,
+				6518CBDD1F7F6AD800A2EBB2 /* BottomBackgrund.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -140,6 +147,7 @@
 			children = (
 				654222BD1F646DA400CE3A84 /* Biaya.swift */,
 				6532FCFC1F77FFFC00459DA4 /* Kurs.swift */,
+				6518CBE51F7FBF4700A2EBB2 /* Tarif.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -177,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				65F1F4F51F7AB76D0062F63F /* UILabel+Size.swift */,
+				6518CBE31F7FA0DD00A2EBB2 /* UIViewController+Custom.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -260,6 +269,7 @@
 				6591ED701F66EE8000A46885 /* CalculatorViewController.swift in Sources */,
 				65550A5F1F6AB6BA00F036E9 /* CalculatorViewModel.swift in Sources */,
 				654222C11F646FE100CE3A84 /* BiayaViewModel.swift in Sources */,
+				6518CBE41F7FA0DD00A2EBB2 /* UIViewController+Custom.swift in Sources */,
 				654222BE1F646DA400CE3A84 /* Biaya.swift in Sources */,
 				655A3C041F76092A0015000B /* ViewInStack.swift in Sources */,
 				652940DB1F75FF8800B2B660 /* ViewShadow.swift in Sources */,
@@ -267,6 +277,8 @@
 				6532FCFF1F78030100459DA4 /* HomeViewModel.swift in Sources */,
 				65C8BCA51F765FF900E95E71 /* ButtonCalculate.swift in Sources */,
 				654222AA1F63E66A00CE3A84 /* AppDelegate.swift in Sources */,
+				6518CBE61F7FBF4700A2EBB2 /* Tarif.swift in Sources */,
+				6518CBDE1F7F6AD800A2EBB2 /* BottomBackgrund.swift in Sources */,
 				6515C32E1F7402400069EBA9 /* HomeViewController.swift in Sources */,
 				6591ED721F66EF0500A46885 /* CalculatorCell.swift in Sources */,
 			);
@@ -295,6 +307,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
@@ -321,9 +335,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "Bea Masuk";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -350,6 +365,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
@@ -370,8 +387,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "Bea Masuk";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
@@ -386,7 +404,7 @@
 				INFOPLIST_FILE = "Bea Cukai/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.wsnjy.Bea-Cukai";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wsnjy.BeaMasuk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -401,7 +419,7 @@
 				INFOPLIST_FILE = "Bea Cukai/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.wsnjy.Bea-Cukai";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wsnjy.BeaMasuk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

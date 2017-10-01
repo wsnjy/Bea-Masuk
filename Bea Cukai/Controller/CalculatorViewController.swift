@@ -12,6 +12,7 @@ class CalculatorViewController: UITableViewController, UITextFieldDelegate{
 
     @IBOutlet weak var btnHitung: ButtonCalculate!
     
+    let titleVC =  "Kalkulator"
     let cellName = "CalculatorCell"
     let heightRow:CGFloat = 70
     let numberOfSection = 1
@@ -23,7 +24,9 @@ class CalculatorViewController: UITableViewController, UITextFieldDelegate{
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        title = titleVC
         settingButton()
+        addBarButtonClose()
         
     }
     
@@ -57,6 +60,7 @@ extension CalculatorViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: cellName, for: indexPath) as! CalculatorCell
         
         cell.condition = cellCondition.calculator
@@ -67,17 +71,15 @@ extension CalculatorViewController {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         
-        let cell : CalculatorCell = self.tableView.cellForRow(at: IndexPath(row: textField.tag, section: 0)) as! CalculatorCell
-        
-        guard  cell.textField.hasText else {
+        guard  textField.hasText else {
             return
         }
         
-        dataForm[textField.tag] = Decimal(string:cell.textField.text!)!
+        print(textField.text!)
+        print(dataForm[textField.tag])
+        dataForm[textField.tag] = Decimal(string:textField.text!)!
         
-        print(cell.textField.text!)
     }
-    
     
 }
 

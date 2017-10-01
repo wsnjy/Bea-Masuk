@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, BottomBackground{
     
     @IBOutlet weak var infoKursTitle: UILabel!
     @IBOutlet weak var usdValue: UILabel!
@@ -22,8 +22,13 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var viewBottomLeft: ViewInStack!
     @IBOutlet weak var viewBottomRight: ViewInStack!
     
-    @IBOutlet weak var btnCalculate: ButtonCalculate!
+    @IBOutlet weak var btnCalculate: UIButton!
 
+    let imageBottom:UIImageView = {
+        return UIImageView.init(image: UIImage(named: "bg_bottom"))
+    }()
+    
+    
     let roundedViewValue: CGFloat = 5
     let roundedButtonValue: CGFloat = 32
     let titleController = "Bea Masuk"
@@ -35,20 +40,23 @@ class HomeViewController: UIViewController {
     }
     
     func viewConfiguration() {
-        
-        self.title = titleController
-        
+        title = titleController
+        infoKursViewConfig()
+        menuConfig()
+        showBottomBackground()
+    }
+    
+    func infoKursViewConfig() {
         infoKursTitle.addTextSpacing()
         viewKurs.backgroundColor = backgroundKurs
         viewKurs.rounded(roundedViewValue)
-        
-        viewTopLeft.addShadowAndRounded(roundedViewValue)
-        viewTopRight.addShadowAndRounded(roundedViewValue)
-        viewBottomLeft.addShadowAndRounded(roundedViewValue)
+    }
     
-        viewBottomRight.addShadowAndRounded(roundedViewValue)
-        btnCalculate.rounded(roundedButtonValue)
-        
+    func menuConfig() {
+        viewTopLeft.addShadowAndRounded(roundedViewValue) /* Rumus */
+        viewTopRight.addShadowAndRounded(roundedViewValue) /* Cara Hitung */
+        viewBottomLeft.addShadowAndRounded(roundedViewValue) /* FAQ */
+        viewBottomRight.addShadowAndRounded(roundedViewValue) /* Pengaduan */
     }
 
     @IBAction func menuButtonActions(_ sender: UIButton) {
@@ -56,7 +64,9 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func openCalculator(_ sender: ButtonCalculate) {
-        print("open calculator")
+        let calculator = CalculatorViewController.instantiateFromStoryboard()
+        let nav = UINavigationController(rootViewController: calculator)
+        self.present(nav, animated: true, completion: nil)
     }
     
     
