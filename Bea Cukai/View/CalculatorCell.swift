@@ -10,6 +10,7 @@ import UIKit
 
 enum cellCondition {
     case calculator
+    case cari
     case tarif
     case result
 }
@@ -20,7 +21,8 @@ class CalculatorCell: UITableViewCell {
     @IBOutlet weak var txtPercent: UILabel!
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var txtLabelCenter: NSLayoutConstraint!
-    
+    @IBOutlet weak var widthPercentage: NSLayoutConstraint!
+
     var condition:cellCondition = cellCondition.calculator
     
     let cellConfigData:[[String:String]] = {
@@ -42,21 +44,43 @@ class CalculatorCell: UITableViewCell {
         
         switch condition {
         case .calculator:
-            textField.placeholder = placeholderText(indexPath)
-            textField.isEnabled = true
+            calculatorConfig(indexPath)
+        case .cari:
+            cariConfig(indexPath)
         case .tarif:
-            txtPercent.isHidden = false
+            tarifConfig(indexPath)
         case .result:
-            txtLabelCenter.isActive = true
+            resultConfig(indexPath)
         }
         
         txtLabel.text = topTitle(indexPath)
         textField.tag = indexPath.row
         textField.delegate = delegate
 
-        //            accessoryType = UITableViewCellAccessoryType.disclosureIndicator
     }
     
+    func calculatorConfig(_ indexPath:IndexPath) {
+        textField.placeholder = placeholderText(indexPath)
+        textField.isEnabled = true
+        setAccessory(indexPath)
+    }
+
+    func cariConfig(_ indexPath:IndexPath) {
+        textField.placeholder = placeholderText(indexPath)
+        textField.isEnabled = true
+        textField.keyboardType = .default
+    }
+    
+    func tarifConfig(_ indexPath:IndexPath) {
+        txtPercent.isHidden = false
+        txtPercent.text = percentage(indexPath)
+        textField.text = placeholderText(indexPath)
+    }
+
+    func resultConfig(_ indexPath:IndexPath) {
+        txtLabelCenter.isActive = true
+    }
+
     
     func placeholderText(_ indexPath:IndexPath) -> String {
         return CalculatorViewModel().placeholderText(indexPath)
@@ -66,4 +90,18 @@ class CalculatorCell: UITableViewCell {
         return CalculatorViewModel().topTitle(indexPath)
     }
 
+    func percentage(_ indexPath: IndexPath) -> String {
+        return CalculatorViewModel().percentage(indexPath)
+    }
+    
+    func setAccessory(_ indexPath: IndexPath) -> Void {
+        
+        guard indexPath.row == 2 else {
+            return
+        }
+        accessoryType = UITableViewCellAccessoryType.disclosureIndicator
+        widthPercentage.constant = 0
+    }
+
+    
 }

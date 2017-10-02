@@ -52,18 +52,18 @@ extension CalculatorViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataForm.count
+        return CalculatorViewModel().rowCount()
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return heightRow
+        return getHeightForRow(indexPath, UILabel(), .calculator)
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: cellName, for: indexPath) as! CalculatorCell
         
-        cell.condition = cellCondition.calculator
+        cell.condition = .cari
         cell.setDataCell(indexPath: indexPath, delegate: self)
         
         return cell
@@ -79,6 +79,10 @@ extension CalculatorViewController {
         print(dataForm[textField.tag])
         dataForm[textField.tag] = Decimal(string:textField.text!)!
         
+    }
+    
+    func getHeightForRow(_ indexPath: IndexPath, _ label: UILabel, _ condition: cellCondition) -> CGFloat {
+        return heightRow
     }
     
 }

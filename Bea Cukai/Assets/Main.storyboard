@@ -82,7 +82,7 @@
                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="value of something" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lPJ-CK-s54">
                                             <rect key="frame" x="12" y="22.5" width="313" height="42"/>
                                             <nil key="textColor"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                         </textField>
                                         <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yEQ-Xt-J1E">
@@ -119,6 +119,7 @@
                                     <outlet property="txtLabel" destination="NkA-Iz-t5T" id="pac-dn-RYS"/>
                                     <outlet property="txtLabelCenter" destination="UZT-SU-mOc" id="rzV-hR-5LV"/>
                                     <outlet property="txtPercent" destination="yEQ-Xt-J1E" id="38O-xN-1Ac"/>
+                                    <outlet property="widthPercentage" destination="8BP-hB-dKS" id="ajM-Pc-Oml"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
