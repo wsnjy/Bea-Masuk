@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="83A-zA-pTk" customClass="FooterSearch" customModule="Bea_Cukai" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="76"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2bm-6S-CsE" customClass="ButtonCalculate" customModule="Bea_Cukai" customModuleProvider="target">
+                    <rect key="frame" x="137" y="23" width="100" height="30"/>
+                    <color key="backgroundColor" red="0.40487687319999999" green="0.7347188925" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="ajm-gP-Duv"/>
+                    </constraints>
+                    <state key="normal" title="Cari">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnAction:" destination="83A-zA-pTk" eventType="touchUpInside" id="CNm-zK-h94"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="2bm-6S-CsE" firstAttribute="centerY" secondItem="dgz-yP-G41" secondAttribute="centerY" id="CdB-tH-lJA"/>
+                <constraint firstItem="2bm-6S-CsE" firstAttribute="centerX" secondItem="dgz-yP-G41" secondAttribute="centerX" id="XH9-Ga-gan"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="dgz-yP-G41"/>
+            <connections>
+                <outlet property="btn" destination="2bm-6S-CsE" id="1IR-xG-cqP"/>
+            </connections>
+            <point key="canvasLocation" x="-31.5" y="-81"/>
+        </view>
+    </objects>
+</document>

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class HomeViewController: UIViewController, BottomBackground{
     
@@ -37,6 +38,8 @@ class HomeViewController: UIViewController, BottomBackground{
     override func viewDidLoad() {
         super.viewDidLoad()
         viewConfiguration()
+//        dataJson()
+        testAPI()
     }
     
     func viewConfiguration() {
@@ -69,5 +72,42 @@ class HomeViewController: UIViewController, BottomBackground{
         self.present(nav, animated: true, completion: nil)
     }
     
+    func dataJson() {
+        do {
+            if let file = Bundle.main.url(forResource: "btki", withExtension: "json") {
+                let data = try Data(contentsOf: file)
+                let json = try JSONSerialization.jsonObject(with: data, options: [])
+                if let object = json as? [String: Any] {
+                    // json is a dictionary
+                    print(object)
+                } else if let object = json as? [[String:String]] {
+                    // json is a array
+
+                    let filteredTarif = object.filter({
+                        $0["uraian"]?.range(of: "kendaraan") != nil
+                    })
+                    
+                    print(filteredTarif)
+                    
+                } else {
+                    print("JSON is invalid")
+                }
+            } else {
+                print("no file")
+            }
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+    
+    func testAPI() -> Void {
+        Alamofire.request("https://hacker-news.firebaseio.com/v0/item/8863.json?print=pretty")
+            .responseString { response in
+                print("Response String: \(String(describing: response.result.value))")
+            }
+            .responseJSON { response in
+                print("Response JSON: \(String(describing: response.result.value))")
+        }
+    }
     
 }

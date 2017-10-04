@@ -25,16 +25,18 @@ class CalculatorViewController: UITableViewController, UITextFieldDelegate{
         
         super.viewDidLoad()
         title = titleVC
+        tableSetting()
         settingButton()
         addBarButtonClose()
-        
+    }
+    
+    func tableSetting() {
+        tableView.sectionFooterHeight = UITableViewAutomaticDimension
     }
     
     func settingButton() {
-        
         btnHitung.rounded(5)
         btnHitung.addTarget(self, action: #selector(self.saveAction), for:.touchUpInside)
-
     }
     
     func saveAction() {
@@ -69,6 +71,22 @@ extension CalculatorViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return heightRow
+    }
+    
+    override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return addFooterSearch(section)
+    }
+
+
+    func addFooterSearch(_ section:Int) -> UIView {
+        let viewFooter = FooterSearch.loadFromXib()
+        viewFooter.delegate = self
+        viewFooter.btn.tag = section
+        return viewFooter
+    }
+    
     func textFieldDidEndEditing(_ textField: UITextField) {
         
         guard  textField.hasText else {
@@ -78,13 +96,19 @@ extension CalculatorViewController {
         print(textField.text!)
         print(dataForm[textField.tag])
         dataForm[textField.tag] = Decimal(string:textField.text!)!
-        
     }
     
     func getHeightForRow(_ indexPath: IndexPath, _ label: UILabel, _ condition: cellCondition) -> CGFloat {
         return heightRow
     }
     
+}
+
+
+extension CalculatorViewController: FooterSearchDelegate {
+    func wedus(_ sender:Int) {
+        print("wedus \(sender)")
+    }
 }
 
 

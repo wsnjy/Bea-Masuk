@@ -7,17 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F1CB3FAEDE436DCAE87750C /* Pods_Bea_Cukai.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ACCA9B754270FA390B12757 /* Pods_Bea_Cukai.framework */; };
 		6515C32E1F7402400069EBA9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6515C32D1F7402400069EBA9 /* HomeViewController.swift */; };
 		6518CBDE1F7F6AD800A2EBB2 /* BottomBackgrund.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6518CBDD1F7F6AD800A2EBB2 /* BottomBackgrund.swift */; };
 		6518CBE41F7FA0DD00A2EBB2 /* UIViewController+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6518CBE31F7FA0DD00A2EBB2 /* UIViewController+Custom.swift */; };
 		6518CBE61F7FBF4700A2EBB2 /* Tarif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6518CBE51F7FBF4700A2EBB2 /* Tarif.swift */; };
 		6525CE7F1F67189400D4BFE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6525CE7E1F67189400D4BFE2 /* Main.storyboard */; };
 		652940DB1F75FF8800B2B660 /* ViewShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652940DA1F75FF8800B2B660 /* ViewShadow.swift */; };
+		65317C7F1F84D67600A6D11F /* FooterSearch.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65317C7E1F84D67600A6D11F /* FooterSearch.xib */; };
 		6532FCFD1F77FFFC00459DA4 /* Kurs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6532FCFC1F77FFFC00459DA4 /* Kurs.swift */; };
 		6532FCFF1F78030100459DA4 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6532FCFE1F78030100459DA4 /* HomeViewModel.swift */; };
 		654222AA1F63E66A00CE3A84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654222A91F63E66A00CE3A84 /* AppDelegate.swift */; };
 		654222BE1F646DA400CE3A84 /* Biaya.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654222BD1F646DA400CE3A84 /* Biaya.swift */; };
 		654222C11F646FE100CE3A84 /* BiayaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654222C01F646FE100CE3A84 /* BiayaViewModel.swift */; };
+		6549E2F91F82AA39009B46E1 /* ReloadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6549E2F81F82AA39009B46E1 /* ReloadView.swift */; };
 		65550A5F1F6AB6BA00F036E9 /* CalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65550A5E1F6AB6BA00F036E9 /* CalculatorViewModel.swift */; };
 		6558B9391F7D79F7004FFBB6 /* SourceSansPro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6558B9351F7D79F1004FFBB6 /* SourceSansPro-Regular.otf */; };
 		6558B93A1F7D79F7004FFBB6 /* SIL Open Font License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6558B9361F7D79F3004FFBB6 /* SIL Open Font License.txt */; };
@@ -27,18 +30,23 @@
 		657AA3951F7D65F8004F3CA6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 657AA3941F7D65F8004F3CA6 /* Images.xcassets */; };
 		6591ED701F66EE8000A46885 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6591ED6F1F66EE8000A46885 /* CalculatorViewController.swift */; };
 		6591ED721F66EF0500A46885 /* CalculatorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6591ED711F66EF0500A46885 /* CalculatorCell.swift */; };
+		65C0DBF91F849D9000729C1C /* btki.json in Resources */ = {isa = PBXBuildFile; fileRef = 65C0DBF71F84067900729C1C /* btki.json */; };
+		65C0DBFB1F84B0E100729C1C /* FooterSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C0DBFA1F84B0E100729C1C /* FooterSearch.swift */; };
 		65C8BCA51F765FF900E95E71 /* ButtonCalculate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C8BCA41F765FF900E95E71 /* ButtonCalculate.swift */; };
 		65F1F4F61F7AB76D0062F63F /* UILabel+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F1F4F51F7AB76D0062F63F /* UILabel+Size.swift */; };
 		65F5CB661F751A46005432D8 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65F5CB651F751A46005432D8 /* Launch.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		021D36A339B1D5BB5473F645 /* Pods-Bea Cukai.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bea Cukai.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bea Cukai/Pods-Bea Cukai.debug.xcconfig"; sourceTree = "<group>"; };
+		2ACCA9B754270FA390B12757 /* Pods_Bea_Cukai.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bea_Cukai.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6515C32D1F7402400069EBA9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		6518CBDD1F7F6AD800A2EBB2 /* BottomBackgrund.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBackgrund.swift; sourceTree = "<group>"; };
 		6518CBE31F7FA0DD00A2EBB2 /* UIViewController+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Custom.swift"; sourceTree = "<group>"; };
 		6518CBE51F7FBF4700A2EBB2 /* Tarif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tarif.swift; sourceTree = "<group>"; };
 		6525CE7E1F67189400D4BFE2 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		652940DA1F75FF8800B2B660 /* ViewShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewShadow.swift; sourceTree = "<group>"; };
+		65317C7E1F84D67600A6D11F /* FooterSearch.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = FooterSearch.xib; path = "Bea Cukai/Assets/FooterSearch.xib"; sourceTree = SOURCE_ROOT; };
 		6532FCFC1F77FFFC00459DA4 /* Kurs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kurs.swift; sourceTree = "<group>"; };
 		6532FCFE1F78030100459DA4 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		654222A61F63E66A00CE3A84 /* Bea Cukai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bea Cukai.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,6 +54,7 @@
 		654222B51F63E66A00CE3A84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		654222BD1F646DA400CE3A84 /* Biaya.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Biaya.swift; sourceTree = "<group>"; };
 		654222C01F646FE100CE3A84 /* BiayaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiayaViewModel.swift; sourceTree = "<group>"; };
+		6549E2F81F82AA39009B46E1 /* ReloadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReloadView.swift; sourceTree = "<group>"; };
 		65550A5E1F6AB6BA00F036E9 /* CalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewModel.swift; sourceTree = "<group>"; };
 		6558B9351F7D79F1004FFBB6 /* SourceSansPro-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Regular.otf"; sourceTree = "<group>"; };
 		6558B9361F7D79F3004FFBB6 /* SIL Open Font License.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "SIL Open Font License.txt"; sourceTree = "<group>"; };
@@ -55,9 +64,12 @@
 		657AA3941F7D65F8004F3CA6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6591ED6F1F66EE8000A46885 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		6591ED711F66EF0500A46885 /* CalculatorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorCell.swift; sourceTree = "<group>"; };
+		65C0DBF71F84067900729C1C /* btki.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = btki.json; sourceTree = "<group>"; };
+		65C0DBFA1F84B0E100729C1C /* FooterSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterSearch.swift; sourceTree = "<group>"; };
 		65C8BCA41F765FF900E95E71 /* ButtonCalculate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCalculate.swift; sourceTree = "<group>"; };
 		65F1F4F51F7AB76D0062F63F /* UILabel+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Size.swift"; sourceTree = "<group>"; };
 		65F5CB651F751A46005432D8 /* Launch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
+		66FEB98BAA00F6C7FB43A4EE /* Pods-Bea Cukai.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bea Cukai.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bea Cukai/Pods-Bea Cukai.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,19 +77,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F1CB3FAEDE436DCAE87750C /* Pods_Bea_Cukai.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		275A3E1D27318BB6571E8DAD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2ACCA9B754270FA390B12757 /* Pods_Bea_Cukai.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6525CE7D1F67176C00D4BFE2 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				65C0DBF81F84068000729C1C /* Json */,
 				6558B93D1F7D7A26004FFBB6 /* Font */,
 				657AA3941F7D65F8004F3CA6 /* Images.xcassets */,
 				6525CE7E1F67189400D4BFE2 /* Main.storyboard */,
 				65F5CB651F751A46005432D8 /* Launch.storyboard */,
+				65317C7E1F84D67600A6D11F /* FooterSearch.xib */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -91,20 +114,13 @@
 			path = Protocol;
 			sourceTree = "<group>";
 		};
-		652940DC1F7603C000B2B660 /* CustomClass */ = {
-			isa = PBXGroup;
-			children = (
-				655A3C031F76092A0015000B /* ViewInStack.swift */,
-				65C8BCA41F765FF900E95E71 /* ButtonCalculate.swift */,
-			);
-			path = CustomClass;
-			sourceTree = "<group>";
-		};
 		6542229D1F63E66A00CE3A84 = {
 			isa = PBXGroup;
 			children = (
 				654222A81F63E66A00CE3A84 /* Bea Cukai */,
 				654222A71F63E66A00CE3A84 /* Products */,
+				C62126F3666F440AFA70473D /* Pods */,
+				275A3E1D27318BB6571E8DAD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,7 +141,6 @@
 				6591ED6C1F66EDD500A46885 /* View */,
 				654222BF1F646FC700CE3A84 /* ViewModel */,
 				652940D91F75FEB100B2B660 /* Protocol */,
-				652940DC1F7603C000B2B660 /* CustomClass */,
 				65F1F4F41F7AB3660062F63F /* Extension */,
 				6525CE7D1F67176C00D4BFE2 /* Assets */,
 				654222B51F63E66A00CE3A84 /* Info.plist */,
@@ -177,8 +192,20 @@
 			isa = PBXGroup;
 			children = (
 				6591ED711F66EF0500A46885 /* CalculatorCell.swift */,
+				6549E2F81F82AA39009B46E1 /* ReloadView.swift */,
+				65C0DBFA1F84B0E100729C1C /* FooterSearch.swift */,
+				655A3C031F76092A0015000B /* ViewInStack.swift */,
+				65C8BCA41F765FF900E95E71 /* ButtonCalculate.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		65C0DBF81F84068000729C1C /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				65C0DBF71F84067900729C1C /* btki.json */,
+			);
+			path = Json;
 			sourceTree = "<group>";
 		};
 		65F1F4F41F7AB3660062F63F /* Extension */ = {
@@ -190,6 +217,15 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		C62126F3666F440AFA70473D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				021D36A339B1D5BB5473F645 /* Pods-Bea Cukai.debug.xcconfig */,
+				66FEB98BAA00F6C7FB43A4EE /* Pods-Bea Cukai.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -197,9 +233,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 654222B81F63E66A00CE3A84 /* Build configuration list for PBXNativeTarget "Bea Cukai" */;
 			buildPhases = (
+				8AA67B05E2D6EE6472B87F94 /* [CP] Check Pods Manifest.lock */,
 				654222A21F63E66A00CE3A84 /* Sources */,
 				654222A31F63E66A00CE3A84 /* Frameworks */,
 				654222A41F63E66A00CE3A84 /* Resources */,
+				0A51615A5BFC44A4DFC28ECC /* [CP] Embed Pods Frameworks */,
+				3299664770C6F179585CA762 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -249,8 +288,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				6558B9391F7D79F7004FFBB6 /* SourceSansPro-Regular.otf in Resources */,
+				65317C7F1F84D67600A6D11F /* FooterSearch.xib in Resources */,
 				6558B93A1F7D79F7004FFBB6 /* SIL Open Font License.txt in Resources */,
 				6558B93B1F7D79F7004FFBB6 /* SourceSansPro-Semibold.otf in Resources */,
+				65C0DBF91F849D9000729C1C /* btki.json in Resources */,
 				6558B93C1F7D79F7004FFBB6 /* SourceSansPro-Bold.otf in Resources */,
 				6525CE7F1F67189400D4BFE2 /* Main.storyboard in Resources */,
 				657AA3951F7D65F8004F3CA6 /* Images.xcassets in Resources */,
@@ -259,6 +300,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0A51615A5BFC44A4DFC28ECC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bea Cukai/Pods-Bea Cukai-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3299664770C6F179585CA762 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bea Cukai/Pods-Bea Cukai-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8AA67B05E2D6EE6472B87F94 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		654222A21F63E66A00CE3A84 /* Sources */ = {
@@ -277,9 +366,11 @@
 				6532FCFF1F78030100459DA4 /* HomeViewModel.swift in Sources */,
 				65C8BCA51F765FF900E95E71 /* ButtonCalculate.swift in Sources */,
 				654222AA1F63E66A00CE3A84 /* AppDelegate.swift in Sources */,
+				65C0DBFB1F84B0E100729C1C /* FooterSearch.swift in Sources */,
 				6518CBE61F7FBF4700A2EBB2 /* Tarif.swift in Sources */,
 				6518CBDE1F7F6AD800A2EBB2 /* BottomBackgrund.swift in Sources */,
 				6515C32E1F7402400069EBA9 /* HomeViewController.swift in Sources */,
+				6549E2F91F82AA39009B46E1 /* ReloadView.swift in Sources */,
 				6591ED721F66EF0500A46885 /* CalculatorCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,6 +489,7 @@
 		};
 		654222B91F63E66A00CE3A84 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 021D36A339B1D5BB5473F645 /* Pods-Bea Cukai.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8XSTQ5G33P;
@@ -413,6 +505,7 @@
 		};
 		654222BA1F63E66A00CE3A84 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66FEB98BAA00F6C7FB43A4EE /* Pods-Bea Cukai.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8XSTQ5G33P;
