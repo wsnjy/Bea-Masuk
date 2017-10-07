@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Alamofire
 
 class HomeViewController: UIViewController, BottomBackground{
     
@@ -29,17 +28,18 @@ class HomeViewController: UIViewController, BottomBackground{
         return UIImageView.init(image: UIImage(named: "bg_bottom"))
     }()
     
-    
     let roundedViewValue: CGFloat = 5
     let roundedButtonValue: CGFloat = 32
     let titleController = "Bea Masuk"
     let backgroundKurs = UIColor.init(patternImage: UIImage.init(named: "box")!)
     
+    var allRates:[String:String] = [:]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         viewConfiguration()
 //        dataJson()
-        testAPI()
+        getAllRates()
     }
     
     func viewConfiguration() {
@@ -100,14 +100,21 @@ class HomeViewController: UIViewController, BottomBackground{
         }
     }
     
-    func testAPI() -> Void {
-        Alamofire.request("https://hacker-news.firebaseio.com/v0/item/8863.json?print=pretty")
-            .responseString { response in
-                print("Response String: \(String(describing: response.result.value))")
-            }
-            .responseJSON { response in
-                print("Response JSON: \(String(describing: response.result.value))")
+    func getAllRates() -> Void {
+        let api = APIManager()
+        api.getCurrency(base: "USD", completion: {(result : JSON) -> Void in
+            self.configAllRates(data: result["rates"])
+        })
+    }
+    
+    func configAllRates(data:JSON) -> Void {
+        
+        for (key,value) in data{
+            allRates[key as String] = value.stringValue
         }
+        
+        print(self.allRates)
+        
     }
     
 }

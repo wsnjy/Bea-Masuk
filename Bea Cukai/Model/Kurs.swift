@@ -9,14 +9,32 @@
 import Foundation
 
 struct Kurs {
-    var currency:String
-    var inRupiah:Decimal
+    var idCurrency:String
+    var valueInRupiah:Decimal
+    var symbol: String
+    var currencyText: String
 }
 
 extension Kurs {
     
-    func setDataKurs(_ data:[String:String]) -> Kurs {
-        return Kurs(currency:"", inRupiah:0)
+    static func setDataKurs(_ id:String,_ value:Decimal) -> Kurs {
+        return Kurs(idCurrency: id,
+                    valueInRupiah:value,
+                    symbol:"\(symbolCurrency(id))",
+                    currencyText:"\(countryCurrency(id))")
+    }
+    
+    static func symbolCurrency(_ idCurrency:String) -> String {
+        return Symbol().currencySymbol(idCurrency)
+    }
+    
+    static func countryCurrency(_ idCurrency:String) -> String {
+        return Symbol().currencyCountry(idCurrency)
+    }
+    
+    func convertToRupiah(_ value:Decimal) -> String{
+        let userDefault = UserDefaults()
+        return userDefault.string(forKey: "USD")!
     }
     
 }

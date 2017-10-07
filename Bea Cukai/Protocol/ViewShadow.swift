@@ -13,7 +13,8 @@ protocol ViewShadow {
     func addShadow ()
     func addShadowAndRounded(_ round: CGFloat)
     func rounded (_ round: CGFloat)
-    
+    func addBorder(_ width:CGFloat,_ color:UIColor)
+
 }
 
 extension ViewShadow where Self : UIView {
@@ -33,5 +34,11 @@ extension ViewShadow where Self : UIView {
         addShadow()
         rounded(round)
     }
+    
+    func addBorder(_ width:CGFloat,_ color:UIColor){
+        layer.borderColor = color.cgColor
+        layer.borderWidth = width
+    }
+
     
 }

@@ -71,17 +71,17 @@ extension CalculatorViewController {
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return heightRow
-    }
+//    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+//        return heightRow
+//    }
     
-    override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        return addFooterSearch(section)
-    }
+//    override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+//        return addFooterSearch(section)
+//    }
 
 
     func addFooterSearch(_ section:Int) -> UIView {
-        let viewFooter = FooterSearch.loadFromXib()
+        let viewFooter = FooterSearch.loadFromXib() as FooterSearch
         viewFooter.delegate = self
         viewFooter.btn.tag = section
         return viewFooter

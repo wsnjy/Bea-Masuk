@@ -9,6 +9,5 @@
 import UIKit
 
 class ViewInStack: UIView , ViewShadow{
-
-
+    
 }

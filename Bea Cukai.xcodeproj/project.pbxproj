@@ -8,15 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		0F1CB3FAEDE436DCAE87750C /* Pods_Bea_Cukai.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ACCA9B754270FA390B12757 /* Pods_Bea_Cukai.framework */; };
+		6513EAB61F86381400C0DCDC /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6513EAB51F86381400C0DCDC /* APIManager.swift */; };
 		6515C32E1F7402400069EBA9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6515C32D1F7402400069EBA9 /* HomeViewController.swift */; };
+		651816781F8532D8002799D8 /* FooterSearch.xib in Resources */ = {isa = PBXBuildFile; fileRef = 651816771F85323D002799D8 /* FooterSearch.xib */; };
+		6518167A1F853312002799D8 /* ReloadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 651816791F853312002799D8 /* ReloadView.xib */; };
 		6518CBDE1F7F6AD800A2EBB2 /* BottomBackgrund.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6518CBDD1F7F6AD800A2EBB2 /* BottomBackgrund.swift */; };
 		6518CBE41F7FA0DD00A2EBB2 /* UIViewController+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6518CBE31F7FA0DD00A2EBB2 /* UIViewController+Custom.swift */; };
 		6518CBE61F7FBF4700A2EBB2 /* Tarif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6518CBE51F7FBF4700A2EBB2 /* Tarif.swift */; };
 		6525CE7F1F67189400D4BFE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6525CE7E1F67189400D4BFE2 /* Main.storyboard */; };
 		652940DB1F75FF8800B2B660 /* ViewShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652940DA1F75FF8800B2B660 /* ViewShadow.swift */; };
-		65317C7F1F84D67600A6D11F /* FooterSearch.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65317C7E1F84D67600A6D11F /* FooterSearch.xib */; };
 		6532FCFD1F77FFFC00459DA4 /* Kurs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6532FCFC1F77FFFC00459DA4 /* Kurs.swift */; };
 		6532FCFF1F78030100459DA4 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6532FCFE1F78030100459DA4 /* HomeViewModel.swift */; };
+		6536A35D1F87D87100A06D59 /* Kurs.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6536A35C1F87D87100A06D59 /* Kurs.xib */; };
+		6536A35F1F87DD6200A06D59 /* KursViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6536A35E1F87DD6200A06D59 /* KursViewController.swift */; };
+		6536A3611F8852EF00A06D59 /* Reloadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6536A3601F8852EE00A06D59 /* Reloadable.swift */; };
+		6536A3631F88596E00A06D59 /* KursInStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6536A3621F88596E00A06D59 /* KursInStack.swift */; };
+		6536A3651F885BA400A06D59 /* KursViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6536A3641F885BA400A06D59 /* KursViewModel.swift */; };
+		6536A3671F88602A00A06D59 /* Symbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6536A3661F88602A00A06D59 /* Symbol.swift */; };
 		654222AA1F63E66A00CE3A84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654222A91F63E66A00CE3A84 /* AppDelegate.swift */; };
 		654222BE1F646DA400CE3A84 /* Biaya.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654222BD1F646DA400CE3A84 /* Biaya.swift */; };
 		654222C11F646FE100CE3A84 /* BiayaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654222C01F646FE100CE3A84 /* BiayaViewModel.swift */; };
@@ -40,15 +48,25 @@
 /* Begin PBXFileReference section */
 		021D36A339B1D5BB5473F645 /* Pods-Bea Cukai.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bea Cukai.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bea Cukai/Pods-Bea Cukai.debug.xcconfig"; sourceTree = "<group>"; };
 		2ACCA9B754270FA390B12757 /* Pods_Bea_Cukai.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bea_Cukai.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6513EAAD1F85EA2200C0DCDC /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6513EAAF1F85EE1900C0DCDC /* Bea Cukai-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bea Cukai-Bridging-Header.h"; sourceTree = "<group>"; };
+		6513EAB51F86381400C0DCDC /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		6515C32D1F7402400069EBA9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		651816771F85323D002799D8 /* FooterSearch.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FooterSearch.xib; sourceTree = "<group>"; };
+		651816791F853312002799D8 /* ReloadView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReloadView.xib; sourceTree = "<group>"; };
 		6518CBDD1F7F6AD800A2EBB2 /* BottomBackgrund.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBackgrund.swift; sourceTree = "<group>"; };
 		6518CBE31F7FA0DD00A2EBB2 /* UIViewController+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Custom.swift"; sourceTree = "<group>"; };
 		6518CBE51F7FBF4700A2EBB2 /* Tarif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tarif.swift; sourceTree = "<group>"; };
 		6525CE7E1F67189400D4BFE2 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		652940DA1F75FF8800B2B660 /* ViewShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewShadow.swift; sourceTree = "<group>"; };
-		65317C7E1F84D67600A6D11F /* FooterSearch.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = FooterSearch.xib; path = "Bea Cukai/Assets/FooterSearch.xib"; sourceTree = SOURCE_ROOT; };
 		6532FCFC1F77FFFC00459DA4 /* Kurs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kurs.swift; sourceTree = "<group>"; };
 		6532FCFE1F78030100459DA4 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		6536A35C1F87D87100A06D59 /* Kurs.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Kurs.xib; sourceTree = "<group>"; };
+		6536A35E1F87DD6200A06D59 /* KursViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KursViewController.swift; sourceTree = "<group>"; };
+		6536A3601F8852EE00A06D59 /* Reloadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reloadable.swift; sourceTree = "<group>"; };
+		6536A3621F88596E00A06D59 /* KursInStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KursInStack.swift; sourceTree = "<group>"; };
+		6536A3641F885BA400A06D59 /* KursViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KursViewModel.swift; sourceTree = "<group>"; };
+		6536A3661F88602A00A06D59 /* Symbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbol.swift; sourceTree = "<group>"; };
 		654222A61F63E66A00CE3A84 /* Bea Cukai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bea Cukai.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		654222A91F63E66A00CE3A84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		654222B51F63E66A00CE3A84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -87,9 +105,18 @@
 		275A3E1D27318BB6571E8DAD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6513EAAD1F85EA2200C0DCDC /* SwiftyJSON.framework */,
 				2ACCA9B754270FA390B12757 /* Pods_Bea_Cukai.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6513EAB21F8635E900C0DCDC /* API */ = {
+			isa = PBXGroup;
+			children = (
+				6513EAB51F86381400C0DCDC /* APIManager.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 		6525CE7D1F67176C00D4BFE2 /* Assets */ = {
@@ -98,9 +125,11 @@
 				65C0DBF81F84068000729C1C /* Json */,
 				6558B93D1F7D7A26004FFBB6 /* Font */,
 				657AA3941F7D65F8004F3CA6 /* Images.xcassets */,
+				651816771F85323D002799D8 /* FooterSearch.xib */,
 				6525CE7E1F67189400D4BFE2 /* Main.storyboard */,
 				65F5CB651F751A46005432D8 /* Launch.storyboard */,
-				65317C7E1F84D67600A6D11F /* FooterSearch.xib */,
+				651816791F853312002799D8 /* ReloadView.xib */,
+				6536A35C1F87D87100A06D59 /* Kurs.xib */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -110,6 +139,7 @@
 			children = (
 				652940DA1F75FF8800B2B660 /* ViewShadow.swift */,
 				6518CBDD1F7F6AD800A2EBB2 /* BottomBackgrund.swift */,
+				6536A3601F8852EE00A06D59 /* Reloadable.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -138,12 +168,14 @@
 				654222BB1F646D6600CE3A84 /* Controller */,
 				654222A91F63E66A00CE3A84 /* AppDelegate.swift */,
 				654222BC1F646D7800CE3A84 /* Model */,
-				6591ED6C1F66EDD500A46885 /* View */,
 				654222BF1F646FC700CE3A84 /* ViewModel */,
+				6591ED6C1F66EDD500A46885 /* View */,
 				652940D91F75FEB100B2B660 /* Protocol */,
 				65F1F4F41F7AB3660062F63F /* Extension */,
+				6513EAB21F8635E900C0DCDC /* API */,
 				6525CE7D1F67176C00D4BFE2 /* Assets */,
 				654222B51F63E66A00CE3A84 /* Info.plist */,
+				6513EAAF1F85EE1900C0DCDC /* Bea Cukai-Bridging-Header.h */,
 			);
 			path = "Bea Cukai";
 			sourceTree = "<group>";
@@ -153,6 +185,7 @@
 			children = (
 				6591ED6F1F66EE8000A46885 /* CalculatorViewController.swift */,
 				6515C32D1F7402400069EBA9 /* HomeViewController.swift */,
+				6536A35E1F87DD6200A06D59 /* KursViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -163,6 +196,7 @@
 				654222BD1F646DA400CE3A84 /* Biaya.swift */,
 				6532FCFC1F77FFFC00459DA4 /* Kurs.swift */,
 				6518CBE51F7FBF4700A2EBB2 /* Tarif.swift */,
+				6536A3661F88602A00A06D59 /* Symbol.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -173,6 +207,7 @@
 				654222C01F646FE100CE3A84 /* BiayaViewModel.swift */,
 				65550A5E1F6AB6BA00F036E9 /* CalculatorViewModel.swift */,
 				6532FCFE1F78030100459DA4 /* HomeViewModel.swift */,
+				6536A3641F885BA400A06D59 /* KursViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -196,6 +231,7 @@
 				65C0DBFA1F84B0E100729C1C /* FooterSearch.swift */,
 				655A3C031F76092A0015000B /* ViewInStack.swift */,
 				65C8BCA41F765FF900E95E71 /* ButtonCalculate.swift */,
+				6536A3621F88596E00A06D59 /* KursInStack.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -261,6 +297,7 @@
 				TargetAttributes = {
 					654222A51F63E66A00CE3A84 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
 					};
 				};
 			};
@@ -288,12 +325,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				6558B9391F7D79F7004FFBB6 /* SourceSansPro-Regular.otf in Resources */,
-				65317C7F1F84D67600A6D11F /* FooterSearch.xib in Resources */,
+				651816781F8532D8002799D8 /* FooterSearch.xib in Resources */,
 				6558B93A1F7D79F7004FFBB6 /* SIL Open Font License.txt in Resources */,
+				6518167A1F853312002799D8 /* ReloadView.xib in Resources */,
 				6558B93B1F7D79F7004FFBB6 /* SourceSansPro-Semibold.otf in Resources */,
 				65C0DBF91F849D9000729C1C /* btki.json in Resources */,
 				6558B93C1F7D79F7004FFBB6 /* SourceSansPro-Bold.otf in Resources */,
 				6525CE7F1F67189400D4BFE2 /* Main.storyboard in Resources */,
+				6536A35D1F87D87100A06D59 /* Kurs.xib in Resources */,
 				657AA3951F7D65F8004F3CA6 /* Images.xcassets in Resources */,
 				65F5CB661F751A46005432D8 /* Launch.storyboard in Resources */,
 			);
@@ -354,16 +393,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6536A3611F8852EF00A06D59 /* Reloadable.swift in Sources */,
 				6532FCFD1F77FFFC00459DA4 /* Kurs.swift in Sources */,
+				6513EAB61F86381400C0DCDC /* APIManager.swift in Sources */,
 				6591ED701F66EE8000A46885 /* CalculatorViewController.swift in Sources */,
+				6536A3631F88596E00A06D59 /* KursInStack.swift in Sources */,
+				6536A3671F88602A00A06D59 /* Symbol.swift in Sources */,
 				65550A5F1F6AB6BA00F036E9 /* CalculatorViewModel.swift in Sources */,
 				654222C11F646FE100CE3A84 /* BiayaViewModel.swift in Sources */,
 				6518CBE41F7FA0DD00A2EBB2 /* UIViewController+Custom.swift in Sources */,
 				654222BE1F646DA400CE3A84 /* Biaya.swift in Sources */,
+				6536A3651F885BA400A06D59 /* KursViewModel.swift in Sources */,
 				655A3C041F76092A0015000B /* ViewInStack.swift in Sources */,
 				652940DB1F75FF8800B2B660 /* ViewShadow.swift in Sources */,
 				65F1F4F61F7AB76D0062F63F /* UILabel+Size.swift in Sources */,
 				6532FCFF1F78030100459DA4 /* HomeViewModel.swift in Sources */,
+				6536A35F1F87DD6200A06D59 /* KursViewController.swift in Sources */,
 				65C8BCA51F765FF900E95E71 /* ButtonCalculate.swift in Sources */,
 				654222AA1F63E66A00CE3A84 /* AppDelegate.swift in Sources */,
 				65C0DBFB1F84B0E100729C1C /* FooterSearch.swift in Sources */,
@@ -492,12 +537,15 @@
 			baseConfigurationReference = 021D36A339B1D5BB5473F645 /* Pods-Bea Cukai.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 8XSTQ5G33P;
 				INFOPLIST_FILE = "Bea Cukai/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wsnjy.BeaMasuk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Bea Cukai/Bea Cukai-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -508,12 +556,14 @@
 			baseConfigurationReference = 66FEB98BAA00F6C7FB43A4EE /* Pods-Bea Cukai.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 8XSTQ5G33P;
 				INFOPLIST_FILE = "Bea Cukai/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wsnjy.BeaMasuk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Bea Cukai/Bea Cukai-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -34,7 +34,8 @@ class FooterSearch: UIView {
 
 
 extension UIView{
-    static func loadFromXib<T>(withOwner: Any? = nil, options: [AnyHashable : Any]? = nil) -> T where T: FooterSearch
+    
+    static func loadFromXib<T>(withOwner: Any? = nil, options: [AnyHashable : Any]? = nil) -> T where T: UIView
     {
         let bundle = Bundle(for: self)
         let nib = UINib(nibName: "\(self)", bundle: bundle)

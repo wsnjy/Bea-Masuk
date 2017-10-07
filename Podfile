@@ -7,4 +7,5 @@ target 'Bea Cukai' do
 
   # Pods for Bea Cukai
     pod 'Alamofire', '~> 4.5'
+    pod 'SwiftyJSON'
 end
