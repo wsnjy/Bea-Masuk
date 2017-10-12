@@ -32,12 +32,12 @@ class KursInStack: UIView {
     
     func setDataForView(_ data: Kurs) {
 
-        let model = KursViewModel(kurs:data)
-    
-        topLabel.text = model.inRupiah()
-        centerLabel.text = model.kurs.symbol
-        bottomLabel.text = model.kurs.currencyText
-        lineView.isHidden = lineViewConfig(typeSide)
+//        let model = KursViewModel(kurs:data)
+//    
+//        topLabel.text = model.inRupiah()
+//        centerLabel.text = model.kurs.symbol
+//        bottomLabel.text = model.kurs.currencyText
+//        lineView.isHidden = lineViewConfig(typeSide)
     
     }
     

@@ -8,16 +8,27 @@
 
 import Foundation
 
+
 struct KursViewModel {
-    var kurs:Kurs
+    var kurs:[Kurs]
 }
 
 extension KursViewModel {
     
-    func inRupiah() -> String {
-        return "IDR \(kurs.valueInRupiah)"
+    func getAllKurs(_ data:[String:String]) -> [Kurs] {
+        
+        
+        
+        return kurs
     }
+//
+//    func inRupiah() -> String {
+//        return "IDR \(kurs.valueInRupiah)"
+//    }
     
+    func setValueToRates() {
+        
+    }
 
     
 }

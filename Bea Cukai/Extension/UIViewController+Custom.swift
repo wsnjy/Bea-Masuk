@@ -47,5 +47,13 @@ extension UIViewController {
         return controller
     }
 
+    func setBackButton(){
+        
+        let yourBackImage = UIImage(named: "back")
+        navigationController?.navigationBar.backIndicatorImage = yourBackImage
+        navigationController?.navigationBar.backIndicatorTransitionMaskImage = yourBackImage
+        navigationController?.navigationBar.topItem?.title = ""
+    }
+    
     
 }

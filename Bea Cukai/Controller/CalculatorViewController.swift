@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CalculatorViewController: UITableViewController, UITextFieldDelegate{
+class CalculatorViewController: UITableViewController, UITextFieldDelegate, BottomBackground{
 
     @IBOutlet weak var btnHitung: ButtonCalculate!
     
@@ -20,14 +20,16 @@ class CalculatorViewController: UITableViewController, UITextFieldDelegate{
     var dataForm:[Decimal] = {
         return CalculatorViewModel().dummyData
     }()
+    
+    let footer = UIView()
         
     override func viewDidLoad() {
         
         super.viewDidLoad()
         title = titleVC
         tableSetting()
-        settingButton()
-        addBarButtonClose()
+        setBackButton()
+        footerConfig()
     }
     
     func tableSetting() {
@@ -35,8 +37,16 @@ class CalculatorViewController: UITableViewController, UITextFieldDelegate{
     }
     
     func settingButton() {
-        btnHitung.rounded(5)
-        btnHitung.addTarget(self, action: #selector(self.saveAction), for:.touchUpInside)
+//        btnHitung.rounded(5)
+//        btnHitung.addTarget(self, action: #selector(self.saveAction), for:.touchUpInside)
+    }
+    
+    func footerConfig() {
+        
+        let bottomImage = BottomImage()
+        footer.frame = CGRect(x: 0, y:0, width:bottomImage.frame.size.width, height:bottomImage.frame.size.height)
+        footer.addSubview(bottomImage)
+        tableView.tableFooterView = footer
     }
     
     func saveAction() {
@@ -71,15 +81,6 @@ extension CalculatorViewController {
         return cell
     }
     
-//    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-//        return heightRow
-//    }
-    
-//    override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-//        return addFooterSearch(section)
-//    }
-
-
     func addFooterSearch(_ section:Int) -> UIView {
         let viewFooter = FooterSearch.loadFromXib() as FooterSearch
         viewFooter.delegate = self

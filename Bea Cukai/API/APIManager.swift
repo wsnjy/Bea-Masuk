@@ -14,8 +14,9 @@ struct mbuhhh {
 
 class APIManager: NSObject {
 
-    let baseURL = "http://api.fixer.io/"
     static let sharedInstance = APIManager()
+    
+    let baseURL = "http://api.fixer.io/"
     static let currentyEndPoint = "latest?base="
     static let currencyParams = "&symbols=CNY,EUR,GBP,HKD,JPY,SAR,SGD,IDR,AUD,MYR"
 
@@ -42,10 +43,8 @@ class APIManager: NSObject {
     }
     
     func usdToIDR(_ data:Decimal){
-        
         let userDefault = UserDefaults()
         userDefault.set(data, forKey: "USD")
-        
     }
     
     

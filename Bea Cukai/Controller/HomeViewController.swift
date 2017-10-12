@@ -32,13 +32,13 @@ class HomeViewController: UIViewController, BottomBackground{
     let roundedButtonValue: CGFloat = 32
     let titleController = "Bea Masuk"
     let backgroundKurs = UIColor.init(patternImage: UIImage.init(named: "box")!)
-    
-    var allRates:[String:String] = [:]
+    var allRates:[String:String] = ["EUR": "0.85419", "GBP": "0.7648", "MYR": "4.2375", "IDR": "13513", "HKD": "7.8062", "JPY": "112.95", "CNY": "6.6534", "SGD": "1.3664", "AUD": "1.2864"]
+
+//    let kursViewModel = KursViewModel(kurs: Kurs.configRates(data:allRates, rate: .Britain))
     
     override func viewDidLoad() {
         super.viewDidLoad()
         viewConfiguration()
-//        dataJson()
         getAllRates()
     }
     
@@ -55,6 +55,13 @@ class HomeViewController: UIViewController, BottomBackground{
         viewKurs.rounded(roundedViewValue)
     }
     
+    func setValueInfoKurs() {
+        usdValue.text = ""
+        eurValue.text = ""
+        cnyValue.text = ""
+        jpyValue.text = ""
+    }
+    
     func menuConfig() {
         viewTopLeft.addShadowAndRounded(roundedViewValue) /* Rumus */
         viewTopRight.addShadowAndRounded(roundedViewValue) /* Cara Hitung */
@@ -68,8 +75,7 @@ class HomeViewController: UIViewController, BottomBackground{
     
     @IBAction func openCalculator(_ sender: ButtonCalculate) {
         let calculator = CalculatorViewController.instantiateFromStoryboard()
-        let nav = UINavigationController(rootViewController: calculator)
-        self.present(nav, animated: true, completion: nil)
+        self.navigationController?.pushViewController(calculator, animated: true)
     }
     
     func dataJson() {
@@ -103,7 +109,7 @@ class HomeViewController: UIViewController, BottomBackground{
     func getAllRates() -> Void {
         let api = APIManager()
         api.getCurrency(base: "USD", completion: {(result : JSON) -> Void in
-            self.configAllRates(data: result["rates"])
+//            self.configAllRates(data: result["rates"])
         })
     }
     

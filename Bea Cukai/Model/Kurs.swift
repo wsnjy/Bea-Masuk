@@ -8,6 +8,18 @@
 
 import Foundation
 
+enum typeRates:String{
+    case USA        = "USD"
+    case EURO       = "EUR"
+    case Britain    = "GBP"
+    case Japan      = "JPY"
+    case China      = "CNY"
+    case Singapore  = "SGD"
+    case Malaysia   = "MYR"
+    case Hongkong   = "HKD"
+    case Indonesia  = "IDR"
+}
+
 struct Kurs {
     var idCurrency:String
     var valueInRupiah:Decimal
@@ -17,6 +29,18 @@ struct Kurs {
 
 extension Kurs {
     
+    static func configRates(data:[String:String]) -> [String:Kurs]{
+        
+        var allRates:[String:Kurs]?
+        
+        for (key,value) in data {
+            allRates![key] = setDataKurs(key, Decimal(string:value)!)
+        }
+        
+        return allRates!
+
+    }
+
     static func setDataKurs(_ id:String,_ value:Decimal) -> Kurs {
         return Kurs(idCurrency: id,
                     valueInRupiah:value,
