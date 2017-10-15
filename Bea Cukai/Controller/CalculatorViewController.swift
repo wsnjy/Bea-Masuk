@@ -9,11 +9,12 @@
 import UIKit
 
 class CalculatorViewController: UITableViewController, UITextFieldDelegate, BottomBackground{
-
+    
     @IBOutlet weak var btnHitung: ButtonCalculate!
     
     let titleVC =  "Kalkulator"
     let cellName = "CalculatorCell"
+    
     let heightRow:CGFloat = 70
     let numberOfSection = 1
     
@@ -21,32 +22,25 @@ class CalculatorViewController: UITableViewController, UITextFieldDelegate, Bott
         return CalculatorViewModel().dummyData
     }()
     
-    let footer = UIView()
-        
     override func viewDidLoad() {
-        
         super.viewDidLoad()
-        title = titleVC
         tableSetting()
         setBackButton()
-        footerConfig()
+        settingButton()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        title = titleVC
     }
     
     func tableSetting() {
+        tableView.register(UINib(nibName: cellName, bundle: nil), forCellReuseIdentifier: cellName)
         tableView.sectionFooterHeight = UITableViewAutomaticDimension
     }
     
     func settingButton() {
-//        btnHitung.rounded(5)
-//        btnHitung.addTarget(self, action: #selector(self.saveAction), for:.touchUpInside)
-    }
-    
-    func footerConfig() {
-        
-        let bottomImage = BottomImage()
-        footer.frame = CGRect(x: 0, y:0, width:bottomImage.frame.size.width, height:bottomImage.frame.size.height)
-        footer.addSubview(bottomImage)
-        tableView.tableFooterView = footer
+        btnHitung.rounded(5)
+        btnHitung.addTarget(self, action: #selector(self.saveAction), for:.touchUpInside)
     }
     
     func saveAction() {
@@ -75,17 +69,19 @@ extension CalculatorViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: cellName, for: indexPath) as! CalculatorCell
         
-        cell.condition = .cari
+        cell.condition = .calculator
         cell.setDataCell(indexPath: indexPath, delegate: self)
         
         return cell
     }
     
-    func addFooterSearch(_ section:Int) -> UIView {
-        let viewFooter = FooterSearch.loadFromXib() as FooterSearch
-        viewFooter.delegate = self
-        viewFooter.btn.tag = section
-        return viewFooter
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if indexPath.row == 2 {
+            let search = SearchViewController()
+            self.navigationController?.pushViewController(search, animated: true)
+        }
+        
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
@@ -94,7 +90,6 @@ extension CalculatorViewController {
             return
         }
         
-        print(textField.text!)
         print(dataForm[textField.tag])
         dataForm[textField.tag] = Decimal(string:textField.text!)!
     }
@@ -105,11 +100,11 @@ extension CalculatorViewController {
     
 }
 
-
-extension CalculatorViewController: FooterSearchDelegate {
-    func wedus(_ sender:Int) {
-        print("wedus \(sender)")
+extension CalculatorViewController {
+    
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        view.endEditing(true)
     }
+    
 }
-
 

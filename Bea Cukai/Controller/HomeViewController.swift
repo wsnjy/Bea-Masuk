@@ -40,10 +40,15 @@ class HomeViewController: UIViewController, BottomBackground{
         super.viewDidLoad()
         viewConfiguration()
         getAllRates()
+        dataJson()
     }
     
-    func viewConfiguration() {
+    override func viewWillAppear(_ animated: Bool) {
         title = titleController
+    }
+    
+    
+    func viewConfiguration() {
         infoKursViewConfig()
         menuConfig()
         showBottomBackground()
@@ -93,7 +98,7 @@ class HomeViewController: UIViewController, BottomBackground{
                         $0["uraian"]?.range(of: "kendaraan") != nil
                     })
                     
-                    print(filteredTarif)
+                    print(filteredTarif[0])
                     
                 } else {
                     print("JSON is invalid")

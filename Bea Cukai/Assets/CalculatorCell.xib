@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CalculatorCell" rowHeight="64" id="v88-ZM-OXy" customClass="CalculatorCell" customModule="Bea_Cukai" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="v88-ZM-OXy" id="8te-Ta-kwV">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="63.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="760-Cm-Z7R">
+                        <rect key="frame" x="12" y="12" width="351" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.52549019610000003" green="0.72156862749999995" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="value of something" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cpm-0S-Z4y">
+                        <rect key="frame" x="12" y="35.5" width="351" height="16"/>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Cpm-0S-Z4y" firstAttribute="top" secondItem="760-Cm-Z7R" secondAttribute="bottom" constant="9" id="0EW-6t-0qO"/>
+                    <constraint firstItem="760-Cm-Z7R" firstAttribute="top" secondItem="8te-Ta-kwV" secondAttribute="top" constant="12" id="0wS-If-JzJ"/>
+                    <constraint firstItem="760-Cm-Z7R" firstAttribute="leading" secondItem="8te-Ta-kwV" secondAttribute="leading" constant="12" id="Y73-dz-2XQ"/>
+                    <constraint firstAttribute="trailing" secondItem="Cpm-0S-Z4y" secondAttribute="trailing" constant="12" id="dsF-X4-Ud6"/>
+                    <constraint firstAttribute="bottom" secondItem="Cpm-0S-Z4y" secondAttribute="bottom" constant="12" id="duE-Vi-Cw7"/>
+                    <constraint firstItem="Cpm-0S-Z4y" firstAttribute="leading" secondItem="8te-Ta-kwV" secondAttribute="leading" constant="12" id="tOH-D3-fVc"/>
+                    <constraint firstAttribute="trailing" secondItem="760-Cm-Z7R" secondAttribute="trailing" constant="12" id="w0u-7O-L5a"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="textField" destination="Cpm-0S-Z4y" id="RRA-co-LLj"/>
+                <outlet property="txtLabel" destination="760-Cm-Z7R" id="fYF-dB-FPU"/>
+            </connections>
+            <point key="canvasLocation" x="-190.5" y="-57"/>
+        </tableViewCell>
+    </objects>
+</document>

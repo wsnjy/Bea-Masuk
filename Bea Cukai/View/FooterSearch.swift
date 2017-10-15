@@ -9,7 +9,7 @@
 import UIKit
 
 protocol FooterSearchDelegate: class {
-    func wedus(_ sender:Int)
+    func buttonAction(_ sender:Int)
 }
 
 
@@ -28,7 +28,7 @@ class FooterSearch: UIView {
     }
 
     @IBAction func btnAction(_ sender: UIButton) {
-        delegate?.wedus(sender.tag)
+        delegate?.buttonAction(sender.tag)
     }
 }
 

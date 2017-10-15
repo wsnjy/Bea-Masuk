@@ -15,7 +15,7 @@ enum cellCondition {
     case result
 }
 
-class CalculatorCell: UITableViewCell {
+class CalculatorCell: UITableViewCell, BeaPickerDelegate{
     
     @IBOutlet weak var txtLabel: UILabel!
     @IBOutlet weak var txtPercent: UILabel!
@@ -24,9 +24,11 @@ class CalculatorCell: UITableViewCell {
     @IBOutlet weak var widthPercentage: NSLayoutConstraint!
 
     var condition:cellCondition = cellCondition.calculator
-    
+
+    let pickerView = BeaPickerView.loadFromXib() as BeaPickerView
+
     let cellConfigData:[[String:String]] = {
-        return CalculatorViewModel().cellConfigData
+        return CalculatorViewModel().configCalculator
     }()
     
     override func awakeFromNib() {
@@ -41,7 +43,12 @@ class CalculatorCell: UITableViewCell {
     }
     
     func setDataCell(indexPath: IndexPath, delegate: UITextFieldDelegate) -> Void {
-        
+
+        textField.tag = indexPath.row
+        txtLabel.text = topTitle(indexPath)
+        textField.delegate = delegate
+        selectionStyle =  .none
+
         switch condition {
         case .calculator:
             calculatorConfig(indexPath)
@@ -53,22 +60,39 @@ class CalculatorCell: UITableViewCell {
             resultConfig(indexPath)
         }
         
-        txtLabel.text = topTitle(indexPath)
-        textField.tag = indexPath.row
-        textField.delegate = delegate
-
     }
     
     func calculatorConfig(_ indexPath:IndexPath) {
         textField.placeholder = placeholderText(indexPath)
         textField.isEnabled = true
         setAccessory(indexPath)
+        
+        pickerView.delegate = self
+
+        if indexPath.row == 5 || indexPath.row == 6{
+            if indexPath.row == 5 {
+                pickerView.pickerType = .tarif
+            }else{
+                pickerView.pickerType = .pembebasan
+            }
+            textField.inputView = pickerView
+        }
+        
     }
 
     func cariConfig(_ indexPath:IndexPath) {
         textField.placeholder = placeholderText(indexPath)
         textField.isEnabled = true
         textField.keyboardType = .default
+
+        if indexPath.section == 0 && indexPath.row == 0 {
+            pickerView.pickerType = .search
+            pickerView.delegate = self
+            textField.inputView = pickerView
+        }else if indexPath.section == 1{
+            textField.tag = 2
+            textField.keyboardType = .numberPad
+        }
     }
     
     func tarifConfig(_ indexPath:IndexPath) {
@@ -81,17 +105,16 @@ class CalculatorCell: UITableViewCell {
         txtLabelCenter.isActive = true
     }
 
-    
     func placeholderText(_ indexPath:IndexPath) -> String {
-        return CalculatorViewModel().placeholderText(indexPath)
+        return CalculatorViewModel().placeholderText(indexPath, condition)
     }
     
     func topTitle(_ indexPath: IndexPath) -> String {
-        return CalculatorViewModel().topTitle(indexPath)
+        return CalculatorViewModel().topTitle(indexPath, condition)
     }
 
     func percentage(_ indexPath: IndexPath) -> String {
-        return CalculatorViewModel().percentage(indexPath)
+        return CalculatorViewModel().percentage(indexPath, condition)
     }
     
     func setAccessory(_ indexPath: IndexPath) -> Void {
@@ -99,9 +122,21 @@ class CalculatorCell: UITableViewCell {
         guard indexPath.row == 2 else {
             return
         }
+        textField.isEnabled = false
         accessoryType = UITableViewCellAccessoryType.disclosureIndicator
-        widthPercentage.constant = 0
     }
-
+    
+    func donePicker() {
+        textField.resignFirstResponder()
+    }
+    
+    func addValueToTextField(value: String) {
+       
+        if pickerView.pickerType == .search{
+            textField.text = value
+        }else{
+            textField.text = BeaPickerViewModel().valueForTarifOrPembebasan(value)
+        }
+    }
     
 }

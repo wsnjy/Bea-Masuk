@@ -25,6 +25,12 @@
 		6536A3631F88596E00A06D59 /* KursInStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6536A3621F88596E00A06D59 /* KursInStack.swift */; };
 		6536A3651F885BA400A06D59 /* KursViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6536A3641F885BA400A06D59 /* KursViewModel.swift */; };
 		6536A3671F88602A00A06D59 /* Symbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6536A3661F88602A00A06D59 /* Symbol.swift */; };
+		653AD00A1F9304B700733876 /* BeaPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653AD0091F9304B600733876 /* BeaPickerView.swift */; };
+		653AD00C1F9361FE00733876 /* BeaPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 653AD00B1F9361FE00733876 /* BeaPickerView.xib */; };
+		653AD00E1F93837200733876 /* BeaPickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653AD00D1F93837200733876 /* BeaPickerViewModel.swift */; };
+		653AD0111F93A31C00733876 /* ResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653AD00F1F93A31C00733876 /* ResultCell.swift */; };
+		653AD0121F93A31C00733876 /* ResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 653AD0101F93A31C00733876 /* ResultCell.xib */; };
+		653AD0141F93A68C00733876 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653AD0131F93A68C00733876 /* ResultViewController.swift */; };
 		654222AA1F63E66A00CE3A84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654222A91F63E66A00CE3A84 /* AppDelegate.swift */; };
 		654222BE1F646DA400CE3A84 /* Biaya.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654222BD1F646DA400CE3A84 /* Biaya.swift */; };
 		654222C11F646FE100CE3A84 /* BiayaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654222C01F646FE100CE3A84 /* BiayaViewModel.swift */; };
@@ -42,6 +48,9 @@
 		65C0DBFB1F84B0E100729C1C /* FooterSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C0DBFA1F84B0E100729C1C /* FooterSearch.swift */; };
 		65C8BCA51F765FF900E95E71 /* ButtonCalculate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C8BCA41F765FF900E95E71 /* ButtonCalculate.swift */; };
 		65CC81F51F8FC71E002E156A /* BottomImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CC81F41F8FC71E002E156A /* BottomImage.swift */; };
+		65CC81F71F91A17B002E156A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CC81F61F91A17B002E156A /* SearchViewController.swift */; };
+		65CC81F91F91A66D002E156A /* CalculatorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65CC81F81F91A66D002E156A /* CalculatorCell.xib */; };
+		65CC81FB1F922552002E156A /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CC81FA1F922552002E156A /* SearchViewModel.swift */; };
 		65F1F4F61F7AB76D0062F63F /* UILabel+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F1F4F51F7AB76D0062F63F /* UILabel+Size.swift */; };
 		65F5CB661F751A46005432D8 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65F5CB651F751A46005432D8 /* Launch.storyboard */; };
 /* End PBXBuildFile section */
@@ -68,6 +77,12 @@
 		6536A3621F88596E00A06D59 /* KursInStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KursInStack.swift; sourceTree = "<group>"; };
 		6536A3641F885BA400A06D59 /* KursViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KursViewModel.swift; sourceTree = "<group>"; };
 		6536A3661F88602A00A06D59 /* Symbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbol.swift; sourceTree = "<group>"; };
+		653AD0091F9304B600733876 /* BeaPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaPickerView.swift; sourceTree = "<group>"; };
+		653AD00B1F9361FE00733876 /* BeaPickerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BeaPickerView.xib; sourceTree = "<group>"; };
+		653AD00D1F93837200733876 /* BeaPickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaPickerViewModel.swift; sourceTree = "<group>"; };
+		653AD00F1F93A31C00733876 /* ResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCell.swift; sourceTree = "<group>"; };
+		653AD0101F93A31C00733876 /* ResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultCell.xib; sourceTree = "<group>"; };
+		653AD0131F93A68C00733876 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		654222A61F63E66A00CE3A84 /* Bea Cukai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bea Cukai.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		654222A91F63E66A00CE3A84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		654222B51F63E66A00CE3A84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -87,6 +102,9 @@
 		65C0DBFA1F84B0E100729C1C /* FooterSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterSearch.swift; sourceTree = "<group>"; };
 		65C8BCA41F765FF900E95E71 /* ButtonCalculate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCalculate.swift; sourceTree = "<group>"; };
 		65CC81F41F8FC71E002E156A /* BottomImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomImage.swift; sourceTree = "<group>"; };
+		65CC81F61F91A17B002E156A /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		65CC81F81F91A66D002E156A /* CalculatorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalculatorCell.xib; sourceTree = "<group>"; };
+		65CC81FA1F922552002E156A /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		65F1F4F51F7AB76D0062F63F /* UILabel+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Size.swift"; sourceTree = "<group>"; };
 		65F5CB651F751A46005432D8 /* Launch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
 		66FEB98BAA00F6C7FB43A4EE /* Pods-Bea Cukai.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bea Cukai.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bea Cukai/Pods-Bea Cukai.release.xcconfig"; sourceTree = "<group>"; };
@@ -132,6 +150,9 @@
 				65F5CB651F751A46005432D8 /* Launch.storyboard */,
 				651816791F853312002799D8 /* ReloadView.xib */,
 				6536A35C1F87D87100A06D59 /* Kurs.xib */,
+				65CC81F81F91A66D002E156A /* CalculatorCell.xib */,
+				653AD00B1F9361FE00733876 /* BeaPickerView.xib */,
+				653AD0101F93A31C00733876 /* ResultCell.xib */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -188,6 +209,8 @@
 				6591ED6F1F66EE8000A46885 /* CalculatorViewController.swift */,
 				6515C32D1F7402400069EBA9 /* HomeViewController.swift */,
 				6536A35E1F87DD6200A06D59 /* KursViewController.swift */,
+				65CC81F61F91A17B002E156A /* SearchViewController.swift */,
+				653AD0131F93A68C00733876 /* ResultViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -210,6 +233,8 @@
 				65550A5E1F6AB6BA00F036E9 /* CalculatorViewModel.swift */,
 				6532FCFE1F78030100459DA4 /* HomeViewModel.swift */,
 				6536A3641F885BA400A06D59 /* KursViewModel.swift */,
+				65CC81FA1F922552002E156A /* SearchViewModel.swift */,
+				653AD00D1F93837200733876 /* BeaPickerViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -228,6 +253,7 @@
 		6591ED6C1F66EDD500A46885 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				653AD00F1F93A31C00733876 /* ResultCell.swift */,
 				6591ED711F66EF0500A46885 /* CalculatorCell.swift */,
 				6549E2F81F82AA39009B46E1 /* ReloadView.swift */,
 				65C0DBFA1F84B0E100729C1C /* FooterSearch.swift */,
@@ -235,6 +261,7 @@
 				65C8BCA41F765FF900E95E71 /* ButtonCalculate.swift */,
 				6536A3621F88596E00A06D59 /* KursInStack.swift */,
 				65CC81F41F8FC71E002E156A /* BottomImage.swift */,
+				653AD0091F9304B600733876 /* BeaPickerView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -328,6 +355,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6558B9391F7D79F7004FFBB6 /* SourceSansPro-Regular.otf in Resources */,
+				65CC81F91F91A66D002E156A /* CalculatorCell.xib in Resources */,
+				653AD0121F93A31C00733876 /* ResultCell.xib in Resources */,
 				651816781F8532D8002799D8 /* FooterSearch.xib in Resources */,
 				6558B93A1F7D79F7004FFBB6 /* SIL Open Font License.txt in Resources */,
 				6518167A1F853312002799D8 /* ReloadView.xib in Resources */,
@@ -337,6 +366,7 @@
 				6525CE7F1F67189400D4BFE2 /* Main.storyboard in Resources */,
 				6536A35D1F87D87100A06D59 /* Kurs.xib in Resources */,
 				657AA3951F7D65F8004F3CA6 /* Images.xcassets in Resources */,
+				653AD00C1F9361FE00733876 /* BeaPickerView.xib in Resources */,
 				65F5CB661F751A46005432D8 /* Launch.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -403,7 +433,11 @@
 				6536A3631F88596E00A06D59 /* KursInStack.swift in Sources */,
 				6536A3671F88602A00A06D59 /* Symbol.swift in Sources */,
 				65550A5F1F6AB6BA00F036E9 /* CalculatorViewModel.swift in Sources */,
+				653AD00E1F93837200733876 /* BeaPickerViewModel.swift in Sources */,
+				653AD0111F93A31C00733876 /* ResultCell.swift in Sources */,
 				65CC81F51F8FC71E002E156A /* BottomImage.swift in Sources */,
+				65CC81F71F91A17B002E156A /* SearchViewController.swift in Sources */,
+				653AD00A1F9304B700733876 /* BeaPickerView.swift in Sources */,
 				654222C11F646FE100CE3A84 /* BiayaViewModel.swift in Sources */,
 				6518CBE41F7FA0DD00A2EBB2 /* UIViewController+Custom.swift in Sources */,
 				654222BE1F646DA400CE3A84 /* Biaya.swift in Sources */,
@@ -419,6 +453,8 @@
 				6518CBE61F7FBF4700A2EBB2 /* Tarif.swift in Sources */,
 				6518CBDE1F7F6AD800A2EBB2 /* BottomBackgrund.swift in Sources */,
 				6515C32E1F7402400069EBA9 /* HomeViewController.swift in Sources */,
+				65CC81FB1F922552002E156A /* SearchViewModel.swift in Sources */,
+				653AD0141F93A68C00733876 /* ResultViewController.swift in Sources */,
 				6549E2F91F82AA39009B46E1 /* ReloadView.swift in Sources */,
 				6591ED721F66EF0500A46885 /* CalculatorCell.swift in Sources */,
 			);

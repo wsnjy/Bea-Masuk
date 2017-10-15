@@ -11,7 +11,7 @@ import Foundation
 
 struct CalculatorViewModel {
     
-    let cellConfigData:Array = [
+    let configCalculator:Array = [
                                     ["top_title":"FOB ($)","placeholder":"Masukan nilai FOB barang"],
                                     ["top_title":"Kurs ($1 USD)","placeholder":""],
                                     ["top_title":"Tarif Bea Masuk (%)","placeholder":"Tap untuk mengetahui tarif bea masuk"],
@@ -22,6 +22,19 @@ struct CalculatorViewModel {
                                     ["top_title":"Asuransi ($ USD)","placeholder":""],
                                     ["top_title":"Freight ($ USD)","placeholder":""]
     ]
+    
+    let configSearch:Array = [
+        [
+            ["top_title":"Metode Pencarian","placeholder":"pilih"],
+            ["top_title":"Kata Kunci atau HS Code","placeholder":"Masukan Parameter Pencarian"],
+            [:], // empty dictionary for button cari
+        ],
+        [
+            ["top_title":"Input Manual (%)","placeholder":"Masukan nilai tarif bea masuk"],
+            [:], // empty dictionary for button simpan
+        ]
+    ]
+
     
 //    let cellConfigData:Array = [
 //        ["top_title":"Metode Pencarian","placeholder":"pilih"],
@@ -41,20 +54,39 @@ struct CalculatorViewModel {
 }
 
 extension CalculatorViewModel {
-    func placeholderText(_ indexPath:IndexPath) -> String {
-        return cellConfigData[indexPath.row]["placeholder"]!
+    
+    func placeholderText(_ indexPath:IndexPath, _ caseCondition:cellCondition) -> String {
+        let dict = getDictionary(indexPath, caseCondition)
+        return dict["placeholder"]!
     }
     
-    func topTitle(_ indexPath: IndexPath) -> String {
-        return cellConfigData[indexPath.row]["top_title"]!
+    func topTitle(_ indexPath: IndexPath, _ caseCondition:cellCondition) -> String {
+        let dict = getDictionary(indexPath, caseCondition)
+        return dict["top_title"]!
     }
 
-    func percentage(_ indexPath: IndexPath) -> String {
-        return "\(cellConfigData[indexPath.row]["percentage"]!)%"
+    func percentage(_ indexPath: IndexPath, _ caseCondition:cellCondition) -> String {
+        let dict = getDictionary(indexPath, caseCondition)
+        return "\(dict["percentage"]!)%"
     }
 
     func rowCount() -> Int {
-        return cellConfigData.count
+        return configCalculator.count
+    }
+    
+    func getDictionary(_ indexPath: IndexPath, _ caseCondition:cellCondition) -> [String:String] {
+        
+        switch caseCondition {
+        case .calculator:
+            return configCalculator[indexPath.row]
+        case .cari:
+            return configSearch[indexPath.section][indexPath.row]
+        case .tarif:
+            return [:]
+        case .result:
+            return [:]
+        }
+        
     }
     
 }

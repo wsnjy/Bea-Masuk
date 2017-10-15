@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SourceSansPro-Regular.otf">
+            <string>SourceSansPro-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="ResultCell" customModule="Bea_Cukai" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTv-gw-Ar5" userLabel="code">
+                        <rect key="frame" x="12" y="0.0" width="267.5" height="25.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.52549019610000003" green="0.72156862749999995" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fj2-Sq-dRi" userLabel="description">
+                        <rect key="frame" x="12" y="25.5" width="267.5" height="18"/>
+                        <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="73i-8o-bDW" userLabel="percent">
+                        <rect key="frame" x="279.5" y="13" width="32.5" height="18"/>
+                        <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="73i-8o-bDW" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="Hn7-Ol-I7A"/>
+                    <constraint firstItem="fj2-Sq-dRi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="LAE-ey-hoI"/>
+                    <constraint firstItem="73i-8o-bDW" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="W09-LB-yB3"/>
+                    <constraint firstItem="fj2-Sq-dRi" firstAttribute="top" secondItem="hTv-gw-Ar5" secondAttribute="bottom" id="ZGP-ol-ssD"/>
+                    <constraint firstItem="73i-8o-bDW" firstAttribute="leading" secondItem="fj2-Sq-dRi" secondAttribute="trailing" id="buA-Ln-596"/>
+                    <constraint firstItem="hTv-gw-Ar5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="dQ1-Nf-IRo"/>
+                    <constraint firstItem="73i-8o-bDW" firstAttribute="leading" secondItem="hTv-gw-Ar5" secondAttribute="trailing" id="jy2-op-xMR"/>
+                    <constraint firstItem="hTv-gw-Ar5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="l4I-Oe-bmA"/>
+                    <constraint firstAttribute="bottom" secondItem="fj2-Sq-dRi" secondAttribute="bottom" id="ucf-l6-niU"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="labelCode" destination="hTv-gw-Ar5" id="yWd-MY-Nf1"/>
+                <outlet property="labelDescription" destination="fj2-Sq-dRi" id="YlU-eC-WZ0"/>
+                <outlet property="labelPercent" destination="73i-8o-bDW" id="P5f-kx-RGU"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>
