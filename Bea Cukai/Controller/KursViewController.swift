@@ -17,6 +17,7 @@ class KursViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 //        configStackKurs([])
+        setBackButton()
     }
 
     override func didReceiveMemoryWarning() {

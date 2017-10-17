@@ -8,10 +8,6 @@
 
 import UIKit
 
-struct mbuhhh {
-    
-}
-
 class APIManager: NSObject {
 
     static let sharedInstance = APIManager()

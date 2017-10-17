@@ -45,8 +45,10 @@ class CalculatorViewController: UITableViewController, UITextFieldDelegate, Bott
     
     func saveAction() {
         view.endEditing(true)
-        let biayaViewModel = BiayaViewModel(biaya: Biaya.dataBiaya(data: dataForm))
-        print("the data \(biayaViewModel.totalPungutan())")
+        let biaya = BiayaViewController()
+        biaya.dataForm = self.dataForm
+        let nav = UINavigationController(rootViewController: biaya)
+        self.present(nav, animated: true, completion: nil)
     }
         
 }

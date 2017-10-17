@@ -18,15 +18,16 @@ extension Tarif {
     
     func dataTarif(_ data:[String:String]) -> Tarif {
         
-        return Tarif(HS_Code:data["HS_Code"],
-                     description:data["description"],
-                     percent:data["percent"])
+        return Tarif(HS_Code:data["hs_code"],
+                     description:data["uraian"],
+                     percent:data["mfn"])
     }
     
-    func dataJson() -> [[String:String]]{
+    func getAllResult(parameter:String, value:String) -> [Tarif] {
         
-        var result:[[String:String]] = [[:]]
+        let parameter = newKey(parameter)
         
+        var result:[Tarif] = []
         
         do {
             if let file = Bundle.main.url(forResource: "btki", withExtension: "json") {
@@ -37,12 +38,12 @@ extension Tarif {
                     print(object)
                 } else if let object = json as? [[String:String]] {
                     // json is a array
-                    
+                    print("\(parameter) \(value)")
                     let filteredTarif = object.filter({
-                        $0["uraian"]?.range(of: "kendaraan") != nil
+                        $0[parameter]?.range(of: value) != nil
                     })
-                    print(filteredTarif[0])
-                    result = filteredTarif
+                    print(filteredTarif)
+                    result = setTarifData(array: filteredTarif)
                 } else {
                     print("JSON is invalid")
                 }
@@ -54,8 +55,34 @@ extension Tarif {
         }
         
         return result
+        
     }
 
+    func setTarifData(array:[[String:String]]) -> [Tarif]{
+        
+        var result:[Tarif] = []
+        
+        for tarif in array{
+            
+            let data = dataTarif(tarif)
+            result.append(data)
+            
+        }
+        
+        return result
+    }
+    
+    func newKey(_ key:String) -> String {
+        
+        switch key {
+        case "Deskripsi Barang":
+            return "uraian"
+        default:
+            return "hs_code"
+        }
+        
+    }
+    
     
 }
 

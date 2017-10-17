@@ -36,6 +36,7 @@
 		654222C11F646FE100CE3A84 /* BiayaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654222C01F646FE100CE3A84 /* BiayaViewModel.swift */; };
 		6549E2F91F82AA39009B46E1 /* ReloadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6549E2F81F82AA39009B46E1 /* ReloadView.swift */; };
 		65550A5F1F6AB6BA00F036E9 /* CalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65550A5E1F6AB6BA00F036E9 /* CalculatorViewModel.swift */; };
+		6555BEFB1F962A3400C63F14 /* ResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6555BEFA1F962A3400C63F14 /* ResultViewModel.swift */; };
 		6558B9391F7D79F7004FFBB6 /* SourceSansPro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6558B9351F7D79F1004FFBB6 /* SourceSansPro-Regular.otf */; };
 		6558B93A1F7D79F7004FFBB6 /* SIL Open Font License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6558B9361F7D79F3004FFBB6 /* SIL Open Font License.txt */; };
 		6558B93B1F7D79F7004FFBB6 /* SourceSansPro-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6558B9371F7D79F3004FFBB6 /* SourceSansPro-Semibold.otf */; };
@@ -44,6 +45,7 @@
 		657AA3951F7D65F8004F3CA6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 657AA3941F7D65F8004F3CA6 /* Images.xcassets */; };
 		6591ED701F66EE8000A46885 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6591ED6F1F66EE8000A46885 /* CalculatorViewController.swift */; };
 		6591ED721F66EF0500A46885 /* CalculatorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6591ED711F66EF0500A46885 /* CalculatorCell.swift */; };
+		65B8D06F1F965697009AFD02 /* BiayaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B8D06E1F965697009AFD02 /* BiayaViewController.swift */; };
 		65C0DBF91F849D9000729C1C /* btki.json in Resources */ = {isa = PBXBuildFile; fileRef = 65C0DBF71F84067900729C1C /* btki.json */; };
 		65C0DBFB1F84B0E100729C1C /* FooterSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C0DBFA1F84B0E100729C1C /* FooterSearch.swift */; };
 		65C8BCA51F765FF900E95E71 /* ButtonCalculate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C8BCA41F765FF900E95E71 /* ButtonCalculate.swift */; };
@@ -90,6 +92,7 @@
 		654222C01F646FE100CE3A84 /* BiayaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiayaViewModel.swift; sourceTree = "<group>"; };
 		6549E2F81F82AA39009B46E1 /* ReloadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReloadView.swift; sourceTree = "<group>"; };
 		65550A5E1F6AB6BA00F036E9 /* CalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewModel.swift; sourceTree = "<group>"; };
+		6555BEFA1F962A3400C63F14 /* ResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewModel.swift; sourceTree = "<group>"; };
 		6558B9351F7D79F1004FFBB6 /* SourceSansPro-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Regular.otf"; sourceTree = "<group>"; };
 		6558B9361F7D79F3004FFBB6 /* SIL Open Font License.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "SIL Open Font License.txt"; sourceTree = "<group>"; };
 		6558B9371F7D79F3004FFBB6 /* SourceSansPro-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Semibold.otf"; sourceTree = "<group>"; };
@@ -98,6 +101,7 @@
 		657AA3941F7D65F8004F3CA6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6591ED6F1F66EE8000A46885 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		6591ED711F66EF0500A46885 /* CalculatorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorCell.swift; sourceTree = "<group>"; };
+		65B8D06E1F965697009AFD02 /* BiayaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiayaViewController.swift; sourceTree = "<group>"; };
 		65C0DBF71F84067900729C1C /* btki.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = btki.json; sourceTree = "<group>"; };
 		65C0DBFA1F84B0E100729C1C /* FooterSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterSearch.swift; sourceTree = "<group>"; };
 		65C8BCA41F765FF900E95E71 /* ButtonCalculate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCalculate.swift; sourceTree = "<group>"; };
@@ -145,7 +149,6 @@
 				65C0DBF81F84068000729C1C /* Json */,
 				6558B93D1F7D7A26004FFBB6 /* Font */,
 				657AA3941F7D65F8004F3CA6 /* Images.xcassets */,
-				651816771F85323D002799D8 /* FooterSearch.xib */,
 				6525CE7E1F67189400D4BFE2 /* Main.storyboard */,
 				65F5CB651F751A46005432D8 /* Launch.storyboard */,
 				651816791F853312002799D8 /* ReloadView.xib */,
@@ -161,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				652940DA1F75FF8800B2B660 /* ViewShadow.swift */,
+				651816771F85323D002799D8 /* FooterSearch.xib */,
 				6518CBDD1F7F6AD800A2EBB2 /* BottomBackgrund.swift */,
 				6536A3601F8852EE00A06D59 /* Reloadable.swift */,
 			);
@@ -211,6 +215,7 @@
 				6536A35E1F87DD6200A06D59 /* KursViewController.swift */,
 				65CC81F61F91A17B002E156A /* SearchViewController.swift */,
 				653AD0131F93A68C00733876 /* ResultViewController.swift */,
+				65B8D06E1F965697009AFD02 /* BiayaViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -235,6 +240,7 @@
 				6536A3641F885BA400A06D59 /* KursViewModel.swift */,
 				65CC81FA1F922552002E156A /* SearchViewModel.swift */,
 				653AD00D1F93837200733876 /* BeaPickerViewModel.swift */,
+				6555BEFA1F962A3400C63F14 /* ResultViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -437,6 +443,7 @@
 				653AD0111F93A31C00733876 /* ResultCell.swift in Sources */,
 				65CC81F51F8FC71E002E156A /* BottomImage.swift in Sources */,
 				65CC81F71F91A17B002E156A /* SearchViewController.swift in Sources */,
+				65B8D06F1F965697009AFD02 /* BiayaViewController.swift in Sources */,
 				653AD00A1F9304B700733876 /* BeaPickerView.swift in Sources */,
 				654222C11F646FE100CE3A84 /* BiayaViewModel.swift in Sources */,
 				6518CBE41F7FA0DD00A2EBB2 /* UIViewController+Custom.swift in Sources */,
@@ -453,6 +460,7 @@
 				6518CBE61F7FBF4700A2EBB2 /* Tarif.swift in Sources */,
 				6518CBDE1F7F6AD800A2EBB2 /* BottomBackgrund.swift in Sources */,
 				6515C32E1F7402400069EBA9 /* HomeViewController.swift in Sources */,
+				6555BEFB1F962A3400C63F14 /* ResultViewModel.swift in Sources */,
 				65CC81FB1F922552002E156A /* SearchViewModel.swift in Sources */,
 				653AD0141F93A68C00733876 /* ResultViewController.swift in Sources */,
 				6549E2F91F82AA39009B46E1 /* ReloadView.swift in Sources */,

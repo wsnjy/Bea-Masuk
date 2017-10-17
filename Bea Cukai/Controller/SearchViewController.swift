@@ -12,6 +12,8 @@ class SearchViewController: UITableViewController, UITextFieldDelegate, BottomBa
 
     let cellName = "CalculatorCell"
     let titleController = "Tarif Bea Masuk"
+    let simpan = "Simpan".uppercased()
+    let cari  = "Cari".uppercased()
     var fieldValue:[String] = ["","",""]
 
     override func viewDidLoad() {
@@ -72,9 +74,9 @@ extension SearchViewController {
     func cellForButton(_ indexPath:IndexPath) -> UITableViewCell{
         
         let titleButton:String = {
-            var title = "SIMPAN"
+            var title = simpan
             if indexPath.section == 0 {
-                title = "CARI"
+                title = cari
             }
             return title
         }()
@@ -94,10 +96,28 @@ extension SearchViewController {
     func buttonAction(_ sender: Int) {
         view.endEditing(true)
         print(fieldValue)
+        
+        if sender == 0{
+            openResultPage()
+        }
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         fieldValue[textField.tag] = textField.text!
+    }
+    
+    func openResultPage() {
+        
+        let result = ResultViewController()
+        let tarif = Tarif().getAllResult(parameter: fieldValue[0], value: fieldValue[1])
+        result.result = ResultViewModel(result: tarif).result
+        let nav = UINavigationController(rootViewController: result)
+        self.present(nav, animated: true, completion: nil)
+        
+    }
+    
+    func back(){
+        self.navigationController?.popoverPresentationController
     }
     
 }

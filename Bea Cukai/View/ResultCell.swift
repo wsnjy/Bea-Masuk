@@ -17,6 +17,7 @@ class ResultCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        selectionStyle = .none
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -25,12 +26,18 @@ class ResultCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configCell(_ indexPath:IndexPath){
+    func configCell(indexPath:IndexPath, data:[Tarif]){
         
-        labelCode.text = "123"
-        labelDescription.text = "Description"
-        labelPercent.text = "10%"
+        labelCode.text = ResultViewModel().labelCode(indexPath, data)
+        labelDescription.text = data[indexPath.row].description
+        labelPercent.text = ResultViewModel().labelPercent(indexPath, data)
         
+    }
+    
+    func configForBiaya(_ indexPath:IndexPath, _ data:[Decimal])  {
+        labelCode.text = ResultViewModel().leftLabel(indexPath)
+        labelPercent.text = String(describing: data[indexPath.row])
+        labelDescription.isHidden = true
     }
     
 }
