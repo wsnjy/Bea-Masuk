@@ -8,8 +8,14 @@
 
 import UIKit
 
+protocol resultDelegate {
+    func sendValue(_ value:String)
+}
+
 class ResultViewController: UITableViewController, BottomBackground {
 
+    var delegate:resultDelegate?
+    
     let cellName = "ResultCell"
     let titleVC    = "Tarif Bea Masuk"
     let numberOfSection = 1
@@ -64,6 +70,8 @@ extension ResultViewController {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(result[indexPath.row].percent!)
+        delegate?.sendValue(result[indexPath.row].percent!)
+        dismisss()
     }
     
 }

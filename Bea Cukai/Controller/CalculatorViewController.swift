@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CalculatorViewController: UITableViewController, UITextFieldDelegate, BottomBackground{
+class CalculatorViewController: UITableViewController, UITextFieldDelegate, BottomBackground, searchDelegate{
     
     @IBOutlet weak var btnHitung: ButtonCalculate!
     
@@ -81,6 +81,7 @@ extension CalculatorViewController {
         
         if indexPath.row == 2 {
             let search = SearchViewController()
+            search.delegate = self
             self.navigationController?.pushViewController(search, animated: true)
         }
         
@@ -106,6 +107,18 @@ extension CalculatorViewController {
     
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {
         view.endEditing(true)
+    }
+    
+    func sendValue(_ value: String) {
+        print("This is from calculator \(value)")
+        dataForm[2] = Decimal(string:value)!
+        
+        let indexPath = IndexPath(row: 2, section:0)
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellName, for: indexPath) as! CalculatorCell
+        cell.condition = .calculator
+        cell.setDataCell(indexPath: indexPath, delegate: self)
+        cell.textField.text = value
+
     }
     
 }

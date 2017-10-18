@@ -8,8 +8,14 @@
 
 import UIKit
 
-class SearchViewController: UITableViewController, UITextFieldDelegate, BottomBackground, FooterSearchDelegate {
+protocol searchDelegate {
+    func sendValue(_ value:String)
+}
 
+class SearchViewController: UITableViewController, UITextFieldDelegate, BottomBackground, FooterSearchDelegate, resultDelegate {
+
+    var delegate:searchDelegate?
+    
     let cellName = "CalculatorCell"
     let titleController = "Tarif Bea Masuk"
     let simpan = "Simpan".uppercased()
@@ -95,10 +101,11 @@ extension SearchViewController {
     
     func buttonAction(_ sender: Int) {
         view.endEditing(true)
-        print(fieldValue)
         
         if sender == 0{
             openResultPage()
+        }else{
+            sendValue(fieldValue.last!)
         }
     }
     
@@ -111,13 +118,15 @@ extension SearchViewController {
         let result = ResultViewController()
         let tarif = Tarif().getAllResult(parameter: fieldValue[0], value: fieldValue[1])
         result.result = ResultViewModel(result: tarif).result
+        result.delegate = self
         let nav = UINavigationController(rootViewController: result)
         self.present(nav, animated: true, completion: nil)
         
     }
     
-    func back(){
-        self.navigationController?.popoverPresentationController
+    func sendValue(_ value: String) {
+        delegate?.sendValue(value)
+        navigationController?.popViewController(animated: true)
     }
     
 }
