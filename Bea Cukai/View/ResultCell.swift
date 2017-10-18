@@ -32,12 +32,29 @@ class ResultCell: UITableViewCell {
         labelDescription.text = data[indexPath.row].description
         labelPercent.text = ResultViewModel().labelPercent(indexPath, data)
         
+        labelDescription.topAnchor.constraint(equalTo: labelCode.bottomAnchor, constant: 12).isActive = true
+    
     }
     
     func configForBiaya(_ indexPath:IndexPath, _ data:[Decimal])  {
+        
         labelCode.text = ResultViewModel().leftLabel(indexPath)
-        labelPercent.text = String(describing: data[indexPath.row])
+        labelPercent.text = ResultViewModel().rightLabel(data[indexPath.row])
         labelDescription.isHidden = true
+        
+        labelCode.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        
+        if indexPath.row == 4{
+            let font = UIFont(name: "SourceSansPro-Bold", size: 14.0)
+            labelCode.textColor = UIColor.black
+            labelCode.font = font
+            labelPercent.font = font
+            separatorInset = UIEdgeInsetsMake(0, 1000, 0, 0)
+        }else{
+            labelCode.font = UIFont(name: "SourceSansPro-Regular", size: 14.0)
+        }
+        
+        
     }
     
 }

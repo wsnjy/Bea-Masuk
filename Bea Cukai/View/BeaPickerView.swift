@@ -28,7 +28,8 @@ class BeaPickerView: UIView , UIPickerViewDelegate, UIPickerViewDataSource{
     @IBOutlet weak var picker: UIPickerView!
     
     let numberOfComponents  = 1    
-
+    var sendForFirstTime:Bool = true
+    
     override func awakeFromNib() {
         setPicker()
     }
@@ -38,7 +39,13 @@ class BeaPickerView: UIView , UIPickerViewDelegate, UIPickerViewDataSource{
     }
 
     @IBAction func done(_ sender: Any) {
-        delegate?.donePicker()
+        if sendForFirstTime {
+            sendDataValue(0)
+            sendForFirstTime = false
+            done("just call done so we can dismiss the picker")
+        }else{
+            delegate?.donePicker()
+        }
     }
 
     func setPicker() {
@@ -59,7 +66,7 @@ class BeaPickerView: UIView , UIPickerViewDelegate, UIPickerViewDataSource{
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        delegate?.addValueToTextField(value: getDataForPicker()[row])
+        sendDataValue(row)
     }
     
     func getDataForPicker() -> [String] {
@@ -72,9 +79,12 @@ class BeaPickerView: UIView , UIPickerViewDelegate, UIPickerViewDataSource{
         case .tarif:
             return BeaPickerViewModel().tarifPicker
         }
-
+        
     }
 
+    func sendDataValue(_ row:Int) {
+        delegate?.addValueToTextField(value: getDataForPicker()[row])
+    }
 
 }
 

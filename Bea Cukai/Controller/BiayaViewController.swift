@@ -12,6 +12,7 @@ class BiayaViewController: UITableViewController, BottomBackground {
 
     let numberOfSection = 1
     let numberOfRow = 5
+    let heightForRow:CGFloat = 65
     let titleVC  = "Kalkulator"
     let cellName = "ResultCell"
     
@@ -38,8 +39,6 @@ class BiayaViewController: UITableViewController, BottomBackground {
     func tableViewConfiguration() {
         
         tableView.isScrollEnabled = false
-        tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 65
         tableView.register(UINib(nibName: cellName, bundle: nil), forCellReuseIdentifier: cellName)
         tableView.tableFooterView = UIView()
         tableView.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height - 45)
@@ -59,6 +58,10 @@ extension BiayaViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return numberOfRow
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return heightForRow
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

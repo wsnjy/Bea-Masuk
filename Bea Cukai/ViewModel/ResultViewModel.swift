@@ -35,5 +35,9 @@ extension ResultViewModel {
         let label = ["Bea Masuk", "PPN", "PPN BM", "PPH Pasal 22", "Total Pungutan"]
         return label[indexPath.row]
     }
+
+    func rightLabel(_ data:Decimal) -> String {
+        return "IDR \(String(describing: data))"
+    }
     
 }
