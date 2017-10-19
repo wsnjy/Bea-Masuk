@@ -105,6 +105,9 @@ extension SearchViewController {
         if sender == 0{
             openResultPage()
         }else{
+            guard !fieldValue.last!.isEmpty else {
+                return
+            }
             sendValue(fieldValue.last!)
         }
     }

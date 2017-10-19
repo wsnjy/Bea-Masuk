@@ -16,7 +16,7 @@ class KursViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        configStackKurs([])
+        print(UserDefaults().string(forKey: "USD") as Any)
         setBackButton()
     }
 
@@ -26,6 +26,7 @@ class KursViewController: UIViewController {
     
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
     }
     
     func configStackKurs(_ data:[Kurs]) {

@@ -31,19 +31,20 @@ extension Kurs {
     
     static func configRates(data:[String:String]) -> [String:Kurs]{
         
-        var allRates:[String:Kurs]?
+        var allRates:[String:Kurs] = [:]
         
-        for (key,value) in data {
-            allRates![key] = setDataKurs(key, Decimal(string:value)!)
+        for (key,value) in data{
+            let value = Decimal(string:value)
+            allRates[key as String] = setDataKurs(key, value!)
         }
-        
-        return allRates!
+
+        return allRates
 
     }
 
     static func setDataKurs(_ id:String,_ value:Decimal) -> Kurs {
         return Kurs(idCurrency: id,
-                    valueInRupiah:value,
+                    valueInRupiah:convertToRupiah(value),
                     symbol:"\(symbolCurrency(id))",
                     currencyText:"\(countryCurrency(id))")
     }
@@ -56,9 +57,14 @@ extension Kurs {
         return Symbol().currencyCountry(idCurrency)
     }
     
-    func convertToRupiah(_ value:Decimal) -> String{
-        let userDefault = UserDefaults()
-        return userDefault.string(forKey: "USD")!
+    static func convertToRupiah(_ value:Decimal) -> Decimal{
+        let oneDollar = Decimal(string:UserDefaults().string(forKey: "USD")!)!
+        
+        guard oneDollar/value != 1 else {
+            return value
+        }
+        let inRupiah:Double = Double(oneDollar as NSNumber)/Double(value as NSNumber)
+        return Decimal(round(inRupiah))
     }
     
 }

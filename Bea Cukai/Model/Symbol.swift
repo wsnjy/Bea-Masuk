@@ -11,27 +11,31 @@ import Foundation
 struct Symbol {
     
     let dataSymbol:[String:String] = {
-        return ["USD":"$",
+        return [
+//            "USD":"$",
                 "EUR":"€",
                 "GBP":"£",
                 "JPY":"¥",
                 "CNY":"¥",
                 "SGD":"$",
-                "SAR":"﷼",
+                "MYR":"MY",
                 "HKD":"$",
-                "IDR":"Rp"]
+                "IDR":"Rp",
+                "AUD":"AUD",]
     }()
     
     let dataCountry:[String:String] = {
-        return ["USD":"United States Dollar",
+        return [
+//            "USD":"United States Dollar",
                 "EUR":"Euro Member Countries",
                 "GBP":"United Kingdom Pound",
                 "JPY":"Japan Yen",
                 "CNY":"Chinese Yuan Renmibi",
                 "SGD":"Singapore Dollar",
-                "SAR":"Saudi Arabia Riyal",
+                "MYR":"Malaysia Ringgit",
                 "HKD":"Hongkong Dollar",
-                "IDR":"Indonesia Rupiah"]
+                "IDR":"Indonesia Rupiah",
+                "AUD":"Australian Dollar"]
     }()
 
     

@@ -30,7 +30,6 @@ class APIManager: NSObject {
                 let currency = Decimal(json["rates"]["IDR"].doubleValue)
                 completion(json)
                 self.usdToIDR(currency)
-                
             case .failure(let error):
                 print(error)
             }

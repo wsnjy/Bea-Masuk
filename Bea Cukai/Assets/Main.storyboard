@@ -209,7 +209,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 EUR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8I7-rS-4M0">
-                                                                <rect key="frame" x="5" y="39" width="88.5" height="14"/>
+                                                                <rect key="frame" x="5" y="38.5" width="88.5" height="14"/>
                                                                 <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="12"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <nil key="highlightedColor"/>
@@ -241,7 +241,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 CNY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VXJ-R8-dvD">
-                                                                <rect key="frame" x="5" y="39" width="89" height="14"/>
+                                                                <rect key="frame" x="5" y="38.5" width="89" height="14"/>
                                                                 <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="12"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <nil key="highlightedColor"/>
@@ -278,7 +278,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 JPY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PjX-Bn-imJ">
-                                                                <rect key="frame" x="5" y="39" width="88.5" height="14"/>
+                                                                <rect key="frame" x="5" y="38.5" width="88.5" height="14"/>
                                                                 <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="12"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <nil key="highlightedColor"/>
@@ -360,7 +360,7 @@
                                                                 <rect key="frame" x="0.0" y="56.5" width="142" height="56.5"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rumus" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qwo-bu-leH">
-                                                                        <rect key="frame" x="30" y="22" width="82" height="14"/>
+                                                                        <rect key="frame" x="30" y="21.5" width="82" height="14"/>
                                                                         <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="12"/>
                                                                         <color key="textColor" red="0.3294117647" green="0.53725490200000003" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
@@ -422,7 +422,7 @@
                                                                 <rect key="frame" x="0.0" y="56.5" width="142" height="56.5"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cara Hitung" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BBY-4o-dmc">
-                                                                        <rect key="frame" x="30" y="21.5" width="82" height="14"/>
+                                                                        <rect key="frame" x="30" y="22" width="82" height="14"/>
                                                                         <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="12"/>
                                                                         <color key="textColor" red="0.3294117647" green="0.53725490200000003" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
@@ -489,7 +489,7 @@
                                                                 <rect key="frame" x="0.0" y="56.5" width="142" height="56.5"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FAQ" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pyl-g0-NCG">
-                                                                        <rect key="frame" x="30" y="22" width="82" height="14"/>
+                                                                        <rect key="frame" x="30" y="21.5" width="82" height="14"/>
                                                                         <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="12"/>
                                                                         <color key="textColor" red="0.3294117647" green="0.53725490200000003" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
@@ -551,7 +551,7 @@
                                                                 <rect key="frame" x="0.0" y="56.5" width="142" height="56.5"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pengaduan" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bHM-5A-G7z">
-                                                                        <rect key="frame" x="30" y="22" width="82" height="14"/>
+                                                                        <rect key="frame" x="30" y="21.5" width="82" height="14"/>
                                                                         <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="12"/>
                                                                         <color key="textColor" red="0.32941176470588235" green="0.53725490196078429" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
@@ -621,9 +621,12 @@
                     <navigationItem key="navigationItem" id="ZpA-6j-UhE"/>
                     <connections>
                         <outlet property="btnCalculate" destination="Cly-BX-hQw" id="qb0-l2-Tpa"/>
+                        <outlet property="cnyLabel" destination="VXJ-R8-dvD" id="FmJ-Tz-hba"/>
                         <outlet property="cnyValue" destination="rvs-Dq-xFc" id="Mfp-zk-WG0"/>
                         <outlet property="eurValue" destination="Ihi-eD-PGQ" id="HwX-C8-scL"/>
+                        <outlet property="euroLabel" destination="8I7-rS-4M0" id="H3D-mz-FS6"/>
                         <outlet property="infoKursTitle" destination="GLd-bp-5xY" id="SWM-hF-Hmv"/>
+                        <outlet property="jpyLabel" destination="PjX-Bn-imJ" id="wCs-dG-hVI"/>
                         <outlet property="jpyValue" destination="pF3-xA-UZf" id="0Pf-MT-4fb"/>
                         <outlet property="usdValue" destination="Lr3-8d-Lqr" id="JkQ-FC-ZPW"/>
                         <outlet property="viewBottomLeft" destination="1aD-le-4de" id="bWR-1e-5ii"/>

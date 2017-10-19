@@ -8,6 +8,19 @@
 
 import UIKit
 
-class HomeViewModel: NSObject {
+struct HomeViewModel {
+    var kurs:[String:Kurs] = [:]
+}
 
+extension HomeViewModel {
+    
+    func currency(_ type:typeRates) -> String {
+        let currency = kurs[type.rawValue]?.valueInRupiah
+        return "IDR \(currency!)"
+    }
+    
+    func symbol(_ type:typeRates) -> String {
+        let symbol = kurs[type.rawValue]?.symbol
+        return "\(symbol!)1 \(type.rawValue)"
+    }
 }
