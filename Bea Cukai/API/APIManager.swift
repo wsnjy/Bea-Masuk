@@ -28,8 +28,8 @@ class APIManager: NSObject {
 
                 let json = JSON(value)
                 let currency = Decimal(json["rates"]["IDR"].doubleValue)
-                completion(json)
                 self.usdToIDR(currency)
+                completion(json)
             case .failure(let error):
                 print(error)
             }
@@ -40,6 +40,7 @@ class APIManager: NSObject {
     func usdToIDR(_ data:Decimal){
         let userDefault = UserDefaults()
         userDefault.set(data, forKey: "USD")
+        print("RUPIAHHH \(String(describing: UserDefaults().string(forKey: "USD")))")
     }
     
     

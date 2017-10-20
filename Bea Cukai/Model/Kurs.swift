@@ -58,7 +58,8 @@ extension Kurs {
     }
     
     static func convertToRupiah(_ value:Decimal) -> Decimal{
-        let oneDollar = Decimal(string:UserDefaults().string(forKey: "USD")!)!
+        
+        let oneDollar = Decimal(string:UserDefaults().string(forKey: "USD")!)! 
         
         guard oneDollar/value != 1 else {
             return value

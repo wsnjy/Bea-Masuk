@@ -15,7 +15,7 @@ class CalculatorViewController: UITableViewController, UITextFieldDelegate, Bott
     let titleVC =  "Kalkulator"
     let cellName = "CalculatorCell"
     
-    let heightRow:CGFloat = 70
+    let heightRow:CGFloat = 55
     let numberOfSection = 1
     
     var dataForm:[Decimal] = {

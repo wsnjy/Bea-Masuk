@@ -113,3 +113,17 @@ extension HomeViewController {
     }
     
 }
+
+extension HomeViewController {
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "kursSegue" {
+            if let kurs = segue.destination as? KursViewController {
+                kurs.allRates = homeViewModel.kurs
+            }
+        }
+        
+    }
+    
+}

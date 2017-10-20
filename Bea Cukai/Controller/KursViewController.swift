@@ -8,16 +8,21 @@
 
 import UIKit
 
-class KursViewController: UIViewController {
-
+class KursViewController: UIViewController, BottomBackground {
+    
     @IBOutlet weak var stackRight: UIStackView!
     @IBOutlet weak var stackLeft: UIStackView!
     @IBOutlet weak var mainStack: UIStackView!
     
+    var allRates:[String:Kurs] = [:]
+    let titleVC = "Info Kurs"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(UserDefaults().string(forKey: "USD") as Any)
         setBackButton()
+        showBottomBackground()
+        configStackKurs(removeIDR())
+        title = titleVC
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,23 +34,32 @@ class KursViewController: UIViewController {
         
     }
     
-    func configStackKurs(_ data:[Kurs]) {
-        
-        let kursView = KursInStack.loadFromXib() as KursInStack
+    func configStackKurs(_ data:[String:Kurs]) {
+
         let halfSide = data.count / 2
+        var i = 0
         
-        for i in 0..<data.count {
-            kursView.setDataForView(data[i])
+        for (_,value) in data {
+            
+            print(value.valueInRupiah)
+            let kursView = KursInStack.loadFromXib() as KursInStack
             
             if i < halfSide{
-                kursView.typeSide = .leftSide
+                kursView.setDataForView(value,.leftSide)
                 stackLeft.addArrangedSubview(kursView)
             }else{
-                kursView.typeSide = .rightSide
+                kursView.setDataForView(value,.rightSide)
                 stackRight.addArrangedSubview(kursView)
             }
+            
+            i += 1
         }
         
+    }
+    
+    func removeIDR() -> [String:Kurs] {
+        allRates.removeValue(forKey: "IDR")
+        return allRates
     }
 
 }

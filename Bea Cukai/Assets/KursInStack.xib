@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SourceSansPro-Bold.otf">
+            <string>SourceSansPro-Bold</string>
+        </array>
+        <array key="SourceSansPro-Regular.otf">
+            <string>SourceSansPro-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="vMq-L2-U1C" customClass="KursInStack" customModule="Bea_Cukai" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="92"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 EUR" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QZU-Gn-CrS">
+                    <rect key="frame" x="10" y="38.5" width="354" height="15.5"/>
+                    <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="12"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Europe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4SC-X4-lTv">
+                    <rect key="frame" x="20" y="54" width="334" height="15.5"/>
+                    <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="12"/>
+                    <color key="textColor" red="0.019607843137254902" green="0.28235294117647058" blue="0.61960784313725492" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IDR 15000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5QH-Ux-pZX">
+                    <rect key="frame" x="159" y="14" width="57.5" height="16.5"/>
+                    <fontDescription key="fontDescription" name="SourceSansPro-Bold" family="Source Sans Pro" pointSize="13"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y1d-sg-H6Y">
+                    <rect key="frame" x="373.5" y="20" width="1" height="52"/>
+                    <color key="backgroundColor" red="0.61960784313725492" green="0.74117647058823533" blue="0.8901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="0.5" id="UsL-0B-AiQ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="QZU-Gn-CrS" firstAttribute="centerX" secondItem="4c4-u0-7o5" secondAttribute="centerX" id="0o4-XI-oYB"/>
+                <constraint firstItem="4c4-u0-7o5" firstAttribute="trailing" secondItem="4SC-X4-lTv" secondAttribute="trailing" constant="21" id="1Jw-Hs-1hg"/>
+                <constraint firstItem="4SC-X4-lTv" firstAttribute="top" secondItem="QZU-Gn-CrS" secondAttribute="bottom" id="4wI-yY-3Cd"/>
+                <constraint firstItem="QZU-Gn-CrS" firstAttribute="centerY" secondItem="4c4-u0-7o5" secondAttribute="centerY" id="7c8-G5-E5h"/>
+                <constraint firstItem="y1d-sg-H6Y" firstAttribute="centerY" secondItem="4c4-u0-7o5" secondAttribute="centerY" id="BCM-6V-tsu"/>
+                <constraint firstItem="y1d-sg-H6Y" firstAttribute="trailing" secondItem="4c4-u0-7o5" secondAttribute="trailing" constant="-0.5" id="UOo-lR-osF"/>
+                <constraint firstAttribute="bottom" secondItem="y1d-sg-H6Y" secondAttribute="bottom" constant="20" id="Upc-iw-6gn"/>
+                <constraint firstItem="4SC-X4-lTv" firstAttribute="centerX" secondItem="QZU-Gn-CrS" secondAttribute="centerX" id="aBQ-jr-a5p"/>
+                <constraint firstItem="4c4-u0-7o5" firstAttribute="trailing" secondItem="QZU-Gn-CrS" secondAttribute="trailing" constant="11" id="bPM-bn-2U9"/>
+                <constraint firstItem="y1d-sg-H6Y" firstAttribute="top" secondItem="4c4-u0-7o5" secondAttribute="top" constant="20" id="bwA-lj-IFU"/>
+                <constraint firstItem="QZU-Gn-CrS" firstAttribute="leading" secondItem="4c4-u0-7o5" secondAttribute="leading" constant="10" id="fu0-fk-IAS"/>
+                <constraint firstItem="4SC-X4-lTv" firstAttribute="leading" secondItem="4c4-u0-7o5" secondAttribute="leading" constant="20" id="k7j-rU-rFX"/>
+                <constraint firstItem="5QH-Ux-pZX" firstAttribute="centerX" secondItem="QZU-Gn-CrS" secondAttribute="centerX" id="ubK-pH-eaG"/>
+                <constraint firstItem="QZU-Gn-CrS" firstAttribute="top" secondItem="5QH-Ux-pZX" secondAttribute="bottom" constant="8" id="yCw-9a-hcZ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="4c4-u0-7o5"/>
+            <connections>
+                <outlet property="bottomLabel" destination="4SC-X4-lTv" id="Zdk-Rg-riW"/>
+                <outlet property="centerLabel" destination="QZU-Gn-CrS" id="415-Oj-gxi"/>
+                <outlet property="lineView" destination="y1d-sg-H6Y" id="XDy-n0-na0"/>
+                <outlet property="topLabel" destination="5QH-Ux-pZX" id="5St-CH-gWr"/>
+            </connections>
+            <point key="canvasLocation" x="25.5" y="50"/>
+        </view>
+    </objects>
+</document>

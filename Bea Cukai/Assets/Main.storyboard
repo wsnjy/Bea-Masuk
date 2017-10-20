@@ -228,7 +228,7 @@
                                                         <rect key="frame" x="98.5" y="0.5" width="99" height="66.5"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ClG-FF-5DG" userLabel="line">
-                                                                <rect key="frame" x="0.0" y="21" width="0.5" height="26.5"/>
+                                                                <rect key="frame" x="0.0" y="20.5" width="0.5" height="26.5"/>
                                                                 <color key="backgroundColor" red="0.71372549019999998" green="0.83529411760000005" blue="0.92549019610000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="0.5" id="c72-NP-dh2"/>
@@ -247,7 +247,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EJQ-wf-2cc" userLabel="line">
-                                                                <rect key="frame" x="98" y="21" width="0.5" height="26.5"/>
+                                                                <rect key="frame" x="98" y="20.5" width="0.5" height="26.5"/>
                                                                 <color key="backgroundColor" red="0.71372549019999998" green="0.83529411760000005" blue="0.92549019610000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="0.5" id="hhX-hR-pem"/>
@@ -305,7 +305,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jpb-gl-cAj" userLabel="buttonKursView">
                                         <rect key="frame" x="0.0" y="0.0" width="296" height="133.5"/>
                                         <connections>
-                                            <segue destination="IpS-3c-d2D" kind="show" id="P7B-iU-l3F"/>
+                                            <segue destination="IpS-3c-d2D" kind="show" identifier="kursSegue" id="P7B-iU-l3F"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -652,51 +652,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hsj-3E-EWk" userLabel="stackKurs">
-                                <rect key="frame" x="12" y="229" width="296" height="110"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Diperbarui Pada:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RC9-BF-vQf">
+                                <rect key="frame" x="120.5" y="94" width="79.5" height="14"/>
+                                <fontDescription key="fontDescription" name="SourceSansPro-Semibold" family="Source Sans Pro" pointSize="11"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="19 September 2017 08:00 WIB" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mkn-Tf-btP">
+                                <rect key="frame" x="12" y="108" width="296" height="14"/>
+                                <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="11"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="hsj-3E-EWk" userLabel="stackKurs">
+                                <rect key="frame" x="12" y="134" width="296" height="300"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="a8z-LY-Ilz" userLabel="kursLeft">
-                                        <rect key="frame" x="0.0" y="0.0" width="296" height="110"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ZyG-50-6OB" userLabel="kursLeft">
+                                        <rect key="frame" x="0.0" y="0.0" width="148" height="300"/>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hf4-We-jMM" userLabel="kursRight">
-                                        <rect key="frame" x="296" y="0.0" width="0.0" height="110"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Lj4-RA-oZN" userLabel="kursRight">
+                                        <rect key="frame" x="148" y="0.0" width="148" height="300"/>
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="110" id="0qo-FX-Mhs"/>
+                                    <constraint firstAttribute="height" constant="300" id="Naa-4A-ZaK"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="19 September 2017 08:00 WIB" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mkn-Tf-btP">
-                                <rect key="frame" x="12" y="199" width="296" height="18"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Diperbarui Pada:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RC9-BF-vQf">
-                                <rect key="frame" x="110" y="173" width="101" height="18"/>
-                                <fontDescription key="fontDescription" name="SourceSansPro-Semibold" family="Source Sans Pro" pointSize="14"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="hsj-3E-EWk" firstAttribute="centerY" secondItem="Hpy-4S-WTN" secondAttribute="centerY" id="9K4-p9-gd9"/>
-                            <constraint firstItem="a8z-LY-Ilz" firstAttribute="top" secondItem="Mkn-Tf-btP" secondAttribute="bottom" constant="12" id="Aqc-ie-4t5"/>
-                            <constraint firstItem="Mkn-Tf-btP" firstAttribute="top" secondItem="RC9-BF-vQf" secondAttribute="bottom" constant="8" id="BQG-eV-LiD"/>
+                            <constraint firstAttribute="trailing" secondItem="hsj-3E-EWk" secondAttribute="trailing" constant="12" id="8Av-XV-I9s"/>
+                            <constraint firstItem="Mkn-Tf-btP" firstAttribute="top" secondItem="RC9-BF-vQf" secondAttribute="bottom" id="BQG-eV-LiD"/>
+                            <constraint firstItem="hsj-3E-EWk" firstAttribute="leading" secondItem="Hpy-4S-WTN" secondAttribute="leading" constant="12" id="DoL-g8-rYb"/>
                             <constraint firstItem="RC9-BF-vQf" firstAttribute="centerX" secondItem="Hpy-4S-WTN" secondAttribute="centerX" id="FWE-0A-RAa"/>
-                            <constraint firstItem="hsj-3E-EWk" firstAttribute="leading" secondItem="Hpy-4S-WTN" secondAttribute="leading" constant="12" id="GlR-QS-acj"/>
+                            <constraint firstItem="hsj-3E-EWk" firstAttribute="centerX" secondItem="Hpy-4S-WTN" secondAttribute="centerX" id="KHU-JJ-FSY"/>
                             <constraint firstItem="Mkn-Tf-btP" firstAttribute="leading" secondItem="Hpy-4S-WTN" secondAttribute="leading" constant="12" id="cAL-Ec-MCw"/>
+                            <constraint firstItem="hsj-3E-EWk" firstAttribute="top" secondItem="Mkn-Tf-btP" secondAttribute="bottom" constant="12" id="hDc-ub-ZBf"/>
                             <constraint firstItem="Mkn-Tf-btP" firstAttribute="centerX" secondItem="Hpy-4S-WTN" secondAttribute="centerX" id="jpK-R6-Nz3"/>
-                            <constraint firstItem="a8z-LY-Ilz" firstAttribute="centerX" secondItem="Hpy-4S-WTN" secondAttribute="centerX" id="kgp-IU-bmf"/>
-                            <constraint firstItem="hsj-3E-EWk" firstAttribute="centerX" secondItem="Hpy-4S-WTN" secondAttribute="centerX" id="qb7-Lj-xGO"/>
+                            <constraint firstItem="hsj-3E-EWk" firstAttribute="centerY" secondItem="Hpy-4S-WTN" secondAttribute="centerY" id="s4G-aH-VSc"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="tNr-sI-fYa"/>
                     <connections>
                         <outlet property="mainStack" destination="hsj-3E-EWk" id="54s-bK-8TI"/>
-                        <outlet property="stackLeft" destination="a8z-LY-Ilz" id="RWS-Ds-GPO"/>
-                        <outlet property="stackRight" destination="hf4-We-jMM" id="Idj-aw-rRL"/>
+                        <outlet property="stackLeft" destination="Lj4-RA-oZN" id="PSy-9R-fTQ"/>
+                        <outlet property="stackRight" destination="ZyG-50-6OB" id="NuO-GE-nZY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AFq-AH-o5v" userLabel="First Responder" sceneMemberID="firstResponder"/>

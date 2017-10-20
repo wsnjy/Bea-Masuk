@@ -16,7 +16,11 @@ extension HomeViewModel {
     
     func currency(_ type:typeRates) -> String {
         let currency = kurs[type.rawValue]?.valueInRupiah
-        return "IDR \(currency!)"
+        return currencyLabel(currency!)
+    }
+    
+    func currencyLabel(_ currency:Decimal) -> String{
+        return "IDR \(currency)"
     }
     
     func symbol(_ type:typeRates) -> String {

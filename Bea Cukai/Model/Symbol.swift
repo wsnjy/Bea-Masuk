@@ -12,25 +12,23 @@ struct Symbol {
     
     let dataSymbol:[String:String] = {
         return [
-//            "USD":"$",
                 "EUR":"€",
                 "GBP":"£",
                 "JPY":"¥",
                 "CNY":"¥",
                 "SGD":"$",
-                "MYR":"MY",
+                "MYR":"RM",
                 "HKD":"$",
                 "IDR":"Rp",
-                "AUD":"AUD",]
+                "AUD":"$",]
     }()
     
     let dataCountry:[String:String] = {
         return [
-//            "USD":"United States Dollar",
-                "EUR":"Euro Member Countries",
-                "GBP":"United Kingdom Pound",
+                "EUR":"Euro",
+                "GBP":"United Kingdom",
                 "JPY":"Japan Yen",
-                "CNY":"Chinese Yuan Renmibi",
+                "CNY":"Chinese Yuan",
                 "SGD":"Singapore Dollar",
                 "MYR":"Malaysia Ringgit",
                 "HKD":"Hongkong Dollar",

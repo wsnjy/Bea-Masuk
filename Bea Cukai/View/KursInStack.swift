@@ -20,8 +20,8 @@ class KursInStack: UIView {
     @IBOutlet weak var bottomLabel: UILabel!
     @IBOutlet weak var lineView: UIView!
     
-    var typeSide:Side = .rightSide
-
+    var typeSide:Side?
+    
     override func awakeFromNib() {
         
     }
@@ -30,14 +30,12 @@ class KursInStack: UIView {
         super.init(coder: aDecoder)
     }
     
-    func setDataForView(_ data: Kurs) {
-
-//        let model = KursViewModel(kurs:data)
-//    
-//        topLabel.text = model.inRupiah()
-//        centerLabel.text = model.kurs.symbol
-//        bottomLabel.text = model.kurs.currencyText
-//        lineView.isHidden = lineViewConfig(typeSide)
+    func setDataForView(_ data: Kurs,_ type:Side) {
+        
+        topLabel.text = HomeViewModel().currencyLabel(data.valueInRupiah)
+        centerLabel.text = data.symbol
+        bottomLabel.text = data.currencyText
+        lineView.isHidden = lineViewConfig(type)
     
     }
     
@@ -48,9 +46,9 @@ extension KursInStack {
     func lineViewConfig(_ type:Side) -> Bool {
         switch type {
         case .leftSide:
-            return false
-        default:
             return true
+        case .rightSide:
+            return false
         }
     }
 }
