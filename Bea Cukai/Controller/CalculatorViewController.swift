@@ -27,16 +27,11 @@ class CalculatorViewController: UITableViewController, UITextFieldDelegate, Bott
         tableSetting()
         setBackButton()
         settingButton()
+        view.backgroundBeaColor()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         title = titleVC
-        view.backgroundBeaColor()
-    }
-    
-    func tableSetting() {
-        tableView.register(UINib(nibName: cellName, bundle: nil), forCellReuseIdentifier: cellName)
-        tableView.sectionFooterHeight = UITableViewAutomaticDimension
     }
     
     func settingButton() {
@@ -55,6 +50,11 @@ class CalculatorViewController: UITableViewController, UITextFieldDelegate, Bott
 }
 
 extension CalculatorViewController {
+    
+    func tableSetting() {
+        tableView.register(UINib(nibName: cellName, bundle: nil), forCellReuseIdentifier: cellName)
+        tableView.sectionFooterHeight = UITableViewAutomaticDimension
+    }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return numberOfSection
@@ -111,7 +111,7 @@ extension CalculatorViewController {
     }
     
     func sendValue(_ value: String) {
-        print("This is from calculator \(value)")
+
         dataForm[2] = Decimal(string:value)!
         
         let indexPath = IndexPath(row: 2, section:0)

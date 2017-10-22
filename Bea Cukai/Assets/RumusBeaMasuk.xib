@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue-Bold</string>
+        </array>
+        <array key="SourceSansPro-Regular.otf">
+            <string>SourceSansPro-Regular</string>
+        </array>
+        <array key="SourceSansPro-Semibold.otf">
+            <string>SourceSansPro-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="398"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rumus Bea Masuk" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VkM-XT-wvw">
+                    <rect key="frame" x="12" y="12" width="351" height="19"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
+                    <color key="textColor" red="0.3294117647" green="0.53725490200000003" blue="0.90588235289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nilai Pabean" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nOc-Sv-3SA">
+                    <rect key="frame" x="12" y="43" width="351" height="17"/>
+                    <fontDescription key="fontDescription" name="SourceSansPro-Semibold" family="Source Sans Pro" pointSize="13"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CIF (Cost/ FOB + Asuransi + Freight) x Kurs*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0O2-vZ-Meu">
+                    <rect key="frame" x="12" y="60" width="351" height="17"/>
+                    <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="13"/>
+                    <color key="textColor" red="0.3294117647" green="0.53725490200000003" blue="0.90588235289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nilai Pabean dengan Pembebasan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ktV-yH-9r7">
+                    <rect key="frame" x="12" y="89" width="351" height="17"/>
+                    <fontDescription key="fontDescription" name="SourceSansPro-Semibold" family="Source Sans Pro" pointSize="13"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="((FOB-Pembebasan) + Asuransi + Freight) x Kurs*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQX-yg-X4i">
+                    <rect key="frame" x="12" y="106" width="351" height="17"/>
+                    <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="13"/>
+                    <color key="textColor" red="0.3294117647" green="0.53725490200000003" blue="0.90588235289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bea Masuk" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Loa-yy-68d">
+                    <rect key="frame" x="12" y="152" width="351" height="17"/>
+                    <fontDescription key="fontDescription" name="SourceSansPro-Semibold" family="Source Sans Pro" pointSize="13"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nilai Pabean x Tarif Bea Masuk" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6R1-L1-K5m">
+                    <rect key="frame" x="12" y="169" width="351" height="17"/>
+                    <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="13"/>
+                    <color key="textColor" red="0.3294117647" green="0.53725490200000003" blue="0.90588235289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rumus PDRI" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="COO-8X-Oz0">
+                    <rect key="frame" x="12" y="234" width="351" height="19"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
+                    <color key="textColor" red="0.3294117647" green="0.53725490200000003" blue="0.90588235289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nilai Impor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nay-v8-HXm">
+                    <rect key="frame" x="12" y="265" width="351" height="17"/>
+                    <fontDescription key="fontDescription" name="SourceSansPro-Semibold" family="Source Sans Pro" pointSize="13"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Impor = Nilai Pabean + Bea Masuk + Cukai*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vVH-eP-Tm7">
+                    <rect key="frame" x="12" y="282" width="351" height="17"/>
+                    <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="13"/>
+                    <color key="textColor" red="0.3294117647" green="0.53725490200000003" blue="0.90588235289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*apabila impor barang kena cukai" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qN5-O9-Okz">
+                    <rect key="frame" x="12" y="299" width="351" height="17"/>
+                    <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="13"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pajak Dalam Rangka Impor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rDm-fS-WmW">
+                    <rect key="frame" x="12" y="328" width="351" height="17"/>
+                    <fontDescription key="fontDescription" name="SourceSansPro-Semibold" family="Source Sans Pro" pointSize="13"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nilai Impor x Tarif Pajak" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hLG-eH-YqX">
+                    <rect key="frame" x="12" y="345" width="351" height="17"/>
+                    <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="13"/>
+                    <color key="textColor" red="0.3294117647" green="0.53725490200000003" blue="0.90588235289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" verticalCompressionResistancePriority="752" text="*apabila menggunakan mata uang asing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Fy-y6-ebk">
+                    <rect key="frame" x="12" y="123" width="351" height="17"/>
+                    <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="13"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.96078431369999995" green="0.97647058819999999" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="ktV-yH-9r7" firstAttribute="top" secondItem="0O2-vZ-Meu" secondAttribute="bottom" constant="12" id="0r8-gP-Ogd"/>
+                <constraint firstItem="0Fy-y6-ebk" firstAttribute="top" secondItem="gQX-yg-X4i" secondAttribute="bottom" id="27l-VI-Ynl"/>
+                <constraint firstItem="COO-8X-Oz0" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="12" id="2jd-pi-Qag"/>
+                <constraint firstItem="VkM-XT-wvw" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="12" id="6dF-NJ-4Bm"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="gQX-yg-X4i" secondAttribute="trailing" constant="12" id="8aF-Q1-3Ux"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="nay-v8-HXm" secondAttribute="trailing" constant="12" id="8vf-Rh-DQ1"/>
+                <constraint firstItem="0O2-vZ-Meu" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="12" id="9cu-PF-ZXt"/>
+                <constraint firstItem="rDm-fS-WmW" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="12" id="AkV-Ea-Vrk"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="qN5-O9-Okz" secondAttribute="trailing" constant="12" id="BNX-yq-Wrt"/>
+                <constraint firstItem="hLG-eH-YqX" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="12" id="GGC-qZ-Jed"/>
+                <constraint firstItem="Loa-yy-68d" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="12" id="Gdd-xc-NQO"/>
+                <constraint firstItem="qN5-O9-Okz" firstAttribute="top" secondItem="vVH-eP-Tm7" secondAttribute="bottom" id="GxP-CK-sGq"/>
+                <constraint firstItem="VkM-XT-wvw" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="12" id="JGz-MU-YOT"/>
+                <constraint firstItem="6R1-L1-K5m" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="12" id="LrZ-di-XEQ"/>
+                <constraint firstItem="0Fy-y6-ebk" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="12" id="M1h-Rm-nzi"/>
+                <constraint firstItem="nay-v8-HXm" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="12" id="MXO-wi-vCT"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Loa-yy-68d" secondAttribute="trailing" constant="12" id="PKo-Vp-cpt"/>
+                <constraint firstItem="nOc-Sv-3SA" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="12" id="Qhj-ON-Zhc"/>
+                <constraint firstItem="nOc-Sv-3SA" firstAttribute="top" secondItem="VkM-XT-wvw" secondAttribute="bottom" constant="12" id="RKH-oG-mMM"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="0Fy-y6-ebk" secondAttribute="trailing" constant="12" id="S9b-Fk-Rba"/>
+                <constraint firstItem="rDm-fS-WmW" firstAttribute="top" secondItem="qN5-O9-Okz" secondAttribute="bottom" constant="12" id="TFz-ES-kkh"/>
+                <constraint firstItem="Loa-yy-68d" firstAttribute="top" secondItem="0Fy-y6-ebk" secondAttribute="bottom" constant="12" id="YxX-K3-bPg"/>
+                <constraint firstItem="COO-8X-Oz0" firstAttribute="top" secondItem="6R1-L1-K5m" secondAttribute="bottom" constant="48" id="a91-VR-58u"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="nOc-Sv-3SA" secondAttribute="trailing" constant="12" id="ap4-a7-4w2"/>
+                <constraint firstItem="ktV-yH-9r7" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="12" id="asX-cT-Hdt"/>
+                <constraint firstItem="vVH-eP-Tm7" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="12" id="eMO-sY-siA"/>
+                <constraint firstItem="6R1-L1-K5m" firstAttribute="top" secondItem="Loa-yy-68d" secondAttribute="bottom" id="eaR-08-mOh"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="VkM-XT-wvw" secondAttribute="trailing" constant="12" id="egd-SM-2CH"/>
+                <constraint firstItem="0O2-vZ-Meu" firstAttribute="top" secondItem="nOc-Sv-3SA" secondAttribute="bottom" id="fAw-wd-y7b"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="6R1-L1-K5m" secondAttribute="trailing" constant="12" id="fCp-gX-5C9"/>
+                <constraint firstItem="qN5-O9-Okz" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="12" id="fY7-Vu-RMt"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="vVH-eP-Tm7" secondAttribute="trailing" constant="12" id="hI4-01-7oh"/>
+                <constraint firstItem="hLG-eH-YqX" firstAttribute="top" secondItem="rDm-fS-WmW" secondAttribute="bottom" id="hzC-yA-bMk"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="rDm-fS-WmW" secondAttribute="trailing" constant="12" id="iPd-Mv-Vl1"/>
+                <constraint firstItem="gQX-yg-X4i" firstAttribute="top" secondItem="ktV-yH-9r7" secondAttribute="bottom" id="jYP-Ck-z5N"/>
+                <constraint firstItem="gQX-yg-X4i" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="12" id="nka-m6-umg"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="hLG-eH-YqX" secondAttribute="trailing" constant="12" id="ptm-CJ-ThC"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ktV-yH-9r7" secondAttribute="trailing" constant="12" id="rPo-Ig-rd8"/>
+                <constraint firstItem="vVH-eP-Tm7" firstAttribute="top" secondItem="nay-v8-HXm" secondAttribute="bottom" id="t5G-aM-D0y"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="0O2-vZ-Meu" secondAttribute="trailing" constant="12" id="w3i-Ks-6GZ"/>
+                <constraint firstItem="nay-v8-HXm" firstAttribute="top" secondItem="COO-8X-Oz0" secondAttribute="bottom" constant="12" id="zLl-8P-054"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="COO-8X-Oz0" secondAttribute="trailing" constant="12" id="zrB-Re-cos"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="33.5" y="-54"/>
+        </view>
+    </objects>
+</document>

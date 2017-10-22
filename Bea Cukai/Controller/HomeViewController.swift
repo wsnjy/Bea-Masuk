@@ -38,7 +38,7 @@ class HomeViewController: UIViewController, BottomBackground{
     let backgroundKurs = UIColor.init(patternImage: UIImage.init(named: "box")!)
     var allRates:[String:String] = [:]
 
-    var homeViewModel = HomeViewModel()
+    var viewModel = HomeViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,6 +54,7 @@ class HomeViewController: UIViewController, BottomBackground{
         infoKursViewConfig()
         menuConfig()
         showBottomBackground()
+        rightButtonHome()
     }
     
     func infoKursViewConfig() {
@@ -71,6 +72,7 @@ class HomeViewController: UIViewController, BottomBackground{
 
     @IBAction func menuButtonActions(_ sender: UIButton) {
         print("sender \(sender.tag)")
+        self.performSegue(withIdentifier: "guideSegue", sender:sender.tag)
     }
     
     @IBAction func openCalculator(_ sender: ButtonCalculate) {
@@ -99,16 +101,16 @@ extension HomeViewController {
     
     func setDataOnKurs() {
         
-        homeViewModel = HomeViewModel(kurs: Kurs.configRates(data: allRates))
+        viewModel = HomeViewModel(kurs: Kurs.configRates(data: allRates))
         
-        usdValue.text = homeViewModel.currency(.Indonesia)
-        eurValue.text = homeViewModel.currency(.EURO)
-        cnyValue.text = homeViewModel.currency(.China)
-        jpyValue.text = homeViewModel.currency(.Japan)
+        usdValue.text = viewModel.currency(.Indonesia)
+        eurValue.text = viewModel.currency(.EURO)
+        jpyValue.text = viewModel.currency(.Japan)
+        cnyValue.text = viewModel.currency(.China)
         
-        euroLabel.text  = homeViewModel.symbol(.EURO)
-        jpyLabel.text   = homeViewModel.symbol(.Japan)
-        cnyLabel.text   = homeViewModel.symbol(.China)
+        euroLabel.text  = viewModel.symbol(.EURO)
+        jpyLabel.text   = viewModel.symbol(.Japan)
+        cnyLabel.text   = viewModel.symbol(.China)
         
     }
     
@@ -120,10 +122,31 @@ extension HomeViewController {
         
         if segue.identifier == "kursSegue" {
             if let kurs = segue.destination as? KursViewController {
-                kurs.allRates = homeViewModel.kurs
+                kurs.allRates = viewModel.kurs
             }
         }
         
+        if segue.identifier == "guideSegue" {
+            if let guide = segue.destination as? GuideViewController {
+                let sndr = sender as! Int
+                
+                if sndr == 0 {
+                    guide.guide = .rumus
+                }else if sndr == 3{
+                    guide.guide = .pengaduan
+                }else{
+                    guide.guide = .developer
+                }
+                
+            }
+        }
+
+        
     }
+    
+    override func developerPage(){
+        self.performSegue(withIdentifier: "guideSegue", sender:1)
+    }
+
     
 }

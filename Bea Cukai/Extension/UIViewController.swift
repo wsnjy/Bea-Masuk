@@ -55,5 +55,14 @@ extension UIViewController {
         navigationController?.navigationBar.topItem?.title = ""
     }
     
+    func rightButtonHome() {
+        let button = UIButton()
+        button.setImage(UIImage(named:"developer"), for: .normal)
+        button.addTarget(self, action: #selector(developerPage), for: .touchUpInside)
+        let barButton = UIBarButtonItem(customView: button)
+        navigationController?.navigationBar.topItem?.rightBarButtonItem = barButton
+    }
+    
+    func developerPage(){}
     
 }
