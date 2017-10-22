@@ -16,7 +16,6 @@ enum GuideType{
 
 class GuideViewController: UIViewController, BottomBackground {
 
-    let titleVC = "Dev Ninjas"
     var guide:GuideType = .developer
     
     override func viewDidLoad() {
@@ -26,7 +25,6 @@ class GuideViewController: UIViewController, BottomBackground {
     }
 
     func configView(){
-        title = titleVC
         view.backgroundBeaColor()
         showBottomBackground()
         setBackButton()
@@ -43,18 +41,11 @@ extension GuideViewController {
     
     func loadViewWithCase(_ type:GuideType) {
         
-        var nibName = ""
+        let viewModel = GuideViewModel(type: type)
         
-        switch type {
-        case .developer:
-            nibName  = "Developer"
-        case .rumus:
-            nibName = "RumusBeaMasuk"
-        case .pengaduan:
-            nibName = "Pengaduan"
-        }
+        title = viewModel.titles()
         
-        let nib = UINib(nibName: nibName, bundle: nil)
+        let nib = UINib(nibName: viewModel.nibName(), bundle: nil)
         let dev = nib.instantiate(withOwner: self, options: nil).first as! UIView
         dev.frame = CGRect(x: 0, y: 0, width: view.frame.size.width, height: 300)
         view.addSubview(dev)
