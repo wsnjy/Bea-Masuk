@@ -26,6 +26,7 @@ class SearchViewController: UITableViewController, UITextFieldDelegate, BottomBa
         super.viewDidLoad()
         setBackButton()
         configTable()
+        view.backgroundBeaColor()
         showBottomBackground()
         title = titleController
     }
@@ -89,6 +90,7 @@ extension SearchViewController {
         
         let cell = UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: "Cell")
         let footer = FooterSearch.loadFromXib() as FooterSearch
+        footer.backgroundBeaColor()
         footer.delegate = self
         footer.btn.tag = indexPath.section
         footer.btn.setTitle(titleButton, for: .normal)

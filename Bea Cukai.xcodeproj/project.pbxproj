@@ -42,6 +42,7 @@
 		6558B93C1F7D79F7004FFBB6 /* SourceSansPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6558B9381F7D79F5004FFBB6 /* SourceSansPro-Bold.otf */; };
 		655A3C041F76092A0015000B /* ViewInStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655A3C031F76092A0015000B /* ViewInStack.swift */; };
 		657AA3951F7D65F8004F3CA6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 657AA3941F7D65F8004F3CA6 /* Images.xcassets */; };
+		658E96821F9C3140004EA531 /* UIView+Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658E96811F9C3140004EA531 /* UIView+Background.swift */; };
 		6591ED701F66EE8000A46885 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6591ED6F1F66EE8000A46885 /* CalculatorViewController.swift */; };
 		6591ED721F66EF0500A46885 /* CalculatorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6591ED711F66EF0500A46885 /* CalculatorCell.swift */; };
 		65B8D06F1F965697009AFD02 /* BiayaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B8D06E1F965697009AFD02 /* BiayaViewController.swift */; };
@@ -98,6 +99,7 @@
 		6558B9381F7D79F5004FFBB6 /* SourceSansPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Bold.otf"; sourceTree = "<group>"; };
 		655A3C031F76092A0015000B /* ViewInStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewInStack.swift; sourceTree = "<group>"; };
 		657AA3941F7D65F8004F3CA6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		658E96811F9C3140004EA531 /* UIView+Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Background.swift"; sourceTree = "<group>"; };
 		6591ED6F1F66EE8000A46885 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		6591ED711F66EF0500A46885 /* CalculatorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorCell.swift; sourceTree = "<group>"; };
 		65B8D06E1F965697009AFD02 /* BiayaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiayaViewController.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				653AD00B1F9361FE00733876 /* BeaPickerView.xib */,
 				653AD0101F93A31C00733876 /* ResultCell.xib */,
 				65ED8AC71F9A590F0082C46D /* KursInStack.xib */,
+				651816771F85323D002799D8 /* FooterSearch.xib */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -164,7 +167,6 @@
 			isa = PBXGroup;
 			children = (
 				652940DA1F75FF8800B2B660 /* ViewShadow.swift */,
-				651816771F85323D002799D8 /* FooterSearch.xib */,
 				6518CBDD1F7F6AD800A2EBB2 /* BottomBackgrund.swift */,
 				6536A3601F8852EE00A06D59 /* Reloadable.swift */,
 			);
@@ -285,6 +287,7 @@
 			children = (
 				65F1F4F51F7AB76D0062F63F /* UILabel+Size.swift */,
 				6518CBE31F7FA0DD00A2EBB2 /* UIViewController+Custom.swift */,
+				658E96811F9C3140004EA531 /* UIView+Background.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -456,6 +459,7 @@
 				6536A35F1F87DD6200A06D59 /* KursViewController.swift in Sources */,
 				65C8BCA51F765FF900E95E71 /* ButtonCalculate.swift in Sources */,
 				654222AA1F63E66A00CE3A84 /* AppDelegate.swift in Sources */,
+				658E96821F9C3140004EA531 /* UIView+Background.swift in Sources */,
 				65C0DBFB1F84B0E100729C1C /* FooterSearch.swift in Sources */,
 				6518CBE61F7FBF4700A2EBB2 /* Tarif.swift in Sources */,
 				6518CBDE1F7F6AD800A2EBB2 /* BottomBackgrund.swift in Sources */,

@@ -31,6 +31,7 @@ class CalculatorViewController: UITableViewController, UITextFieldDelegate, Bott
     
     override func viewWillAppear(_ animated: Bool) {
         title = titleVC
+        view.backgroundBeaColor()
     }
     
     func tableSetting() {

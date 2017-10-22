@@ -15,16 +15,17 @@ protocol resultDelegate {
 class ResultViewController: UITableViewController, BottomBackground {
 
     var delegate:resultDelegate?
-    
+    let titleVC = "Tarif Bea Masuk"
     let cellName = "ResultCell"
-    let titleVC    = "Tarif Bea Masuk"
     let numberOfSection = 1
     let heightHeaderSection:CGFloat = 44
     var result:[Tarif] = []
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         addBarButtonClose()
+        view.backgroundBeaColor()
         tableViewConfiguration()
     }
     
@@ -49,7 +50,7 @@ class ResultViewController: UITableViewController, BottomBackground {
 extension ResultViewController {
     
     // MARK: - Table view data source
-    
+        
     override func numberOfSections(in tableView: UITableView) -> Int {
         return numberOfSection
     }

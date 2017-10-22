@@ -13,16 +13,32 @@ class KursViewController: UIViewController, BottomBackground {
     @IBOutlet weak var stackRight: UIStackView!
     @IBOutlet weak var stackLeft: UIStackView!
     @IBOutlet weak var mainStack: UIStackView!
-    
+    @IBOutlet weak var topText: UILabel!
+    @IBOutlet weak var bottomText: UILabel!
+
     var allRates:[String:Kurs] = [:]
     let titleVC = "Info Kurs"
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = titleVC
         setBackButton()
         showBottomBackground()
-        configStackKurs(removeIDR())
-        title = titleVC
+        configContent()
+    }
+    
+    func configContent() {
+        
+        if allRates.count > 0 {
+            configStackKurs(removeIDR())
+        }else{
+            topText.isHidden = true
+            bottomText.isHidden = true
+            stackLeft.removeFromSuperview()
+            stackRight.removeFromSuperview()
+            showReloadView()
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -71,8 +87,9 @@ extension KursViewController: ReloadViewDelegate {
         let reloadView = ReloadView.loadFromXib() as ReloadView
         reloadView.configView(.pageKurs)
         reloadView.delegate = self
-        view.addSubview(reloadView)
-     
+        mainStack.addArrangedSubview(reloadView)
+        mainStack.heightAnchor.constraint(equalToConstant: 200).isActive = true
+        
     }
     
     func reload() {

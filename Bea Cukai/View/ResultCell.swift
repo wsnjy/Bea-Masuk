@@ -18,6 +18,7 @@ class ResultCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         selectionStyle = .none
+        backgroundBeaColor()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -45,13 +46,15 @@ class ResultCell: UITableViewCell {
         labelCode.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
         
         if indexPath.row == 4{
-            let font = UIFont(name: "SourceSansPro-Bold", size: 14.0)
+            let font = UIFont(name: "SourceSansPro-SemiBold", size: 12.0)
+            let fontPercent = UIFont(name: "SourceSansPro-SemiBold", size: 14.0)
+
             labelCode.textColor = UIColor.black
             labelCode.font = font
-            labelPercent.font = font
+            labelPercent.font = fontPercent
             separatorInset = UIEdgeInsetsMake(0, 1000, 0, 0)
         }else{
-            labelCode.font = UIFont(name: "SourceSansPro-Regular", size: 14.0)
+            labelCode.font = UIFont(name: "SourceSansPro-Regular", size: 11.0)
         }
         
         

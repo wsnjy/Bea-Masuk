@@ -21,10 +21,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func settingNavigationBar() {
         UINavigationBar.appearance().shadowImage = UIImage()
-        UINavigationBar.appearance().backgroundColor = UIColor.init(red: 245/225, green: 249/225, blue: 252/225, alpha: 1)
-        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.init(red: 134/225, green: 184/225, blue: 227/225, alpha: 1)]
+        UINavigationBar.appearance().backgroundColor = UIColor.init(red: 245/255, green: 249/255, blue: 252/255, alpha: 1)
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.init(red: 84/255, green: 137/255, blue: 231/255, alpha: 1)]
     }
-    
+
     func applicationWillResignActive(_ application: UIApplication) {
     }
 
