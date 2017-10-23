@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,27 +17,240 @@
         <array key="SourceSansPro-Regular.otf">
             <string>SourceSansPro-Regular</string>
         </array>
+        <array key="SourceSansPro-Semibold.otf">
+            <string>SourceSansPro-Semibold</string>
+        </array>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="Pengaduan" customModule="Bea_Cukai" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="457"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="Direktur Kepatuhan Internal Direktorat Jenderal Bea dan Cukai  Kantor Pusat Bea dan Cukai" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4L-Tt-zIE">
-                    <rect key="frame" x="12" y="32" width="351" height="66"/>
+                    <rect key="frame" x="12" y="12" width="351" height="65.5"/>
                     <color key="backgroundColor" red="0.96078431369999995" green="0.97647058819999999" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <fontDescription key="fontDescription" name="SourceSansPro-Bold" family="Source Sans Pro" pointSize="13"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c5y-G8-0ib">
-                    <rect key="frame" x="12" y="95" width="351" height="49.5"/>
-                    <string key="text">Jl. Ahmad Yani By Pass - Rawamangun, Jakarta Timur.Jakarta - 13230</string>
+                    <rect key="frame" x="12" y="74.5" width="351" height="49.5"/>
+                    <string key="text">Jl. Ahmad Yani By Pass - Rawamangun, Jakarta Timur.
+Jakarta - 13230</string>
                     <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="13"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="PHr-lK-Dcb">
+                    <rect key="frame" x="12" y="136" width="351" height="281"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="RLv-oh-reT" userLabel="StackTelepon">
+                            <rect key="frame" x="0.0" y="0.0" width="169.5" height="281"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S1z-v1-pdP" userLabel="Telepon" customClass="ViewInStack" customModule="Bea_Cukai" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="169.5" height="134.5"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pengaduan_telepon" translatesAutoresizingMaskIntoConstraints="NO" id="NzJ-qN-X2Q">
+                                            <rect key="frame" x="65" y="24" width="40" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="NzJ-qN-X2Q" secondAttribute="height" multiplier="1:1" id="GHX-v1-40c"/>
+                                                <constraint firstAttribute="width" constant="40" id="V5N-56-ehV"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TELEPON BEBAS PULSA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rht-eN-NMI">
+                                            <rect key="frame" x="12" y="73" width="145.5" height="14"/>
+                                            <fontDescription key="fontDescription" name="SourceSansPro-Semibold" family="Source Sans Pro" pointSize="11"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0800-100-3545" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YWY-NU-o2R">
+                                            <rect key="frame" x="12" y="87" width="145.5" height="14"/>
+                                            <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="11"/>
+                                            <color key="textColor" red="0.3294117647" green="0.53725490200000003" blue="0.90588235289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Yw-PW-0lu" userLabel="btnTelepon">
+                                            <rect key="frame" x="0.0" y="0.0" width="169.5" height="134.5"/>
+                                            <connections>
+                                                <action selector="pengaduanAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="pcY-AA-bK8"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <gestureRecognizers/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="YWY-NU-o2R" secondAttribute="trailing" constant="12" id="BN6-Gg-Cwd"/>
+                                        <constraint firstAttribute="trailing" secondItem="Rht-eN-NMI" secondAttribute="trailing" constant="12" id="NvA-vR-LB5"/>
+                                        <constraint firstItem="Rht-eN-NMI" firstAttribute="leading" secondItem="S1z-v1-pdP" secondAttribute="leading" constant="12" id="OZc-iR-fdV"/>
+                                        <constraint firstItem="NzJ-qN-X2Q" firstAttribute="centerY" secondItem="S1z-v1-pdP" secondAttribute="centerY" constant="-24" id="QRB-wh-3ie"/>
+                                        <constraint firstItem="NzJ-qN-X2Q" firstAttribute="centerX" secondItem="S1z-v1-pdP" secondAttribute="centerX" id="Wes-9O-j4U"/>
+                                        <constraint firstItem="YWY-NU-o2R" firstAttribute="leading" secondItem="S1z-v1-pdP" secondAttribute="leading" constant="12" id="X9A-yG-wsS"/>
+                                        <constraint firstItem="Rht-eN-NMI" firstAttribute="centerX" secondItem="S1z-v1-pdP" secondAttribute="centerX" id="biB-mU-Kfg"/>
+                                        <constraint firstItem="Rht-eN-NMI" firstAttribute="centerY" secondItem="S1z-v1-pdP" secondAttribute="centerY" constant="12" id="fpZ-Lc-f6j"/>
+                                        <constraint firstItem="5Yw-PW-0lu" firstAttribute="leading" secondItem="S1z-v1-pdP" secondAttribute="leading" id="hHk-xg-bFy"/>
+                                        <constraint firstItem="YWY-NU-o2R" firstAttribute="top" secondItem="Rht-eN-NMI" secondAttribute="bottom" id="lvz-AV-uUr"/>
+                                        <constraint firstAttribute="trailing" secondItem="5Yw-PW-0lu" secondAttribute="trailing" id="ms0-Ue-E2P"/>
+                                        <constraint firstItem="5Yw-PW-0lu" firstAttribute="top" secondItem="S1z-v1-pdP" secondAttribute="top" id="nnj-2J-oXP"/>
+                                        <constraint firstAttribute="bottom" secondItem="5Yw-PW-0lu" secondAttribute="bottom" id="xe7-ik-26L"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BLs-nL-g5p" userLabel="Email" customClass="ViewInStack" customModule="Bea_Cukai" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="146.5" width="169.5" height="134.5"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pengaduan_email" translatesAutoresizingMaskIntoConstraints="NO" id="lWs-tp-RUt">
+                                            <rect key="frame" x="62.5" y="21.5" width="44" height="44"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="lWs-tp-RUt" secondAttribute="height" multiplier="1:1" id="Hdz-PI-scL"/>
+                                                <constraint firstAttribute="height" constant="44" id="uJX-gb-U74"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EMAIL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nkl-pj-PiW">
+                                            <rect key="frame" x="12" y="72.5" width="145.5" height="14"/>
+                                            <fontDescription key="fontDescription" name="SourceSansPro-Semibold" family="Source Sans Pro" pointSize="11"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="pengaduan.beacukai@customs.go.id" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ktU-H2-67P">
+                                            <rect key="frame" x="12" y="86.5" width="145.5" height="14"/>
+                                            <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="11"/>
+                                            <color key="textColor" red="0.3294117647" green="0.53725490200000003" blue="0.90588235289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vua-mJ-n8j" userLabel="btnEmail">
+                                            <rect key="frame" x="0.0" y="0.0" width="169.5" height="134.5"/>
+                                            <connections>
+                                                <action selector="pengaduanAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="DQM-7T-cvp"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <gestureRecognizers/>
+                                    <constraints>
+                                        <constraint firstItem="nkl-pj-PiW" firstAttribute="leading" secondItem="BLs-nL-g5p" secondAttribute="leading" constant="12" id="0L4-4I-e38"/>
+                                        <constraint firstItem="ktU-H2-67P" firstAttribute="leading" secondItem="BLs-nL-g5p" secondAttribute="leading" constant="12" id="2Y2-Bh-6lq"/>
+                                        <constraint firstItem="nkl-pj-PiW" firstAttribute="centerY" secondItem="BLs-nL-g5p" secondAttribute="centerY" constant="12" id="5LQ-LQ-qOZ"/>
+                                        <constraint firstItem="Vua-mJ-n8j" firstAttribute="leading" secondItem="aew-7J-3fU" secondAttribute="leading" id="9NF-I0-mGS"/>
+                                        <constraint firstItem="lWs-tp-RUt" firstAttribute="centerY" secondItem="aew-7J-3fU" secondAttribute="centerY" constant="-24" id="DBa-Uu-NZO"/>
+                                        <constraint firstItem="aew-7J-3fU" firstAttribute="bottom" secondItem="Vua-mJ-n8j" secondAttribute="bottom" id="SGT-4o-L9p"/>
+                                        <constraint firstAttribute="trailing" secondItem="nkl-pj-PiW" secondAttribute="trailing" constant="12" id="Tz2-l0-K3w"/>
+                                        <constraint firstAttribute="trailing" secondItem="ktU-H2-67P" secondAttribute="trailing" constant="12" id="Yxn-3c-gNi"/>
+                                        <constraint firstItem="aew-7J-3fU" firstAttribute="trailing" secondItem="Vua-mJ-n8j" secondAttribute="trailing" id="hz3-E4-Ut4"/>
+                                        <constraint firstItem="nkl-pj-PiW" firstAttribute="centerX" secondItem="BLs-nL-g5p" secondAttribute="centerX" id="leL-5c-VfS"/>
+                                        <constraint firstItem="ktU-H2-67P" firstAttribute="top" secondItem="nkl-pj-PiW" secondAttribute="bottom" id="vcI-Mk-kZP"/>
+                                        <constraint firstItem="lWs-tp-RUt" firstAttribute="centerX" secondItem="aew-7J-3fU" secondAttribute="centerX" id="wKM-05-G8q"/>
+                                        <constraint firstItem="Vua-mJ-n8j" firstAttribute="top" secondItem="aew-7J-3fU" secondAttribute="top" id="yb6-Qw-jPO"/>
+                                    </constraints>
+                                    <viewLayoutGuide key="safeArea" id="aew-7J-3fU"/>
+                                </view>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="gDE-yP-uAz" userLabel="StackSms">
+                            <rect key="frame" x="181.5" y="0.0" width="169.5" height="281"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NEG-aY-YXg" userLabel="Sms" customClass="ViewInStack" customModule="Bea_Cukai" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="169.5" height="134.5"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pengaduan_sms" translatesAutoresizingMaskIntoConstraints="NO" id="Zgy-AO-QH8">
+                                            <rect key="frame" x="65" y="23.5" width="40" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="40" id="I2v-pw-rZ1"/>
+                                                <constraint firstAttribute="width" secondItem="Zgy-AO-QH8" secondAttribute="height" multiplier="1:1" id="mQr-fS-URe"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SMS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RqX-7n-5R3">
+                                            <rect key="frame" x="12" y="72.5" width="145.5" height="14"/>
+                                            <fontDescription key="fontDescription" name="SourceSansPro-Semibold" family="Source Sans Pro" pointSize="11"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0821-30-202045" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLK-Bj-Kiv">
+                                            <rect key="frame" x="12" y="86.5" width="145.5" height="14"/>
+                                            <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="11"/>
+                                            <color key="textColor" red="0.3294117647" green="0.53725490200000003" blue="0.90588235289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1lD-RZ-3o8" userLabel="btnSms">
+                                            <rect key="frame" x="0.0" y="0.0" width="169" height="126"/>
+                                            <connections>
+                                                <action selector="pengaduanAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="n8U-ol-GTX"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <gestureRecognizers/>
+                                    <constraints>
+                                        <constraint firstItem="RqX-7n-5R3" firstAttribute="centerY" secondItem="NEG-aY-YXg" secondAttribute="centerY" constant="12" id="2GY-UU-JeH"/>
+                                        <constraint firstItem="Zgy-AO-QH8" firstAttribute="centerX" secondItem="NEG-aY-YXg" secondAttribute="centerX" id="6Qo-vK-dcs"/>
+                                        <constraint firstItem="1lD-RZ-3o8" firstAttribute="top" secondItem="NEG-aY-YXg" secondAttribute="top" id="Io5-2b-EcS"/>
+                                        <constraint firstAttribute="bottom" secondItem="1lD-RZ-3o8" secondAttribute="bottom" constant="8.5" id="PgS-jw-QeD"/>
+                                        <constraint firstAttribute="trailing" secondItem="RqX-7n-5R3" secondAttribute="trailing" constant="12" id="Y1c-Sa-GuX"/>
+                                        <constraint firstItem="gLK-Bj-Kiv" firstAttribute="leading" secondItem="NEG-aY-YXg" secondAttribute="leading" constant="12" id="bkf-bs-2bl"/>
+                                        <constraint firstItem="Zgy-AO-QH8" firstAttribute="centerY" secondItem="NEG-aY-YXg" secondAttribute="centerY" constant="-24" id="eOg-ui-ecP"/>
+                                        <constraint firstItem="1lD-RZ-3o8" firstAttribute="leading" secondItem="NEG-aY-YXg" secondAttribute="leading" id="gqO-0Y-gSc"/>
+                                        <constraint firstAttribute="trailing" secondItem="gLK-Bj-Kiv" secondAttribute="trailing" constant="12" id="iqP-2Z-6DB"/>
+                                        <constraint firstItem="RqX-7n-5R3" firstAttribute="centerX" secondItem="NEG-aY-YXg" secondAttribute="centerX" id="izh-ab-LzD"/>
+                                        <constraint firstItem="RqX-7n-5R3" firstAttribute="leading" secondItem="NEG-aY-YXg" secondAttribute="leading" constant="12" id="oLZ-K0-uQW"/>
+                                        <constraint firstItem="gLK-Bj-Kiv" firstAttribute="top" secondItem="RqX-7n-5R3" secondAttribute="bottom" id="oaJ-qY-Ahq"/>
+                                        <constraint firstAttribute="trailing" secondItem="1lD-RZ-3o8" secondAttribute="trailing" id="pte-r0-ygu"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xYS-Ic-Z3p" userLabel="Online" customClass="ViewInStack" customModule="Bea_Cukai" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="146.5" width="169.5" height="134.5"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pengaduan_online" translatesAutoresizingMaskIntoConstraints="NO" id="9ef-sl-dk7">
+                                            <rect key="frame" x="65.5" y="23.5" width="40" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="9ef-sl-dk7" secondAttribute="height" multiplier="1:1" id="MMg-sR-Yne"/>
+                                                <constraint firstAttribute="width" constant="40" id="kco-JY-GJn"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PENGADUAN ONLINE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8QT-8A-Puf">
+                                            <rect key="frame" x="12" y="72.5" width="145.5" height="14"/>
+                                            <fontDescription key="fontDescription" name="SourceSansPro-Semibold" family="Source Sans Pro" pointSize="11"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="via system ticketing" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zHr-dV-L5X">
+                                            <rect key="frame" x="12" y="86.5" width="145.5" height="14"/>
+                                            <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="11"/>
+                                            <color key="textColor" red="0.3294117647" green="0.53725490200000003" blue="0.90588235289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dJY-f2-Bfp" userLabel="btnOnline">
+                                            <rect key="frame" x="0.0" y="0.0" width="169.5" height="134.5"/>
+                                            <connections>
+                                                <action selector="pengaduanAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="yHj-pB-ygb"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <gestureRecognizers/>
+                                    <constraints>
+                                        <constraint firstItem="8QT-8A-Puf" firstAttribute="leading" secondItem="xYS-Ic-Z3p" secondAttribute="leading" constant="12" id="0vD-X7-MiK"/>
+                                        <constraint firstItem="8QT-8A-Puf" firstAttribute="centerX" secondItem="xYS-Ic-Z3p" secondAttribute="centerX" id="4vW-Ms-kBf"/>
+                                        <constraint firstItem="8QT-8A-Puf" firstAttribute="centerY" secondItem="xYS-Ic-Z3p" secondAttribute="centerY" constant="12" id="55v-EN-Vja"/>
+                                        <constraint firstItem="dJY-f2-Bfp" firstAttribute="top" secondItem="6ql-tk-O7a" secondAttribute="top" id="AAr-Ta-Vfj"/>
+                                        <constraint firstAttribute="trailing" secondItem="zHr-dV-L5X" secondAttribute="trailing" constant="12" id="OWo-eK-a2P"/>
+                                        <constraint firstItem="9ef-sl-dk7" firstAttribute="centerY" secondItem="xYS-Ic-Z3p" secondAttribute="centerY" constant="-24" id="TTr-dA-M9n"/>
+                                        <constraint firstItem="dJY-f2-Bfp" firstAttribute="leading" secondItem="6ql-tk-O7a" secondAttribute="leading" id="VwV-74-fdk"/>
+                                        <constraint firstItem="zHr-dV-L5X" firstAttribute="top" secondItem="8QT-8A-Puf" secondAttribute="bottom" id="cFI-Md-WSI"/>
+                                        <constraint firstAttribute="trailing" secondItem="8QT-8A-Puf" secondAttribute="trailing" constant="12" id="dZv-WL-ddX"/>
+                                        <constraint firstItem="6ql-tk-O7a" firstAttribute="bottom" secondItem="dJY-f2-Bfp" secondAttribute="bottom" id="hx7-Gb-WBU"/>
+                                        <constraint firstItem="9ef-sl-dk7" firstAttribute="centerX" secondItem="xYS-Ic-Z3p" secondAttribute="centerX" id="hzk-DP-44h"/>
+                                        <constraint firstItem="zHr-dV-L5X" firstAttribute="leading" secondItem="xYS-Ic-Z3p" secondAttribute="leading" constant="12" id="jsV-ZS-wdz"/>
+                                        <constraint firstItem="6ql-tk-O7a" firstAttribute="trailing" secondItem="dJY-f2-Bfp" secondAttribute="trailing" id="jyj-6o-rWz"/>
+                                    </constraints>
+                                    <viewLayoutGuide key="safeArea" id="6ql-tk-O7a"/>
+                                </view>
+                            </subviews>
+                            <viewLayoutGuide key="safeArea" id="SUn-3w-N9u"/>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="PHr-lK-Dcb" secondAttribute="height" multiplier="1:0.8" id="AlR-Eg-ZHW"/>
+                    </constraints>
+                </stackView>
             </subviews>
             <color key="backgroundColor" red="0.96078431369999995" green="0.97647058819999999" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -45,10 +259,26 @@
                 <constraint firstItem="c5y-G8-0ib" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="12" id="DUz-Jq-Cm0"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="c5y-G8-0ib" secondAttribute="trailing" constant="12" id="G1R-9F-gsf"/>
                 <constraint firstItem="c5y-G8-0ib" firstAttribute="top" secondItem="a4L-Tt-zIE" secondAttribute="bottom" constant="-3" id="KMd-DQ-AvC"/>
+                <constraint firstItem="PHr-lK-Dcb" firstAttribute="top" secondItem="c5y-G8-0ib" secondAttribute="bottom" constant="12" id="LNS-uP-Kb6"/>
+                <constraint firstItem="PHr-lK-Dcb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="12" id="h3d-3U-nff"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="PHr-lK-Dcb" secondAttribute="trailing" constant="12" id="pc3-TU-kwA"/>
                 <constraint firstItem="a4L-Tt-zIE" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="12" id="wO9-pk-NYe"/>
             </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="34.5" y="125.5"/>
+            <connections>
+                <outlet property="viewEmail" destination="BLs-nL-g5p" id="FZa-gT-edz"/>
+                <outlet property="viewOnline" destination="xYS-Ic-Z3p" id="Q9t-v6-n8u"/>
+                <outlet property="viewSms" destination="NEG-aY-YXg" id="vTb-DE-2Vp"/>
+                <outlet property="viewTelepon" destination="S1z-v1-pdP" id="tEm-aJ-yui"/>
+            </connections>
+            <point key="canvasLocation" x="30.5" y="-11.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="pengaduan_email" width="40" height="40"/>
+        <image name="pengaduan_online" width="40" height="40"/>
+        <image name="pengaduan_sms" width="40" height="40"/>
+        <image name="pengaduan_telepon" width="40" height="40"/>
+    </resources>
 </document>

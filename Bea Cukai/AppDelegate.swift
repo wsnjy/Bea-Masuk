@@ -12,7 +12,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    let backgroundNav = UIColor(patternImage: UIImage.init(named: "backgroundNav")!)
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         settingNavigationBar()
@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func settingNavigationBar() {
         UINavigationBar.appearance().shadowImage = UIImage()
-        UINavigationBar.appearance().backgroundColor = UIColor.init(red: 245/255, green: 249/255, blue: 252/255, alpha: 1)
+        UINavigationBar.appearance().backgroundColor = backgroundNav
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.init(red: 84/255, green: 137/255, blue: 231/255, alpha: 1)]
     }
 

@@ -50,6 +50,7 @@
 		658E96861F9C98E6004EA531 /* Developer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 658E96851F9C98E6004EA531 /* Developer.xib */; };
 		6591ED701F66EE8000A46885 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6591ED6F1F66EE8000A46885 /* CalculatorViewController.swift */; };
 		6591ED721F66EF0500A46885 /* CalculatorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6591ED711F66EF0500A46885 /* CalculatorCell.swift */; };
+		6595DE9F1F9E25B2005938E0 /* Pengaduan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6595DE9E1F9E25B2005938E0 /* Pengaduan.swift */; };
 		65B8D06F1F965697009AFD02 /* BiayaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B8D06E1F965697009AFD02 /* BiayaViewController.swift */; };
 		65C0DBF91F849D9000729C1C /* btki.json in Resources */ = {isa = PBXBuildFile; fileRef = 65C0DBF71F84067900729C1C /* btki.json */; };
 		65C0DBFB1F84B0E100729C1C /* FooterSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C0DBFA1F84B0E100729C1C /* FooterSearch.swift */; };
@@ -112,6 +113,7 @@
 		658E96851F9C98E6004EA531 /* Developer.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Developer.xib; sourceTree = "<group>"; };
 		6591ED6F1F66EE8000A46885 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		6591ED711F66EF0500A46885 /* CalculatorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorCell.swift; sourceTree = "<group>"; };
+		6595DE9E1F9E25B2005938E0 /* Pengaduan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pengaduan.swift; sourceTree = "<group>"; };
 		65B8D06E1F965697009AFD02 /* BiayaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiayaViewController.swift; sourceTree = "<group>"; };
 		65C0DBF71F84067900729C1C /* btki.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = btki.json; sourceTree = "<group>"; };
 		65C0DBFA1F84B0E100729C1C /* FooterSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterSearch.swift; sourceTree = "<group>"; };
@@ -285,6 +287,7 @@
 				6536A3621F88596E00A06D59 /* KursInStack.swift */,
 				65CC81F41F8FC71E002E156A /* BottomImage.swift */,
 				653AD0091F9304B600733876 /* BeaPickerView.swift */,
+				6595DE9E1F9E25B2005938E0 /* Pengaduan.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -467,6 +470,7 @@
 				65CC81F71F91A17B002E156A /* SearchViewController.swift in Sources */,
 				65B8D06F1F965697009AFD02 /* BiayaViewController.swift in Sources */,
 				653AD00A1F9304B700733876 /* BeaPickerView.swift in Sources */,
+				6595DE9F1F9E25B2005938E0 /* Pengaduan.swift in Sources */,
 				654222C11F646FE100CE3A84 /* BiayaViewModel.swift in Sources */,
 				6518CBE41F7FA0DD00A2EBB2 /* UIViewController.swift in Sources */,
 				654222BE1F646DA400CE3A84 /* Biaya.swift in Sources */,
