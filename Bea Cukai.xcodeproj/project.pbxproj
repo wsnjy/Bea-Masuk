@@ -59,6 +59,10 @@
 		65CC81F71F91A17B002E156A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CC81F61F91A17B002E156A /* SearchViewController.swift */; };
 		65CC81F91F91A66D002E156A /* CalculatorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65CC81F81F91A66D002E156A /* CalculatorCell.xib */; };
 		65CC81FB1F922552002E156A /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CC81FA1F922552002E156A /* SearchViewModel.swift */; };
+		65DAAE4D1F9F7433005ABB1D /* CaraHitungCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DAAE4B1F9F7433005ABB1D /* CaraHitungCell.swift */; };
+		65DAAE4E1F9F7433005ABB1D /* CaraHitungCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65DAAE4C1F9F7433005ABB1D /* CaraHitungCell.xib */; };
+		65DAAE501F9F7863005ABB1D /* CaraHitungController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DAAE4F1F9F7863005ABB1D /* CaraHitungController.swift */; };
+		65DAAE521F9F7F63005ABB1D /* CaraHitungViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DAAE511F9F7F62005ABB1D /* CaraHitungViewModel.swift */; };
 		65ED8AC81F9A590F0082C46D /* KursInStack.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65ED8AC71F9A590F0082C46D /* KursInStack.xib */; };
 		65F1F4F61F7AB76D0062F63F /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F1F4F51F7AB76D0062F63F /* UILabel.swift */; };
 		65F5CB661F751A46005432D8 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65F5CB651F751A46005432D8 /* Launch.storyboard */; };
@@ -122,6 +126,10 @@
 		65CC81F61F91A17B002E156A /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		65CC81F81F91A66D002E156A /* CalculatorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalculatorCell.xib; sourceTree = "<group>"; };
 		65CC81FA1F922552002E156A /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		65DAAE4B1F9F7433005ABB1D /* CaraHitungCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaraHitungCell.swift; sourceTree = "<group>"; };
+		65DAAE4C1F9F7433005ABB1D /* CaraHitungCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CaraHitungCell.xib; sourceTree = "<group>"; };
+		65DAAE4F1F9F7863005ABB1D /* CaraHitungController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaraHitungController.swift; sourceTree = "<group>"; };
+		65DAAE511F9F7F62005ABB1D /* CaraHitungViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaraHitungViewModel.swift; sourceTree = "<group>"; };
 		65ED8AC71F9A590F0082C46D /* KursInStack.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KursInStack.xib; sourceTree = "<group>"; };
 		65F1F4F51F7AB76D0062F63F /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		65F5CB651F751A46005432D8 /* Launch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
@@ -160,20 +168,12 @@
 		6525CE7D1F67176C00D4BFE2 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				65DAAE481F9F7309005ABB1D /* XIB */,
 				65C0DBF81F84068000729C1C /* Json */,
 				6558B93D1F7D7A26004FFBB6 /* Font */,
 				657AA3941F7D65F8004F3CA6 /* Images.xcassets */,
 				6525CE7E1F67189400D4BFE2 /* Main.storyboard */,
 				65F5CB651F751A46005432D8 /* Launch.storyboard */,
-				651816791F853312002799D8 /* ReloadView.xib */,
-				65CC81F81F91A66D002E156A /* CalculatorCell.xib */,
-				653AD00B1F9361FE00733876 /* BeaPickerView.xib */,
-				653AD0101F93A31C00733876 /* ResultCell.xib */,
-				65ED8AC71F9A590F0082C46D /* KursInStack.xib */,
-				651816771F85323D002799D8 /* FooterSearch.xib */,
-				658E96831F9C8FF9004EA531 /* RumusBeaMasuk.xib */,
-				658E96851F9C98E6004EA531 /* Developer.xib */,
-				6560156E1F9CFBCB001A00C4 /* Pengaduan.xib */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -234,6 +234,7 @@
 				653AD0131F93A68C00733876 /* ResultViewController.swift */,
 				65B8D06E1F965697009AFD02 /* BiayaViewController.swift */,
 				6560156A1F9CA0E3001A00C4 /* GuideViewController.swift */,
+				65DAAE4F1F9F7863005ABB1D /* CaraHitungController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -260,6 +261,7 @@
 				653AD00D1F93837200733876 /* BeaPickerViewModel.swift */,
 				6555BEFA1F962A3400C63F14 /* ResultViewModel.swift */,
 				656015701F9D0727001A00C4 /* GuideViewModel.swift */,
+				65DAAE511F9F7F62005ABB1D /* CaraHitungViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -280,6 +282,7 @@
 			children = (
 				653AD00F1F93A31C00733876 /* ResultCell.swift */,
 				6591ED711F66EF0500A46885 /* CalculatorCell.swift */,
+				65DAAE4B1F9F7433005ABB1D /* CaraHitungCell.swift */,
 				6549E2F81F82AA39009B46E1 /* ReloadView.swift */,
 				65C0DBFA1F84B0E100729C1C /* FooterSearch.swift */,
 				655A3C031F76092A0015000B /* ViewInStack.swift */,
@@ -298,6 +301,23 @@
 				65C0DBF71F84067900729C1C /* btki.json */,
 			);
 			path = Json;
+			sourceTree = "<group>";
+		};
+		65DAAE481F9F7309005ABB1D /* XIB */ = {
+			isa = PBXGroup;
+			children = (
+				651816791F853312002799D8 /* ReloadView.xib */,
+				65CC81F81F91A66D002E156A /* CalculatorCell.xib */,
+				653AD00B1F9361FE00733876 /* BeaPickerView.xib */,
+				653AD0101F93A31C00733876 /* ResultCell.xib */,
+				65ED8AC71F9A590F0082C46D /* KursInStack.xib */,
+				651816771F85323D002799D8 /* FooterSearch.xib */,
+				658E96831F9C8FF9004EA531 /* RumusBeaMasuk.xib */,
+				658E96851F9C98E6004EA531 /* Developer.xib */,
+				6560156E1F9CFBCB001A00C4 /* Pengaduan.xib */,
+				65DAAE4C1F9F7433005ABB1D /* CaraHitungCell.xib */,
+			);
+			path = XIB;
 			sourceTree = "<group>";
 		};
 		65F1F4F41F7AB3660062F63F /* Extension */ = {
@@ -384,6 +404,7 @@
 				6558B9391F7D79F7004FFBB6 /* SourceSansPro-Regular.otf in Resources */,
 				65CC81F91F91A66D002E156A /* CalculatorCell.xib in Resources */,
 				6560156F1F9CFBCB001A00C4 /* Pengaduan.xib in Resources */,
+				65DAAE4E1F9F7433005ABB1D /* CaraHitungCell.xib in Resources */,
 				653AD0121F93A31C00733876 /* ResultCell.xib in Resources */,
 				651816781F8532D8002799D8 /* FooterSearch.xib in Resources */,
 				658E96861F9C98E6004EA531 /* Developer.xib in Resources */,
@@ -478,7 +499,9 @@
 				655A3C041F76092A0015000B /* ViewInStack.swift in Sources */,
 				652940DB1F75FF8800B2B660 /* ViewShadow.swift in Sources */,
 				65F1F4F61F7AB76D0062F63F /* UILabel.swift in Sources */,
+				65DAAE521F9F7F63005ABB1D /* CaraHitungViewModel.swift in Sources */,
 				6532FCFF1F78030100459DA4 /* HomeViewModel.swift in Sources */,
+				65DAAE4D1F9F7433005ABB1D /* CaraHitungCell.swift in Sources */,
 				6536A35F1F87DD6200A06D59 /* KursViewController.swift in Sources */,
 				65C8BCA51F765FF900E95E71 /* ButtonCalculate.swift in Sources */,
 				654222AA1F63E66A00CE3A84 /* AppDelegate.swift in Sources */,
@@ -491,6 +514,7 @@
 				6555BEFB1F962A3400C63F14 /* ResultViewModel.swift in Sources */,
 				65CC81FB1F922552002E156A /* SearchViewModel.swift in Sources */,
 				653AD0141F93A68C00733876 /* ResultViewController.swift in Sources */,
+				65DAAE501F9F7863005ABB1D /* CaraHitungController.swift in Sources */,
 				6549E2F91F82AA39009B46E1 /* ReloadView.swift in Sources */,
 				6591ED721F66EF0500A46885 /* CalculatorCell.swift in Sources */,
 			);

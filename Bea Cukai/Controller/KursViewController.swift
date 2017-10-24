@@ -94,6 +94,7 @@ extension KursViewController: ReloadViewDelegate {
     
     func reload() {
         print("reload view action")
+        getallrate
     }
     
 }

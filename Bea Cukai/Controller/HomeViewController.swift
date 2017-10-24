@@ -72,7 +72,11 @@ class HomeViewController: UIViewController, BottomBackground{
 
     @IBAction func menuButtonActions(_ sender: UIButton) {
         print("sender \(sender.tag)")
-        self.performSegue(withIdentifier: "guideSegue", sender:sender.tag)
+        if sender.tag == 1 {
+            caraHitungGuide()
+        }else{
+            self.performSegue(withIdentifier: "guideSegue", sender:sender.tag)
+        }
     }
     
     @IBAction func openCalculator(_ sender: ButtonCalculate) {
@@ -92,7 +96,7 @@ class HomeViewController: UIViewController, BottomBackground{
         for (key,value) in data{
             allRates[key as String] = value.stringValue
         }
-        print("all rates \(allRates)")
+
         setDataOnKurs()
     }
 }
@@ -118,6 +122,11 @@ extension HomeViewController {
 
 extension HomeViewController {
     
+    func caraHitungGuide() {
+        let caraHitung = CaraHitungController()
+        self.navigationController?.pushViewController(caraHitung, animated: true)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "kursSegue" {
@@ -127,18 +136,21 @@ extension HomeViewController {
         }
         
         if segue.identifier == "guideSegue" {
-            if let guide = segue.destination as? GuideViewController {
-                let sndr = sender as! Int
-                
-                if sndr == 0 {
-                    guide.guide = .rumus
-                }else if sndr == 3{
-                    guide.guide = .pengaduan
-                }else{
-                    guide.guide = .developer
-                }
-                
+            
+            guard let guide = segue.destination as? GuideViewController else {
+                return
             }
+            
+            let sndr = sender as! Int
+            
+            if sndr == 0 {
+                guide.guide = .rumus
+            }else if sndr == 3 {
+                guide.guide = .pengaduan
+            }else{
+                guide.guide = .developer
+            }
+                
         }
 
         
