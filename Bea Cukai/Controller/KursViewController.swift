@@ -8,7 +8,13 @@
 
 import UIKit
 
+protocol KursDelegate {
+    func setDataOnKurs(_ allRates:[String:String])
+}
+
 class KursViewController: UIViewController, BottomBackground {
+    
+    var delegate:KursDelegate!
     
     @IBOutlet weak var stackRight: UIStackView!
     @IBOutlet weak var stackLeft: UIStackView!
@@ -18,6 +24,7 @@ class KursViewController: UIViewController, BottomBackground {
 
     var allRates:[String:Kurs] = [:]
     let titleVC = "Info Kurs"
+    var reloadView:ReloadView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,12 +37,15 @@ class KursViewController: UIViewController, BottomBackground {
     func configContent() {
         
         if allRates.count > 0 {
+            print("config stack kurs")
             configStackKurs(removeIDR())
         }else{
             topText.isHidden = true
             bottomText.isHidden = true
-            stackLeft.removeFromSuperview()
-            stackRight.removeFromSuperview()
+//            stackLeft.removeFromSuperview()
+//            stackRight.removeFromSuperview()
+            stackLeft.isHidden = true
+            stackRight.isHidden = true
             showReloadView()
         }
         
@@ -84,7 +94,7 @@ extension KursViewController: ReloadViewDelegate {
     
     func showReloadView() -> Void {
         
-        let reloadView = ReloadView.loadFromXib() as ReloadView
+        reloadView = ReloadView.loadFromXib() as ReloadView
         reloadView.configView(.pageKurs)
         reloadView.delegate = self
         mainStack.addArrangedSubview(reloadView)
@@ -94,7 +104,39 @@ extension KursViewController: ReloadViewDelegate {
     
     func reload() {
         print("reload view action")
-        getallrate
+        getAllRates()
     }
+    
+    func getAllRates() -> Void {
+        let api = APIManager()
+        api.getCurrency(base: "USD", completion: {(result : JSON) -> Void in
+            self.configAllRates(data: result["rates"])
+            print(result)
+        })
+    }
+
+    func configAllRates(data:JSON) -> Void {
+        
+        var rates:[String:String] = [:]
+        
+        for (key,value) in data{
+            rates[key as String] = value.stringValue
+        }
+
+        let viewModel = HomeViewModel(kurs: Kurs.configRates(data: rates))
+        allRates  = viewModel.kurs
+//        mainStack.addArrangedSubview(stackLeft)
+//        mainStack.addArrangedSubview(stackRight)
+        stackLeft.isHidden = false
+        stackRight.isHidden = false
+        reloadView.isHidden = true
+        configContent()
+        sendDataToHome(rates)
+    }
+    
+    func sendDataToHome(_ rates:[String:String]){
+        delegate.setDataOnKurs(rates)
+    }
+
     
 }

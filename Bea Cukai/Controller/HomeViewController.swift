@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, BottomBackground{
+class HomeViewController: UIViewController, BottomBackground, KursDelegate{
     
     @IBOutlet weak var infoKursTitle: UILabel!
     @IBOutlet weak var usdValue: UILabel!
@@ -97,14 +97,15 @@ class HomeViewController: UIViewController, BottomBackground{
             allRates[key as String] = value.stringValue
         }
 
-        setDataOnKurs()
+        setDataOnKurs(allRates)
     }
 }
 
 extension HomeViewController {
     
-    func setDataOnKurs() {
+    func setDataOnKurs(_ allRates:[String:String]) {
         
+        self.allRates = allRates
         viewModel = HomeViewModel(kurs: Kurs.configRates(data: allRates))
         
         usdValue.text = viewModel.currency(.Indonesia)
@@ -132,6 +133,7 @@ extension HomeViewController {
         if segue.identifier == "kursSegue" {
             if let kurs = segue.destination as? KursViewController {
                 kurs.allRates = viewModel.kurs
+                kurs.delegate = self
             }
         }
         
