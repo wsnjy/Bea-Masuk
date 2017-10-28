@@ -8,7 +8,10 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, BottomBackground, KursDelegate{
+class HomeViewController: UIViewController, BottomBackground, KursDelegate, ReloadViewDelegate{
+    
+    @IBOutlet weak var stackKurs: UIStackView!
+    @IBOutlet weak var btnKurs: UIButton!
     
     @IBOutlet weak var infoKursTitle: UILabel!
     @IBOutlet weak var usdValue: UILabel!
@@ -27,6 +30,7 @@ class HomeViewController: UIViewController, BottomBackground, KursDelegate{
     @IBOutlet weak var viewBottomRight: ViewInStack!
     
     @IBOutlet weak var btnCalculate: UIButton!
+    var reloadView:ReloadView!
 
     let imageBottom:UIImageView = {
         return UIImageView.init(image: UIImage(named: "bg_bottom"))
@@ -71,7 +75,6 @@ class HomeViewController: UIViewController, BottomBackground, KursDelegate{
     }
 
     @IBAction func menuButtonActions(_ sender: UIButton) {
-        print("sender \(sender.tag)")
         if sender.tag == 1 {
             caraHitungGuide()
         }else{
@@ -85,9 +88,21 @@ class HomeViewController: UIViewController, BottomBackground, KursDelegate{
     }
     
     func getAllRates() -> Void {
-        let api = APIManager()
-        api.getCurrency(base: "USD", completion: {(result : JSON) -> Void in
-            self.configAllRates(data: result["rates"])
+        APIManager().getCurrency(base: "USD", completion: {(result : JSON, error: Bool) -> Void in
+            
+            if (!error){
+                
+                if (!self.reloadView.isHidden){
+                    self.reloadView.removeFromSuperview()
+                }
+                
+                self.stackKurs.isHidden = false
+                self.btnKurs.isHidden = false
+                self.configAllRates(data: result["rates"])
+            }else{
+                print("no connection")
+                self.showReloadView()
+            }
         })
     }
     
@@ -99,6 +114,30 @@ class HomeViewController: UIViewController, BottomBackground, KursDelegate{
 
         setDataOnKurs(allRates)
     }
+    
+    func showReloadView() -> Void {
+        
+        stackKurs.isHidden = true
+        btnKurs.isHidden = true
+        
+        reloadView = ReloadView.loadFromXib() as ReloadView
+        reloadView.configView(.homeKurs)
+        reloadView.isHidden = false
+        reloadView.delegate = self
+        viewKurs.addSubview(reloadView)
+        
+        reloadView.translatesAutoresizingMaskIntoConstraints = false
+        reloadView.leftAnchor.constraint(equalTo: viewKurs.leftAnchor).isActive = true
+        reloadView.topAnchor.constraint(equalTo: viewKurs.topAnchor).isActive = true
+        reloadView.rightAnchor.constraint(equalTo: viewKurs.rightAnchor).isActive = true
+        reloadView.bottomAnchor.constraint(equalTo: viewKurs.bottomAnchor).isActive = true
+    }
+    
+    func reload() {
+        getAllRates()
+    }
+
+
 }
 
 extension HomeViewController {

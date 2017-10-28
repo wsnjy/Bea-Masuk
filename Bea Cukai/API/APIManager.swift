@@ -16,12 +16,13 @@ class APIManager: NSObject {
     static let currentyEndPoint = "latest?base="
     static let currencyParams = "&symbols=CNY,EUR,GBP,HKD,JPY,SAR,SGD,IDR,AUD,MYR"
 
-    func getCurrency(base:String, completion:@escaping(_ result: JSON) ->())  {
+    func getCurrency(base:String, completion:@escaping(_ result: JSON,_ error:Bool) ->())  {
         
         let url = baseURL + APIManager.currentyEndPoint + base + APIManager.currencyParams
         print(baseURL)
         Alamofire.request(url, method: .get).validate().responseJSON { response in
-            
+            print()
+
             switch response.result {
 
             case .success(let value):
@@ -29,9 +30,11 @@ class APIManager: NSObject {
                 let json = JSON(value)
                 let currency = Decimal(json["rates"]["IDR"].doubleValue)
                 self.usdToIDR(currency)
-                completion(json)
+                completion(json, response.result.isFailure)
+                
             case .failure(let error):
                 print(error)
+                completion(JSON.null, response.result.isFailure)
             }
         }
 
@@ -40,7 +43,6 @@ class APIManager: NSObject {
     func usdToIDR(_ data:Decimal){
         let userDefault = UserDefaults()
         userDefault.set(data, forKey: "USD")
-        print("RUPIAHHH \(String(describing: UserDefaults().string(forKey: "USD")))")
     }
     
     

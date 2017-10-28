@@ -27,7 +27,7 @@ class ReloadView: UIView {
     @IBOutlet weak var checkConnection: UILabel!
 
     var caseReload:CaseReload?
-    let borderHomeKurs:UIColor = UIColor.red
+    let borderHomeKurs:UIColor = UIColor.white
     let borderPageKurs:UIColor = UIColor.init(red: 182.0/255.0, green: 213.0/255.0, blue: 236.0/255.0, alpha: 1)
 
     override func awakeFromNib() {
@@ -54,18 +54,20 @@ extension ReloadView {
     func iconAndLabelConfig(_ type:CaseReload) -> Void {
         
         var icon = UIImage()
+        var color:UIColor = borderHomeKurs
         
         switch type {
         case .homeKurs:
             icon = #imageLiteral(resourceName: "emoji_sad_kurs")
         case .pageKurs:
             icon = #imageLiteral(resourceName: "emoji_sad")
+            color = borderPageKurs
         }
         
         iconEmojiSad.image = icon
-        btnReload.titleLabel?.textColor = borderPageKurs
-        textSorry.textColor = borderPageKurs
-        checkConnection.textColor = borderPageKurs
+        btnReload.setTitleColor(color, for: .normal)
+        textSorry.textColor = color
+        checkConnection.textColor = color
         
     }
     

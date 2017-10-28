@@ -30,33 +30,35 @@
                     </constraints>
                 </activityIndicatorView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check your internet connection" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="81o-8A-ceN">
-                    <rect key="frame" x="0.0" y="78.5" width="374.5" height="19"/>
-                    <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="16"/>
+                    <rect key="frame" x="0.0" y="86" width="374.5" height="15.5"/>
+                    <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="12"/>
                     <color key="textColor" red="0.71372549019999998" green="0.83529411760000005" blue="0.92549019610000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I'M SORRY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="klS-0f-bPX">
-                    <rect key="frame" x="0.0" y="59.5" width="375" height="19"/>
-                    <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="16"/>
+                    <rect key="frame" x="0.0" y="68" width="375" height="18"/>
+                    <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="14"/>
                     <color key="textColor" red="0.71372549019999998" green="0.83529411760000005" blue="0.92549019610000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QaG-8B-6M6" customClass="ButtonCalculate" customModule="Bea_Cukai" customModuleProvider="target">
-                    <rect key="frame" x="137.5" y="109.5" width="100" height="29"/>
+                    <rect key="frame" x="147.5" y="113.5" width="80" height="30"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="100" id="A4B-ar-iGU"/>
+                        <constraint firstAttribute="width" constant="80" id="A4B-ar-iGU"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="14"/>
-                    <state key="normal" title="Reload"/>
+                    <state key="normal" title="Reload">
+                        <color key="titleColor" red="0.3294117647" green="0.53725490200000003" blue="0.90588235289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
                     <connections>
                         <action selector="reloadButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="Kaa-NP-fiB"/>
                     </connections>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emoji_sad" translatesAutoresizingMaskIntoConstraints="NO" id="ydL-s8-gNM">
-                    <rect key="frame" x="172.5" y="17.5" width="30" height="30"/>
+                    <rect key="frame" x="175.5" y="32" width="24" height="24"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="ydL-s8-gNM" secondAttribute="height" multiplier="1:1" id="0hp-Yc-q1V"/>
-                        <constraint firstAttribute="height" constant="30" id="TK7-si-e0Y"/>
+                        <constraint firstAttribute="height" constant="24" id="TK7-si-e0Y"/>
                     </constraints>
                 </imageView>
             </subviews>
@@ -65,7 +67,7 @@
                 <constraint firstItem="81o-8A-ceN" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="3A5-b0-Wlb"/>
                 <constraint firstItem="81o-8A-ceN" firstAttribute="top" secondItem="klS-0f-bPX" secondAttribute="bottom" id="5hz-b1-pO1"/>
                 <constraint firstItem="gAH-D2-Ecs" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="EmE-mQ-sex"/>
-                <constraint firstItem="81o-8A-ceN" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Evy-w1-qUb"/>
+                <constraint firstItem="81o-8A-ceN" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="6" id="Evy-w1-qUb"/>
                 <constraint firstItem="QaG-8B-6M6" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="GY1-sb-7XF"/>
                 <constraint firstItem="gAH-D2-Ecs" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="Lfn-E9-n1Z"/>
                 <constraint firstItem="ydL-s8-gNM" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="PpJ-sB-OwF"/>

@@ -37,18 +37,19 @@ class KursViewController: UIViewController, BottomBackground {
     func configContent() {
         
         if allRates.count > 0 {
-            print("config stack kurs")
             configStackKurs(removeIDR())
         }else{
-            topText.isHidden = true
-            bottomText.isHidden = true
-//            stackLeft.removeFromSuperview()
-//            stackRight.removeFromSuperview()
-            stackLeft.isHidden = true
-            stackRight.isHidden = true
+            configViewForReloadView(true)
             showReloadView()
         }
+    }
+    
+    func configViewForReloadView(_ isNoConnection:Bool) {
         
+        topText.isHidden = isNoConnection
+        bottomText.isHidden = isNoConnection
+        stackLeft.isHidden = isNoConnection
+        stackRight.isHidden = isNoConnection
     }
 
     override func didReceiveMemoryWarning() {
@@ -98,20 +99,22 @@ extension KursViewController: ReloadViewDelegate {
         reloadView.configView(.pageKurs)
         reloadView.delegate = self
         mainStack.addArrangedSubview(reloadView)
-        mainStack.heightAnchor.constraint(equalToConstant: 200).isActive = true
         
     }
     
     func reload() {
-        print("reload view action")
         getAllRates()
     }
     
     func getAllRates() -> Void {
-        let api = APIManager()
-        api.getCurrency(base: "USD", completion: {(result : JSON) -> Void in
-            self.configAllRates(data: result["rates"])
-            print(result)
+        APIManager().getCurrency(base: "USD", completion: {(result : JSON, error: Bool) -> Void in
+            
+            if (!error){
+                self.configAllRates(data: result["rates"])
+            }else{
+                print("no connection")
+                self.configContent()
+            }
         })
     }
 
@@ -125,11 +128,9 @@ extension KursViewController: ReloadViewDelegate {
 
         let viewModel = HomeViewModel(kurs: Kurs.configRates(data: rates))
         allRates  = viewModel.kurs
-//        mainStack.addArrangedSubview(stackLeft)
-//        mainStack.addArrangedSubview(stackRight)
-        stackLeft.isHidden = false
-        stackRight.isHidden = false
-        reloadView.isHidden = true
+        
+        reloadView.removeFromSuperview()
+        configViewForReloadView(false)
         configContent()
         sendDataToHome(rates)
     }
