@@ -48,7 +48,7 @@ class HomeViewController: UIViewController, BottomBackground, KursDelegate, Relo
         super.viewDidLoad()
         viewConfiguration()
         getAllRates()
-    }
+}
     
     override func viewWillAppear(_ animated: Bool) {
         title = titleController
@@ -92,7 +92,7 @@ class HomeViewController: UIViewController, BottomBackground, KursDelegate, Relo
             
             if (!error){
                 
-                if (!self.reloadView.isHidden){
+                if (self.reloadView !=  nil){
                     self.reloadView.removeFromSuperview()
                 }
                 

@@ -32,6 +32,12 @@ class KursViewController: UIViewController, BottomBackground {
         setBackButton()
         showBottomBackground()
         configContent()
+        setTopText()
+    }
+    
+    func setTopText() {
+        let time = UserDefaults().string(forKey: "dateNow")!
+        bottomText.text = time
     }
     
     func configContent() {

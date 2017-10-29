@@ -30,6 +30,7 @@ class APIManager: NSObject {
                 let json = JSON(value)
                 let currency = Decimal(json["rates"]["IDR"].doubleValue)
                 self.usdToIDR(currency)
+                self.dateNow()
                 completion(json, response.result.isFailure)
                 
             case .failure(let error):
@@ -45,5 +46,18 @@ class APIManager: NSObject {
         userDefault.set(data, forKey: "USD")
     }
     
+    
+    func dateNow() {
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd MMMM yyyy HH:mm"
+        formatter.locale = NSLocale(localeIdentifier: "id-ID") as Locale!
+        let result = formatter.string(from: date)
+        
+        let userDefault = UserDefaults()
+        userDefault.set("\(result) WIB", forKey: "dateNow")
+
+    }
+
     
 }
