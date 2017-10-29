@@ -83,6 +83,8 @@ class BeaPickerView: UIView , UIPickerViewDelegate, UIPickerViewDataSource{
     }
 
     func sendDataValue(_ row:Int) {
+        
+        if sendForFirstTime { sendForFirstTime = false}
         delegate?.addValueToTextField(value: getDataForPicker()[row])
     }
 

@@ -132,7 +132,7 @@ class CalculatorCell: UITableViewCell, BeaPickerDelegate{
     }
     
     func addValueToTextField(value: String) {
-       
+       print("value adalah \(value)")
         if pickerView.pickerType == .search{
             textField.text = value
         }else{

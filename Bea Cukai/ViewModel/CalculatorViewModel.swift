@@ -34,20 +34,6 @@ struct CalculatorViewModel {
             [:], // empty dictionary for button simpan
         ]
     ]
-
-    
-//    let cellConfigData:Array = [
-//        ["top_title":"Metode Pencarian","placeholder":"pilih"],
-//        ["top_title":"Kata Kunci atau HS Code","placeholder":"Masukan Parameter Pencarian"],
-//        ["top_title":"Input Manual (%)","placeholder":"Masukan nilai tarif bea masuk"],
-//    ]
-
-//    let cellConfigData:Array = [
-//        ["top_title":"Mobil mewah","placeholder":"Kopra", "percentage":"10"],
-//        ["top_title":"Mobil mewah","placeholder":"Kopra", "percentage":"10"],
-//        ["top_title":"Mobil mewah","placeholder":"Kopra", "percentage":"10"],
-//        ]
-
     
     let dummyData:[Decimal] = [0, 0, 0, 0, 0, 0, 0, 0, 0]
     
