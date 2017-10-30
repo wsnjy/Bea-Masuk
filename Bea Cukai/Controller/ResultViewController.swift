@@ -17,6 +17,11 @@ class ResultViewController: UITableViewController, BottomBackground {
     var delegate:resultDelegate?
     let titleVC = "Tarif Bea Masuk"
     let cellName = "ResultCell"
+    let titleAlert = "Maaf"
+    let messageAlert = "Sepertinya daftar tarif belum tersedia, silahkan input manual besarnya tarif atau anda dapat memilih yang lebih sesuai"
+    let manualTitle = "Manual"
+    let lainTitle = "Pilih Lainnya"
+
     let numberOfSection = 1
     let heightHeaderSection:CGFloat = 44
     var result:[Tarif] = []
@@ -70,9 +75,42 @@ extension ResultViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(result[indexPath.row].percent!)
-        delegate?.sendValue(result[indexPath.row].percent!)
+        actionSelect(indexPath)
+    }
+    
+    func actionSelect(_ indexPath:IndexPath) {
+        
+        let value:String = result[indexPath.row].percent!
+        
+        print("valuenya adalah \(value)")
+        guard value.characters.count > 0 else {
+            showAlert()
+            return
+        }
+        
+        delegate?.sendValue(value)
         dismisss()
     }
+    
+}
+
+extension ResultViewController {
+    
+    func showAlert() {
+        
+        let alert = UIAlertController(title: titleAlert, message: messageAlert , preferredStyle: .alert)
+        let manual = UIAlertAction(title: manualTitle, style: .default) {
+            action in
+            self.dismisss()
+        }
+        let lain = UIAlertAction(title: lainTitle, style: .cancel, handler: nil)
+        
+        alert.addAction(manual)
+        alert.addAction(lain)
+        
+        self.present(alert, animated: true, completion: nil)
+        
+    }
+
     
 }

@@ -40,6 +40,7 @@ class CalculatorViewController: UITableViewController, UITextFieldDelegate, Bott
     }
     
     func saveAction() {
+        print("all the data form \(dataForm)")
         view.endEditing(true)
         let biaya = BiayaViewController()
         biaya.dataForm = self.dataForm
@@ -74,6 +75,7 @@ extension CalculatorViewController {
         
         cell.condition = .calculator
         cell.setDataCell(indexPath: indexPath, delegate: self)
+        if dataForm[2] > 0 { cell.setDataTarif(indexPath,dataForm[2])}
         
         return cell
     }
@@ -111,14 +113,16 @@ extension CalculatorViewController {
     }
     
     func sendValue(_ value: String) {
-
-        dataForm[2] = Decimal(string:value)!
         
-        let indexPath = IndexPath(row: 2, section:0)
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellName, for: indexPath) as! CalculatorCell
-        cell.condition = .calculator
-        cell.setDataCell(indexPath: indexPath, delegate: self)
-        cell.textField.text = value
+        var decimalValue = Decimal(string:value)
+        
+        guard decimalValue != nil else {
+            decimalValue = 0
+            return
+        }
+        
+        dataForm[2] = decimalValue!
+        tableView.reloadData()
 
     }
     

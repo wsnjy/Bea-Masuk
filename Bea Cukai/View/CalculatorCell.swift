@@ -26,7 +26,7 @@ class CalculatorCell: UITableViewCell, BeaPickerDelegate{
     var condition:cellCondition = cellCondition.calculator
 
     let pickerView = BeaPickerView.loadFromXib() as BeaPickerView
-
+    let calculatorViewModel = CalculatorViewModel()
     let cellConfigData:[[String:String]] = {
         return CalculatorViewModel().configCalculator
     }()
@@ -69,7 +69,7 @@ class CalculatorCell: UITableViewCell, BeaPickerDelegate{
         setAccessory(indexPath)
         
         pickerView.delegate = self
-
+        
         if indexPath.row == 5 || indexPath.row == 6{
             if indexPath.row == 5 {
                 pickerView.pickerType = .tarif
@@ -107,22 +107,20 @@ class CalculatorCell: UITableViewCell, BeaPickerDelegate{
     }
 
     func placeholderText(_ indexPath:IndexPath) -> String {
-        return CalculatorViewModel().placeholderText(indexPath, condition)
+        return calculatorViewModel.placeholderText(indexPath, condition)
     }
     
     func topTitle(_ indexPath: IndexPath) -> String {
-        return CalculatorViewModel().topTitle(indexPath, condition)
+        return calculatorViewModel.topTitle(indexPath, condition)
     }
 
     func percentage(_ indexPath: IndexPath) -> String {
-        return CalculatorViewModel().percentage(indexPath, condition)
+        return calculatorViewModel.percentage(indexPath, condition)
     }
     
     func setAccessory(_ indexPath: IndexPath) -> Void {
         
-        guard indexPath.row == 2 else {
-            return
-        }
+        guard indexPath.row == 2 else { return }
         textField.isEnabled = false
         accessoryType = UITableViewCellAccessoryType.disclosureIndicator
     }
@@ -132,12 +130,18 @@ class CalculatorCell: UITableViewCell, BeaPickerDelegate{
     }
     
     func addValueToTextField(value: String) {
-       print("value adalah \(value)")
+
         if pickerView.pickerType == .search{
             textField.text = value
         }else{
             textField.text = BeaPickerViewModel().valueForTarifOrPembebasan(value)
         }
+    }
+    
+    func setDataTarif(_ indexPath:IndexPath,_ value:Decimal) {
+        
+        guard indexPath.row == 2 else { return }
+        textField.text = String(describing: value)
     }
     
 }

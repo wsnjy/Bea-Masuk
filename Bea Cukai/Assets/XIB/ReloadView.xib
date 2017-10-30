@@ -30,19 +30,19 @@
                     </constraints>
                 </activityIndicatorView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check your internet connection" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="81o-8A-ceN">
-                    <rect key="frame" x="0.0" y="86" width="374.5" height="15.5"/>
+                    <rect key="frame" x="0.0" y="87" width="374.5" height="14"/>
                     <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="12"/>
                     <color key="textColor" red="0.71372549019999998" green="0.83529411760000005" blue="0.92549019610000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I'M SORRY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="klS-0f-bPX">
-                    <rect key="frame" x="0.0" y="68" width="375" height="18"/>
+                    <rect key="frame" x="0.0" y="70.5" width="375" height="16.5"/>
                     <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="14"/>
                     <color key="textColor" red="0.71372549019999998" green="0.83529411760000005" blue="0.92549019610000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QaG-8B-6M6" customClass="ButtonCalculate" customModule="Bea_Cukai" customModuleProvider="target">
-                    <rect key="frame" x="147.5" y="113.5" width="80" height="30"/>
+                    <rect key="frame" x="147.5" y="113" width="80" height="29"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="80" id="A4B-ar-iGU"/>
                     </constraints>
@@ -55,7 +55,7 @@
                     </connections>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emoji_sad" translatesAutoresizingMaskIntoConstraints="NO" id="ydL-s8-gNM">
-                    <rect key="frame" x="175.5" y="32" width="24" height="24"/>
+                    <rect key="frame" x="175.5" y="34.5" width="24" height="24"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="ydL-s8-gNM" secondAttribute="height" multiplier="1:1" id="0hp-Yc-q1V"/>
                         <constraint firstAttribute="height" constant="24" id="TK7-si-e0Y"/>
