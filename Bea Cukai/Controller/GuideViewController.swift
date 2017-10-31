@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MessageUI
 
 enum GuideType{
     case developer
@@ -14,7 +15,7 @@ enum GuideType{
     case pengaduan
 }
 
-class GuideViewController: UIViewController, BottomBackground, PengaduanDelegate {
+class GuideViewController: UIViewController, BottomBackground, PengaduanDelegate, MFMailComposeViewControllerDelegate, MFMessageComposeViewControllerDelegate {
 
     var guide:GuideType = .developer
     
@@ -76,7 +77,62 @@ extension GuideViewController {
 extension GuideViewController {
     
     func pengaduanAction(_ type: pengaduanCase) {
-        print("pengaduan action \(type)")
+
+        switch type {
+        case .pengaduanTelepon:
+            makeAPhoneCall()
+        case .pengaduanSms:
+            sendSms()
+        case .pengaduanEmail:
+            sendEmail()
+        case .pengaduanTicketing:
+            pengaduanTicketing()
+        }
     }
 
+    func makeAPhoneCall()  {
+        
+        guard let number = URL(string: "tel://+628001003545") else { return }
+        
+        if #available(iOS 10.0, *) {
+            UIApplication.shared.open(number)
+        }
+    }
+    
+    func sendSms() {
+        let number = "+6282130202045"
+        if MFMessageComposeViewController.canSendText() {
+            let controller = MFMessageComposeViewController()
+            controller.body = "Message Body"
+            controller.recipients = [number]
+            controller.messageComposeDelegate = self
+            self.present(controller, animated: true, completion: nil)
+        }
+    }
+    
+    func sendEmail() {
+        if MFMailComposeViewController.canSendMail() {
+            let mail = MFMailComposeViewController()
+            mail.mailComposeDelegate = self
+            mail.setSubject("Pengaduan Bea Cukai")
+            mail.setMessageBody("Dengan email saya ingin menyampaikan bahwa ", isHTML: true)
+            mail.setToRecipients(["pengaduan.beacukai@customs.go.id, puski.beacukai@gmail.com"])
+            present(mail, animated: true, completion: nil)
+        }
+    }
+    
+    func pengaduanTicketing() {
+        UIApplication.shared.openURL(URL(string: "http://www.beacukai.go.id/pengaduan/rekam.html")!)
+    }
+    
+
+    func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
+    dismiss(animated: true, completion: nil)
+    }
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        dismiss(animated: true, completion: nil)
+    }
+
+    
 }

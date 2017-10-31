@@ -55,16 +55,8 @@ class Pengaduan: UIView, ViewShadow{
         default: break
             
         }
-        print("hancikkk")
         delegate?.pengaduanAction(type!)
         
     }
-    
-    @IBAction func actionEmail(_ sender: UIButton) {
-        print("hancikkk 2")
-        delegate?.pengaduanAction(.pengaduanEmail)
-
-    }
-    
     
 }
