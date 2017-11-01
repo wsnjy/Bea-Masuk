@@ -18,8 +18,10 @@ class CalculatorViewController: UITableViewController, UITextFieldDelegate, Bott
     let heightRow:CGFloat = 55
     let numberOfSection = 1
     
+    let calculatorViewModel = CalculatorViewModel()
+    
     var dataForm:[Decimal] = {
-        return CalculatorViewModel().dummyData
+        return CalculatorViewModel().defaultData
     }()
     
     override func viewDidLoad() {
@@ -43,7 +45,8 @@ class CalculatorViewController: UITableViewController, UITextFieldDelegate, Bott
         print("all the data form \(dataForm)")
         view.endEditing(true)
         let biaya = BiayaViewController()
-        biaya.dataForm = self.dataForm
+        biaya.dataForm = setDataFormWithKurs()
+        biaya.setModel()
         let nav = UINavigationController(rootViewController: biaya)
         self.present(nav, animated: true, completion: nil)
     }
@@ -62,7 +65,7 @@ extension CalculatorViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return CalculatorViewModel().rowCount()
+        return calculatorViewModel.rowCount()
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -96,7 +99,6 @@ extension CalculatorViewController {
             return
         }
         
-        print(dataForm[textField.tag])
         dataForm[textField.tag] = Decimal(string:textField.text!)!
     }
     
@@ -124,6 +126,14 @@ extension CalculatorViewController {
         dataForm[2] = decimalValue!
         tableView.reloadData()
 
+    }
+    
+    func setDataFormWithKurs() -> [Decimal] {
+        
+        guard dataForm[1] == 0 else { return dataForm}
+        
+        dataForm[1] = calculatorViewModel.getKursUSD()
+        return dataForm
     }
     
 }

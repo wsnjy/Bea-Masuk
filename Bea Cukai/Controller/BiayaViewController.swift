@@ -50,7 +50,9 @@ class BiayaViewController: UITableViewController, BottomBackground {
     }
     
     func setModel() {
+        
         let biayaViewModel = BiayaViewModel(biaya: Biaya.dataBiaya(data: dataForm))
+        print(biayaViewModel)
         dataForm = [biayaViewModel.totalBeaMasuk(), biayaViewModel.totalPPN(), biayaViewModel.totalPPN(), biayaViewModel.totalPPH(), biayaViewModel.totalPungutan()]
     }
 

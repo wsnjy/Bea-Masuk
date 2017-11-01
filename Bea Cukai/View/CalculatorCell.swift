@@ -79,8 +79,12 @@ class CalculatorCell: UITableViewCell, BeaPickerDelegate{
             textField.inputView = pickerView
         }
         
+        if indexPath.row == 1 {
+            setDataKurs(indexPath)
+        }
+        
     }
-
+    
     func cariConfig(_ indexPath:IndexPath) {
         textField.placeholder = placeholderText(indexPath)
         textField.isEnabled = true
@@ -143,5 +147,10 @@ class CalculatorCell: UITableViewCell, BeaPickerDelegate{
         guard indexPath.row == 2 else { return }
         textField.text = String(describing: value)
     }
+    
+    func setDataKurs(_ indexPath:IndexPath) {
+        textField.text =  String(describing: calculatorViewModel.getKursUSD())
+    }
+
     
 }

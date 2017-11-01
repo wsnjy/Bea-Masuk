@@ -35,7 +35,7 @@ struct CalculatorViewModel {
         ]
     ]
     
-    let dummyData:[Decimal] = [0, 0, 0, 0, 0, 0, 0, 0, 0]
+    var defaultData:[Decimal] = [0, 0, 0, 0, 0, 0, 0, 0, 0]
     
 }
 
@@ -73,6 +73,17 @@ extension CalculatorViewModel {
             return [:]
         }
         
+    }
+    
+    func getKursUSD() -> Decimal{
+        
+        let oneDollar = Decimal(string:UserDefaults().string(forKey: "USD")!)
+
+        guard oneDollar != nil else {
+            return 0
+        }
+        
+        return oneDollar!
     }
     
 }
