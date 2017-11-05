@@ -52,13 +52,20 @@ class HomeViewController: UIViewController, BottomBackground, KursDelegate, Relo
     
     override func viewWillAppear(_ animated: Bool) {
         title = titleController
+//        rightButtonHome()
+        let button = UIButton()
+        button.setImage(UIImage(named:"developer"), for: .normal)
+        button.addTarget(self, action: #selector(openDeveloper), for: .touchUpInside)
+        let barButton = UIBarButtonItem(customView: button)
+//        navigationController?.navigationBar.topItem?.rightBarButtonItem = barButton
+        self.navigationItem.leftBarButtonItem = barButton
+
     }
     
     func viewConfiguration() {
         infoKursViewConfig()
         menuConfig()
         showBottomBackground()
-        rightButtonHome()
     }
     
     func infoKursViewConfig() {
@@ -100,7 +107,6 @@ class HomeViewController: UIViewController, BottomBackground, KursDelegate, Relo
                 self.btnKurs.isHidden = false
                 self.configAllRates(data: result["rates"])
             }else{
-                print("no connection")
                 self.showReloadView()
             }
         })
@@ -137,7 +143,10 @@ class HomeViewController: UIViewController, BottomBackground, KursDelegate, Relo
         getAllRates()
     }
 
-
+    @IBAction func openDeveloper(_ sender: Any) {
+        self.performSegue(withIdentifier: "guideSegue", sender:1)
+    }
+    
 }
 
 extension HomeViewController {
@@ -196,10 +205,5 @@ extension HomeViewController {
 
         
     }
-    
-    override func developerPage(){
-        self.performSegue(withIdentifier: "guideSegue", sender:1)
-    }
-
     
 }
