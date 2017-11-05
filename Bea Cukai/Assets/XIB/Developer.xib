@@ -34,7 +34,7 @@
                 </imageView>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="596-VK-9eW">
                     <rect key="frame" x="12" y="119" width="350" height="121"/>
-                    <color key="backgroundColor" red="0.96078431369999995" green="0.97647058819999999" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <attributedString key="attributedText">
                         <fragment>
                             <string key="content">Beamasuk app merupakan aplikasi pihak ketiga untuk  menghitung tarif bea masuk barang impor sesuai
@@ -81,7 +81,7 @@ Kritik, saran dan masukan kami terima di email:</string>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
-                            <color key="backgroundColor" red="0.96078431369999995" green="0.97647058819999999" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstItem="9Xu-PA-Orn" firstAttribute="top" secondItem="BR5-XX-Hco" secondAttribute="bottom" constant="7" id="8QZ-fL-j8E"/>
                                 <constraint firstAttribute="trailing" secondItem="9Xu-PA-Orn" secondAttribute="trailing" id="HgH-mB-hG2"/>
@@ -117,7 +117,7 @@ Kritik, saran dan masukan kami terima di email:</string>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
-                            <color key="backgroundColor" red="0.96078431369999995" green="0.97647058819999999" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstItem="0WU-2G-Jgl" firstAttribute="top" secondItem="Ga3-sC-BWf" secondAttribute="bottom" id="4Xb-v1-VOp"/>
                                 <constraint firstItem="Ga3-sC-BWf" firstAttribute="top" secondItem="bYp-Vx-xQL" secondAttribute="bottom" constant="7" id="GjH-bf-JjL"/>
@@ -137,7 +137,7 @@ Kritik, saran dan masukan kami terima di email:</string>
                     </constraints>
                 </stackView>
             </subviews>
-            <color key="backgroundColor" red="0.96078431369999995" green="0.97647058819999999" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="596-VK-9eW" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="Dot-RW-uUH"/>
                 <constraint firstItem="eIs-nJ-SRw" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="I05-7C-WZY"/>
@@ -153,7 +153,7 @@ Kritik, saran dan masukan kami terima di email:</string>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="34.5" y="-117.5"/>
+            <point key="canvasLocation" x="-139" y="-139"/>
         </view>
     </objects>
     <resources>

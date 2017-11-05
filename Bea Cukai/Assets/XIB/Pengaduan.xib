@@ -25,7 +25,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="Pengaduan" customModule="Bea_Cukai" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="457"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="437"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="Direktur Kepatuhan Internal Direktorat Jenderal Bea dan Cukai  Kantor Pusat Bea dan Cukai" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4L-Tt-zIE">
@@ -272,7 +272,7 @@ Jakarta - 13230</string>
                 <outlet property="viewSms" destination="NEG-aY-YXg" id="vTb-DE-2Vp"/>
                 <outlet property="viewTelepon" destination="S1z-v1-pdP" id="tEm-aJ-yui"/>
             </connections>
-            <point key="canvasLocation" x="30.5" y="-11.5"/>
+            <point key="canvasLocation" x="30.5" y="-21.5"/>
         </view>
     </objects>
     <resources>

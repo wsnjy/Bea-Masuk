@@ -23,7 +23,7 @@ class ResultViewController: UITableViewController, BottomBackground {
     let lainTitle = "Pilih Lainnya"
 
     let numberOfSection = 1
-    let heightHeaderSection:CGFloat = 44
+    let heightHeaderSection:CGFloat = 0
     var result:[Tarif] = []
     
     

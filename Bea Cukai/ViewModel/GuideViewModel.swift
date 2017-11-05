@@ -8,10 +8,22 @@
 
 import UIKit
 
-struct GuideViewModel {
+class GuideViewModel {
     
     var type:GuideType
     
+    let telpNumber = "tel://+628001003545"
+    let number = "+6282130202045"
+    let templateSMS = "Dengan ini saya menyampaikan saran dan kritik bahwa..."
+    let subjectEmail = "Pengaduan Bea Cukai"
+    let templateEmail = "Dengan email saya ingin menyampaikan bahwa "
+    let emailAddress = "pengaduan.beacukai@customs.go.id"
+    let urlPengaduan = "http://www.beacukai.go.id/pengaduan/rekam.html"
+
+
+    init(type:GuideType) {
+        self.type = type
+    }
 }
 
 extension GuideViewModel {

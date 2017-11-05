@@ -18,13 +18,12 @@ class ResultCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         selectionStyle = .none
-        backgroundBeaColor()
+//        backgroundBeaColor()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
     
     func configCell(indexPath:IndexPath, data:[Tarif]){

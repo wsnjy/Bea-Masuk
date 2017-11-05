@@ -42,7 +42,6 @@ class CalculatorViewController: UITableViewController, UITextFieldDelegate, Bott
     }
     
     func saveAction() {
-        print("all the data form \(dataForm)")
         view.endEditing(true)
         let biaya = BiayaViewController()
         biaya.dataForm = setDataFormWithKurs()
@@ -112,6 +111,9 @@ extension CalculatorViewController {
     
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {
         view.endEditing(true)
+        
+//        print(scrollView.contentOffset.y)
+        
     }
     
     func sendValue(_ value: String) {

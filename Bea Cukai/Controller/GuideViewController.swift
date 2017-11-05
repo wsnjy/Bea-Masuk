@@ -18,6 +18,7 @@ enum GuideType{
 class GuideViewController: UIViewController, BottomBackground, PengaduanDelegate, MFMailComposeViewControllerDelegate, MFMessageComposeViewControllerDelegate {
 
     var guide:GuideType = .developer
+    var viewModel:GuideViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +43,7 @@ extension GuideViewController {
     
     func loadViewWithCase(_ type:GuideType) {
         
-        let viewModel = GuideViewModel(type: type)
+        viewModel = GuideViewModel.init(type: type)
         
         title = viewModel.titles()
         
@@ -52,8 +53,17 @@ extension GuideViewController {
             showPengaduan(nib: nib)
         }else{
             let dev = nib.instantiate(withOwner: self, options: nil).first as! UIView
-            dev.frame = CGRect(x: 0, y: 0, width: view.frame.size.width, height: 300)
             view.addSubview(dev)
+            
+            
+            dev.translatesAutoresizingMaskIntoConstraints = false
+            dev.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+            dev.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+            dev.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+            dev.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+
+            let multipier = Float(view.frame.size.height) * (2.4/3)
+            dev.heightAnchor.constraint(equalToConstant: CGFloat(multipier)).isActive = true
         }
     }
     
@@ -65,11 +75,12 @@ extension GuideViewController {
         view.addSubview(dev)
         
         dev.translatesAutoresizingMaskIntoConstraints = false
-        dev.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        dev.topAnchor.constraint(equalTo: view.topAnchor, constant: 50).isActive = true
         dev.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         dev.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
-        dev.heightAnchor.constraint(equalToConstant: view.frame.size.height - 90).isActive = true
-
+        let multipier = Float(view.frame.size.height) * (2.4/3)
+        dev.heightAnchor.constraint(equalToConstant: CGFloat(multipier)).isActive = true
+        
     }
     
 }
@@ -92,42 +103,49 @@ extension GuideViewController {
 
     func makeAPhoneCall()  {
         
-        guard let number = URL(string: "tel://+628001003545") else { return }
+        guard let number = URL(string:viewModel.telpNumber) else { return }
         
         if #available(iOS 10.0, *) {
             UIApplication.shared.open(number)
+        }else{
+            print("can't send anything")
         }
     }
     
     func sendSms() {
-        let number = "+6282130202045"
+
         if MFMessageComposeViewController.canSendText() {
             let controller = MFMessageComposeViewController()
-            controller.body = "Message Body"
-            controller.recipients = [number]
+            controller.body = viewModel.templateSMS
+            controller.recipients = [viewModel.number]
             controller.messageComposeDelegate = self
             self.present(controller, animated: true, completion: nil)
+        }else{
+            print("can't send anything")
         }
     }
     
     func sendEmail() {
+
         if MFMailComposeViewController.canSendMail() {
             let mail = MFMailComposeViewController()
             mail.mailComposeDelegate = self
-            mail.setSubject("Pengaduan Bea Cukai")
-            mail.setMessageBody("Dengan email saya ingin menyampaikan bahwa ", isHTML: true)
-            mail.setToRecipients(["pengaduan.beacukai@customs.go.id, puski.beacukai@gmail.com"])
+            mail.setSubject(viewModel.subjectEmail)
+            mail.setMessageBody(viewModel.templateEmail, isHTML: true)
+            mail.setToRecipients([viewModel.emailAddress])
             present(mail, animated: true, completion: nil)
+        }else{
+            print("can't send anything")
         }
     }
     
     func pengaduanTicketing() {
-        UIApplication.shared.openURL(URL(string: "http://www.beacukai.go.id/pengaduan/rekam.html")!)
+        UIApplication.shared.openURL(URL(string: viewModel.urlPengaduan)!)
     }
     
 
     func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
-    dismiss(animated: true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
     
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
@@ -136,3 +154,4 @@ extension GuideViewController {
 
     
 }
+

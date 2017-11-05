@@ -34,6 +34,8 @@ class SearchViewController: UITableViewController, UITextFieldDelegate, BottomBa
     func configTable() {
         tableView.tableFooterView = UIView()
         tableView.register(UINib(nibName: cellName, bundle: nil), forCellReuseIdentifier: cellName)
+        tableView.estimatedRowHeight = 64
+        tableView.rowHeight = UITableViewAutomaticDimension
         tableView.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height - 45)
     }
 
@@ -88,7 +90,7 @@ extension SearchViewController {
             return title
         }()
         
-        let cell = UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: "Cell")
+        let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "Cell")
         let footer = FooterSearch.loadFromXib() as FooterSearch
         footer.backgroundBeaColor()
         footer.delegate = self
@@ -96,8 +98,16 @@ extension SearchViewController {
         footer.btn.setTitle(titleButton, for: .normal)
         
         cell.selectionStyle = .none
+        cell.accessoryType = .none
         cell.separatorInset = UIEdgeInsetsMake(0, 1000, 0, 0)
         cell.addSubview(footer)
+        
+        footer.translatesAutoresizingMaskIntoConstraints = false
+        footer.leftAnchor.constraint(equalTo: cell.leftAnchor).isActive = true
+        footer.topAnchor.constraint(equalTo: cell.topAnchor).isActive = true
+        footer.rightAnchor.constraint(equalTo: cell.rightAnchor).isActive = true
+        footer.bottomAnchor.constraint(equalTo: cell.bottomAnchor).isActive = true
+        
         return cell
     }
     

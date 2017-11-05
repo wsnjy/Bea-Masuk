@@ -12,17 +12,23 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    let backgroundNav = UIColor(patternImage: UIImage.init(named: "backgroundNav")!)
+    let backgroundNav =  UIImage.init(named: "backgroundNav")!
+    let colorTitleAttributes = UIColor.init(red: 84/255, green: 137/255, blue: 231/255, alpha: 1)
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        settingNavigationBar()
+        settingNavigationBarBackground()
         return true
     }
 
-    func settingNavigationBar() {
+    func settingNavigationBarBackground() {
+        
+        let colorAtPixel : UIColor = (backgroundNav.getPixelColor(pos: CGPoint(x: 2, y: 2)))
+
+        UINavigationBar.appearance().backgroundColor = colorAtPixel
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: colorTitleAttributes]
         UINavigationBar.appearance().shadowImage = UIImage()
-        UINavigationBar.appearance().backgroundColor = backgroundNav
-        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.init(red: 84/255, green: 137/255, blue: 231/255, alpha: 1)]
+        UINavigationBar.appearance().isTranslucent = true
+
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

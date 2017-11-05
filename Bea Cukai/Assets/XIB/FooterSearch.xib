@@ -17,7 +17,7 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2bm-6S-CsE" customClass="ButtonCalculate" customModule="Bea_Cukai" customModuleProvider="target">
-                    <rect key="frame" x="121" y="10" width="85" height="30"/>
+                    <rect key="frame" x="145" y="10" width="85" height="30"/>
                     <color key="backgroundColor" red="0.3294117647" green="0.53725490200000003" blue="0.90588235289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="85" id="ajm-gP-Duv"/>
@@ -33,7 +33,7 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="2bm-6S-CsE" firstAttribute="centerY" secondItem="dgz-yP-G41" secondAttribute="centerY" id="CdB-tH-lJA"/>
-                <constraint firstItem="2bm-6S-CsE" firstAttribute="centerX" secondItem="dgz-yP-G41" secondAttribute="centerX" constant="-24" id="XH9-Ga-gan"/>
+                <constraint firstItem="2bm-6S-CsE" firstAttribute="centerX" secondItem="dgz-yP-G41" secondAttribute="centerX" id="XH9-Ga-gan"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="dgz-yP-G41"/>

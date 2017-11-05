@@ -23,7 +23,6 @@ class CaraHitungController: UITableViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
 }
@@ -32,7 +31,8 @@ extension CaraHitungController {
     
     func configTable(){
         tableView.register(UINib(nibName: cellName, bundle: nil), forCellReuseIdentifier: cellName)
-        tableView.sectionFooterHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 100.0
+        tableView.rowHeight = UITableViewAutomaticDimension
         tableView.tableFooterView = UIView()
     }
     

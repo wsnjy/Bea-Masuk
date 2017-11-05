@@ -63,6 +63,7 @@
 		65DAAE4E1F9F7433005ABB1D /* CaraHitungCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65DAAE4C1F9F7433005ABB1D /* CaraHitungCell.xib */; };
 		65DAAE501F9F7863005ABB1D /* CaraHitungController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DAAE4F1F9F7863005ABB1D /* CaraHitungController.swift */; };
 		65DAAE521F9F7F63005ABB1D /* CaraHitungViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DAAE511F9F7F62005ABB1D /* CaraHitungViewModel.swift */; };
+		65DBFAA81FAEC8A300BB6330 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DBFAA71FAEC8A300BB6330 /* UIImage.swift */; };
 		65ED8AC81F9A590F0082C46D /* KursInStack.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65ED8AC71F9A590F0082C46D /* KursInStack.xib */; };
 		65F1F4F61F7AB76D0062F63F /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F1F4F51F7AB76D0062F63F /* UILabel.swift */; };
 		65F5CB661F751A46005432D8 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65F5CB651F751A46005432D8 /* Launch.storyboard */; };
@@ -130,6 +131,7 @@
 		65DAAE4C1F9F7433005ABB1D /* CaraHitungCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CaraHitungCell.xib; sourceTree = "<group>"; };
 		65DAAE4F1F9F7863005ABB1D /* CaraHitungController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaraHitungController.swift; sourceTree = "<group>"; };
 		65DAAE511F9F7F62005ABB1D /* CaraHitungViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaraHitungViewModel.swift; sourceTree = "<group>"; };
+		65DBFAA71FAEC8A300BB6330 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		65ED8AC71F9A590F0082C46D /* KursInStack.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KursInStack.xib; sourceTree = "<group>"; };
 		65F1F4F51F7AB76D0062F63F /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		65F5CB651F751A46005432D8 /* Launch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
@@ -326,6 +328,7 @@
 				65F1F4F51F7AB76D0062F63F /* UILabel.swift */,
 				6518CBE31F7FA0DD00A2EBB2 /* UIViewController.swift */,
 				658E96811F9C3140004EA531 /* UIView.swift */,
+				65DBFAA71FAEC8A300BB6330 /* UIImage.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -482,6 +485,7 @@
 				6513EAB61F86381400C0DCDC /* APIManager.swift in Sources */,
 				6560156B1F9CA0E3001A00C4 /* GuideViewController.swift in Sources */,
 				6591ED701F66EE8000A46885 /* CalculatorViewController.swift in Sources */,
+				65DBFAA81FAEC8A300BB6330 /* UIImage.swift in Sources */,
 				6536A3631F88596E00A06D59 /* KursInStack.swift in Sources */,
 				6536A3671F88602A00A06D59 /* Symbol.swift in Sources */,
 				65550A5F1F6AB6BA00F036E9 /* CalculatorViewModel.swift in Sources */,
@@ -638,7 +642,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = 8XSTQ5G33P;
+				DEVELOPMENT_TEAM = R34CXP3NUA;
 				INFOPLIST_FILE = "Bea Cukai/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -657,7 +661,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = 8XSTQ5G33P;
+				DEVELOPMENT_TEAM = R34CXP3NUA;
 				INFOPLIST_FILE = "Bea Cukai/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
