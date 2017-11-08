@@ -52,14 +52,6 @@ class HomeViewController: UIViewController, BottomBackground, KursDelegate, Relo
     
     override func viewWillAppear(_ animated: Bool) {
         title = titleController
-//        rightButtonHome()
-        let button = UIButton()
-        button.setImage(UIImage(named:"developer"), for: .normal)
-        button.addTarget(self, action: #selector(openDeveloper), for: .touchUpInside)
-        let barButton = UIBarButtonItem(customView: button)
-//        navigationController?.navigationBar.topItem?.rightBarButtonItem = barButton
-        self.navigationItem.leftBarButtonItem = barButton
-
     }
     
     func viewConfiguration() {
