@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="V16-3h-Fwl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="V16-3h-Fwl">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -69,8 +69,8 @@
                                 </button>
                             </subviews>
                             <constraints>
+                                <constraint firstItem="DKE-IE-l3Q" firstAttribute="top" secondItem="KIe-rv-VcU" secondAttribute="bottom" constant="3" id="2tp-xt-Cjq"/>
                                 <constraint firstAttribute="bottom" secondItem="DKE-IE-l3Q" secondAttribute="bottom" id="96u-z6-Ksc"/>
-                                <constraint firstItem="KIe-rv-VcU" firstAttribute="top" secondItem="mGD-YU-lBS" secondAttribute="top" constant="10" id="N0H-61-WRB"/>
                                 <constraint firstItem="KIe-rv-VcU" firstAttribute="centerX" secondItem="mGD-YU-lBS" secondAttribute="centerX" id="XFE-EP-iPg"/>
                                 <constraint firstAttribute="trailing" secondItem="DKE-IE-l3Q" secondAttribute="trailing" id="Xb0-3A-mKO"/>
                                 <constraint firstItem="DKE-IE-l3Q" firstAttribute="leadingMargin" secondItem="mGD-YU-lBS" secondAttribute="leading" id="fN6-6G-JR9"/>
@@ -206,13 +206,13 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="98.5" height="74"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IDR 15.350" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ihi-eD-PGQ">
-                                                                <rect key="frame" x="8" y="17" width="82.5" height="18"/>
+                                                                <rect key="frame" x="8" y="16.5" width="82.5" height="18"/>
                                                                 <fontDescription key="fontDescription" name="SourceSansPro-Bold" family="Source Sans Pro" pointSize="14"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 EUR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8I7-rS-4M0">
-                                                                <rect key="frame" x="5" y="42" width="88.5" height="15.5"/>
+                                                                <rect key="frame" x="5" y="41.5" width="88.5" height="15.5"/>
                                                                 <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="12"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <nil key="highlightedColor"/>
@@ -238,13 +238,13 @@
                                                                 </constraints>
                                                             </view>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IDR 2013,82" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rvs-Dq-xFc">
-                                                                <rect key="frame" x="8" y="17" width="83" height="18"/>
+                                                                <rect key="frame" x="8" y="16.5" width="83" height="18"/>
                                                                 <fontDescription key="fontDescription" name="SourceSansPro-Bold" family="Source Sans Pro" pointSize="14"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 CNY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VXJ-R8-dvD">
-                                                                <rect key="frame" x="5" y="42" width="89" height="15.5"/>
+                                                                <rect key="frame" x="5" y="41.5" width="89" height="15.5"/>
                                                                 <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="12"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <nil key="highlightedColor"/>
@@ -275,13 +275,13 @@
                                                         <rect key="frame" x="197.5" y="0.0" width="98.5" height="74"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IDR 187,76" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pF3-xA-UZf">
-                                                                <rect key="frame" x="8" y="17" width="82.5" height="18"/>
+                                                                <rect key="frame" x="8" y="16.5" width="82.5" height="18"/>
                                                                 <fontDescription key="fontDescription" name="SourceSansPro-Bold" family="Source Sans Pro" pointSize="14"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 JPY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PjX-Bn-imJ">
-                                                                <rect key="frame" x="5" y="42" width="88.5" height="15.5"/>
+                                                                <rect key="frame" x="5" y="41.5" width="88.5" height="15.5"/>
                                                                 <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="12"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <nil key="highlightedColor"/>

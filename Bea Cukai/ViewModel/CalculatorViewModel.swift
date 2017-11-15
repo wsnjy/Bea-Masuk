@@ -77,13 +77,12 @@ extension CalculatorViewModel {
     
     func getKursUSD() -> Decimal{
         
-        let oneDollar = Decimal(string:UserDefaults().string(forKey: "USD")!)
-
-        guard oneDollar != nil else {
+        guard UserDefaults().string(forKey: "USD") != nil else {
             return 0
         }
         
-        return oneDollar!
+        return Decimal(string:UserDefaults().string(forKey: "USD")!)!
+
     }
     
 }

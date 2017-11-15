@@ -13,6 +13,7 @@ enum GuideType{
     case developer
     case rumus
     case pengaduan
+    case faq
 }
 
 class GuideViewController: UIViewController, BottomBackground, PengaduanDelegate, MFMailComposeViewControllerDelegate, MFMessageComposeViewControllerDelegate {
@@ -49,7 +50,9 @@ extension GuideViewController {
         
         let nib = UINib(nibName: viewModel.nibName(), bundle: nil)
         
-        if type == .pengaduan {
+        if type == .faq{
+            showLabelEmpty()
+        }else if type == .pengaduan {
             showPengaduan(nib: nib)
         }else{
             let dev = nib.instantiate(withOwner: self, options: nil).first as! UIView
@@ -65,6 +68,25 @@ extension GuideViewController {
             let multipier = Float(view.frame.size.height) * (2.4/3)
             dev.heightAnchor.constraint(equalToConstant: CGFloat(multipier)).isActive = true
         }
+    }
+    
+    func showLabelEmpty() {
+        
+        let font = UIFont(name: "SourceSansPro-SemiBold", size: 12.0)
+
+        let labelEmpty = UILabel()
+        labelEmpty.text = viewModel.emptyFAQ
+        labelEmpty.font = font
+        labelEmpty.textAlignment = .center
+        
+        view.addSubview(labelEmpty)
+        
+        labelEmpty.translatesAutoresizingMaskIntoConstraints = false
+        labelEmpty.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        labelEmpty.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        labelEmpty.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        labelEmpty.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        
     }
     
     func showPengaduan(nib:UINib) {

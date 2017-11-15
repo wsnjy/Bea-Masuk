@@ -19,7 +19,7 @@ class GuideViewModel {
     let templateEmail = "Dengan email saya ingin menyampaikan bahwa "
     let emailAddress = "pengaduan.beacukai@customs.go.id"
     let urlPengaduan = "http://www.beacukai.go.id/pengaduan/rekam.html"
-
+    let emptyFAQ = "Saat ini FAQ masih kosong"
 
     init(type:GuideType) {
         self.type = type
@@ -38,6 +38,9 @@ extension GuideViewModel {
             nibName = "RumusBeaMasuk"
         case .pengaduan:
             nibName = "Pengaduan"
+        case .faq:
+            nibName = "Developer"
+
         }
         
         return nibName
@@ -55,6 +58,8 @@ extension GuideViewModel {
             titles = "Rumus"
         case .pengaduan:
             titles = "Pengaduan"
+        case .faq:
+            titles = "FAQ"
         }
         
         return titles

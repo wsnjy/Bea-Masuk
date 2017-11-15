@@ -10,9 +10,13 @@ import UIKit
 
 class FAQViewController: UITableViewController {
 
+    let dataTable = [
+        ["question":"tanya",
+         "answer":"jawab"]
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,11 +30,11 @@ class FAQViewController: UITableViewController {
 extension FAQViewController {
  
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 0
+        return dataTable.count
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return dataTable.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

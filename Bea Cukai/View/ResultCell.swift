@@ -18,7 +18,7 @@ class ResultCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         selectionStyle = .none
-//        backgroundBeaColor()
+        backgroundBeaColor()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

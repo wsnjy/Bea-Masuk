@@ -34,6 +34,15 @@ class CalculatorViewController: UITableViewController, UITextFieldDelegate, Bott
     
     override func viewWillAppear(_ animated: Bool) {
         title = titleVC
+        
+//        var frame = tableView.frame
+//        frame.size.height = view.frame.size.height - 90
+//        tableView.frame = frame
+//        showBottomBackground()
+//        tableView.tableFooterView = UIView.init(frame: CGRect.zero)
+//        print(tableView.frame.size.height)
+//        print(view.frame.size.height)
+        
     }
     
     func settingButton() {
@@ -82,6 +91,7 @@ extension CalculatorViewController {
         return cell
     }
     
+
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         if indexPath.row == 2 {
@@ -111,9 +121,6 @@ extension CalculatorViewController {
     
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {
         view.endEditing(true)
-        
-//        print(scrollView.contentOffset.y)
-        
     }
     
     func sendValue(_ value: String) {

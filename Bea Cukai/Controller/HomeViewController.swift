@@ -187,6 +187,8 @@ extension HomeViewController {
             
             if sndr == 0 {
                 guide.guide = .rumus
+            }else if sndr == 2 {
+                guide.guide = .faq
             }else if sndr == 3 {
                 guide.guide = .pengaduan
             }else{
