@@ -34,15 +34,7 @@ class CalculatorViewController: UITableViewController, UITextFieldDelegate, Bott
     
     override func viewWillAppear(_ animated: Bool) {
         title = titleVC
-        
-//        var frame = tableView.frame
-//        frame.size.height = view.frame.size.height - 90
-//        tableView.frame = frame
-//        showBottomBackground()
-//        tableView.tableFooterView = UIView.init(frame: CGRect.zero)
-//        print(tableView.frame.size.height)
-//        print(view.frame.size.height)
-        
+//        configBottom()
     }
     
     func settingButton() {
@@ -144,6 +136,36 @@ extension CalculatorViewController {
         dataForm[1] = calculatorViewModel.getKursUSD()
         return dataForm
     }
+    
+}
+
+extension CalculatorViewController {
+    
+    func configBottom() {
+        print(view.frame.size.height)
+        print(((heightRow * 8) + 100))
+
+        guard isTableHigherThanScreen() == true else {
+            return
+        }
+        
+        setNewFrameTable()
+        showBottomBackground()
+        tableView.tableFooterView = UIView.init(frame: CGRect.zero)
+        tableView.isScrollEnabled = false
+    }
+    
+    func isTableHigherThanScreen() -> Bool {
+        return (view.frame.size.height > ((heightRow * 8) + 144))
+    }
+    
+    func setNewFrameTable() {
+
+        var frame = tableView.frame
+        frame.size.height = tableView.frame.size.height - (setImageBottom().frame.size.height + 32)
+        tableView.frame = frame
+    }
+    
     
 }
 

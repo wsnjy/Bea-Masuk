@@ -10,6 +10,7 @@ import UIKit
 
 protocol BottomBackground {
     func showBottomBackground(_ is_showing: Bool)
+    func setImageBottom() -> UIImageView
 }
 
 extension BottomBackground where Self : UIViewController{
@@ -17,7 +18,7 @@ extension BottomBackground where Self : UIViewController{
     func showBottomBackground(_ is_showing: Bool = true) {
         
         let imageBottom:UIImageView = {
-            return UIImageView.init(image: UIImage(named: "bg_bottom"))
+            return setImageBottom()
         }()
 
         imageBottom.frame = CGRect(x: 0,
@@ -26,6 +27,10 @@ extension BottomBackground where Self : UIViewController{
                                    height: imageBottom.frame.size.height)
         
         view.addSubview(imageBottom)
+    }
+    
+    func setImageBottom() -> UIImageView{
+        return UIImageView.init(image: UIImage(named: "bg_bottom"))
     }
     
 }

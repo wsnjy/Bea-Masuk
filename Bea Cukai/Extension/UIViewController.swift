@@ -14,11 +14,13 @@ extension UIViewController {
     func addBarButtonClose() {
         
         let btn = UIButton.init()
-        btn.setBackgroundImage(UIImage(named: "close"), for: .normal)
+        btn.frame = CGRect(x:0, y:0, width:13, height:13)
+        btn.setBackgroundImage(UIImage(named: "close")?.withRenderingMode(.alwaysOriginal), for: .normal)
         btn.addTarget(self, action: #selector(dismisss), for: .touchUpInside)
         
         let btnX = UIBarButtonItem(customView:btn)
         self.navigationItem.leftBarButtonItem = btnX
+
     }
     
     func dismisss() {
