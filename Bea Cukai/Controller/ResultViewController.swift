@@ -83,7 +83,7 @@ extension ResultViewController {
         let value:String = result[indexPath.row].percent!
         
         print("valuenya adalah \(value)")
-        guard value.characters.count > 0 else {
+        guard value.count > 0 else {
             showAlert()
             return
         }

@@ -12,7 +12,6 @@ protocol FooterSearchDelegate: class {
     func buttonAction(_ sender:Int)
 }
 
-
 class FooterSearch: UIView {
 
     weak var delegate:FooterSearchDelegate?

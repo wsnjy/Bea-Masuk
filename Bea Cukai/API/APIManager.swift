@@ -12,14 +12,15 @@ class APIManager: NSObject {
 
     static let sharedInstance = APIManager()
     
-    let baseURL = "http://api.fixer.io/"
-    static let currentyEndPoint = "latest?base="
+    
+    let baseURL = "https://api.exchangeratesapi.io/latest"
+    static let currentyEndPoint = "?base="
     static let currencyParams = "&symbols=CNY,EUR,GBP,HKD,JPY,SAR,SGD,IDR,AUD,MYR"
 
     func getCurrency(base:String, completion:@escaping(_ result: JSON,_ error:Bool) ->())  {
         
         let url = baseURL + APIManager.currentyEndPoint + base + APIManager.currencyParams
-        print(baseURL)
+        print(url)
         Alamofire.request(url, method: .get).validate().responseJSON { response in
             print()
 

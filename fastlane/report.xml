@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="fastlane.lanes">
+    
+    
+    
+      
+      <testcase classname="fastlane.lanes" name="0: Verifying required fastlane version" time="0.010392">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="1: default_platform" time="0.002092">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="2: cocoapods" time="4.751257">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="3: gym" time="109.705311">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="4: deliver" time="1497.892828">
+        
+          <failure message="/Users/wsnjy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/fastlane-2.66.2/fastlane/lib/fastlane/actions/actions_helper.rb:48:in `execute_action'&#10;/Users/wsnjy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/fastlane-2.66.2/fastlane/lib/fastlane/runner.rb:231:in `block in execute_action'&#10;/Users/wsnjy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/fastlane-2.66.2/fastlane/lib/fastlane/runner.rb:227:in `chdir'&#10;/Users/wsnjy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/fastlane-2.66.2/fastlane/lib/fastlane/runner.rb:227:in `execute_action'&#10;/Users/wsnjy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/fastlane-2.66.2/fastlane/lib/fastlane/runner.rb:148:in `trigger_action_by_name'&#10;/Users/wsnjy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/fastlane-2.66.2/fastlane/lib/fastlane/fast_file.rb:146:in `method_missing'&#10;Fastfile:46:in `block (2 levels) in parsing_binding'&#10;/Users/wsnjy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/fastlane-2.66.2/fastlane/lib/fastlane/lane.rb:33:in `call'&#10;/Users/wsnjy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/fastlane-2.66.2/fastlane/lib/fastlane/runner.rb:49:in `block in execute'&#10;/Users/wsnjy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/fastlane-2.66.2/fastlane/lib/fastlane/runner.rb:45:in `chdir'&#10;/Users/wsnjy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/fastlane-2.66.2/fastlane/lib/fastlane/runner.rb:45:in `execute'&#10;/Users/wsnjy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/fastlane-2.66.2/fastlane/lib/fastlane/lane_manager.rb:54:in `cruise_lane'&#10;/Users/wsnjy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/fastlane-2.66.2/fastlane/lib/fastlane/command_line_handler.rb:30:in `handle'&#10;/Users/wsnjy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/fastlane-2.66.2/fastlane/lib/fastlane/commands_generator.rb:104:in `block (2 levels) in run'&#10;/Users/wsnjy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/commander-fastlane-4.4.5/lib/commander/command.rb:178:in `call'&#10;/Users/wsnjy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/commander-fastlane-4.4.5/lib/commander/command.rb:153:in `run'&#10;/Users/wsnjy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/commander-fastlane-4.4.5/lib/commander/runner.rb:476:in `run_active_command'&#10;/Users/wsnjy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/fastlane-2.66.2/fastlane_core/lib/fastlane_core/ui/fastlane_runner.rb:66:in `run!'&#10;/Users/wsnjy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/commander-fastlane-4.4.5/lib/commander/delegates.rb:15:in `run!'&#10;/Users/wsnjy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/fastlane-2.66.2/fastlane/lib/fastlane/commands_generator.rb:303:in `run'&#10;/Users/wsnjy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/fastlane-2.66.2/fastlane/lib/fastlane/commands_generator.rb:42:in `start'&#10;/Users/wsnjy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/fastlane-2.66.2/fastlane/lib/fastlane/cli_tools_distributor.rb:66:in `take_off'&#10;/Users/wsnjy/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/fastlane-2.66.2/bin/fastlane:20:in `&lt;top (required)&gt;'&#10;/Users/wsnjy/.rbenv/versions/2.3.1/bin/fastlane:23:in `load'&#10;/Users/wsnjy/.rbenv/versions/2.3.1/bin/fastlane:23:in `&lt;main&gt;'&#10;&#10;You must provide copyright information for the app you are adding. You must select the level of frequency for each Apple content description in the Ratings section. [en-GB]: You must provide an app description for English (U.K.). [en-GB]: You must enter one or more keywords for your app in English (U.K.). You must add at least one screenshot. [en-GB]: You must add at least one screenshot. [en-GB]: You must provide a Support URL. You must provide a first name in the Contact Information section. You must provide a last name in the Contact Information section. The phone number must be in a valid format. Preface the phone number with ‘+’ followed by the country code (for example, +44 844 209 0611) You must enter a phone number in the Contact Information section. The email address must be in a valid format (for example, support@example.com). There are one or more issues with your &lt;a href=&quot;/WebObjects/iTunesConnect.woa/ra/ng/app/1315949167?submitErrors=true&quot;&gt;App Information&lt;/a&gt;. There are one or more errors on the page. You must choose a price tier in &lt;a href=&quot;[?]&quot;&gt;Pricing&lt;/a&gt;." />
+        
+      </testcase>
+    
+  </testsuite>
+</testsuites>

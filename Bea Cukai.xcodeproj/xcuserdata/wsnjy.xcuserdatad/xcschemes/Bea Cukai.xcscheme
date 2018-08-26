@@ -29,6 +29,16 @@
       language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "656E6DE01FBF0C620091A4F9"
+               BuildableName = "Bea CukaiUITests.xctest"
+               BlueprintName = "Bea CukaiUITests"
+               ReferencedContainer = "container:Bea Cukai.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
