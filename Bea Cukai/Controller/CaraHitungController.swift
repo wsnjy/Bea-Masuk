@@ -12,6 +12,7 @@ class CaraHitungController: UITableViewController {
 
     let cellName = "CaraHitungCell"
     let titleVC  = "Cara Hitung"
+    let viewModel = CaraHitungViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +48,8 @@ extension CaraHitungController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: cellName, for: indexPath) as! CaraHitungCell
-        cell.configContent(indexPath)
+        let text = viewModel.caraHitungModel[indexPath.row]
+        cell.configContent(text)
         
         return cell
     }

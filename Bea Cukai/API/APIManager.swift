@@ -52,7 +52,7 @@ class APIManager: NSObject {
         let date = Date()
         let formatter = DateFormatter()
         formatter.dateFormat = "dd MMMM yyyy HH:mm"
-        formatter.locale = NSLocale(localeIdentifier: "id-ID") as Locale!
+        formatter.locale = NSLocale(localeIdentifier: "id-ID") as Locale?
         let result = formatter.string(from: date)
         
         let userDefault = UserDefaults()

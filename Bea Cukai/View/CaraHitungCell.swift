@@ -10,10 +10,8 @@ import UIKit
 
 class CaraHitungCell: UITableViewCell {
 
-    @IBOutlet weak var textContent: UITextView!
+    @IBOutlet weak var textContent: UITextView?
     
-    let viewModel = CaraHitungViewModel()
-
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -22,12 +20,11 @@ class CaraHitungCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
     }
     
-    func configContent(_ indexPath:IndexPath){
-        textContent.text = viewModel.caraHitungModel[indexPath.row]
+    func configContent(_ value:String){
+        textContent?.text = value
         separatorInset = UIEdgeInsetsMake(0, 1000, 0, 0)
     }
     

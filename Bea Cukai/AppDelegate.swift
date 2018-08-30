@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let colorAtPixel : UIColor = (backgroundNav.getPixelColor(pos: CGPoint(x: 2, y: 2)))
 
         UINavigationBar.appearance().backgroundColor = colorAtPixel
-        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: colorTitleAttributes]
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: colorTitleAttributes]
         UINavigationBar.appearance().shadowImage = UIImage()
         UINavigationBar.appearance().isTranslucent = true
 

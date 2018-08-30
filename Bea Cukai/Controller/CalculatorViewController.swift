@@ -42,7 +42,7 @@ class CalculatorViewController: UITableViewController, UITextFieldDelegate, Bott
         btnHitung.addTarget(self, action: #selector(self.saveAction), for:.touchUpInside)
     }
     
-    func saveAction() {
+    @objc func saveAction() {
         view.endEditing(true)
         let biaya = BiayaViewController()
         biaya.dataForm = setDataFormWithKurs()

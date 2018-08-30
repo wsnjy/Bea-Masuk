@@ -674,7 +674,7 @@
         <!--View Controller-->
         <scene sceneID="Jja-s0-bgu">
             <objects>
-                <tableViewController id="eTK-NX-ASJ" customClass="FAQViewController" customModule="Bea_Cukai" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="FAQViewController" id="eTK-NX-ASJ" customClass="FAQViewController" customModule="Bea_Cukai" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="q31-N4-54v">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

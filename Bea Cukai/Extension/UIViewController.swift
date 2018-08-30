@@ -23,7 +23,7 @@ extension UIViewController {
 
     }
     
-    func dismisss() {
+    @objc func dismisss() {
         dismiss(animated: true, completion: nil)
     }
     

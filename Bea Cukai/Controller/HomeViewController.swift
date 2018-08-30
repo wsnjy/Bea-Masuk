@@ -174,7 +174,7 @@ extension HomeViewController {
         
         if segue.identifier == "FAQSegue" {
             
-            guard let faq = segue.destination as? FAQViewController else {
+            guard segue.destination is FAQViewController else {
                 return
             }
             
