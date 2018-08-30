@@ -76,6 +76,8 @@ class HomeViewController: UIViewController, BottomBackground, KursDelegate, Relo
     @IBAction func menuButtonActions(_ sender: UIButton) {
         if sender.tag == 1 {
             caraHitungGuide()
+        }else if sender.tag == 2 {
+            self.performSegue(withIdentifier: "FAQSegue", sender:sender.tag)
         }else{
             self.performSegue(withIdentifier: "guideSegue", sender:sender.tag)
         }
@@ -169,6 +171,15 @@ extension HomeViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "FAQSegue" {
+            
+            guard let faq = segue.destination as? FAQViewController else {
+                return
+            }
+            
+            
+        }
         
         if segue.identifier == "kursSegue" {
             if let kurs = segue.destination as? KursViewController {
