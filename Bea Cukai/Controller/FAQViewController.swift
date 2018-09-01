@@ -23,14 +23,25 @@ class FAQViewController: UITableViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "FAQ Bea Cukai"
         setBackButton()
         view.backgroundBeaColor()
-        self.tableView.register(CaraHitungCell.self, forCellReuseIdentifier: cellNameDetail)
+        configFAQ()
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.title = "FAQ Bea Cukai"
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    func configFAQ() {
+        tableView.register(UINib(nibName: cellNameDetail, bundle: nil), forCellReuseIdentifier: cellNameDetail)
+        tableView.estimatedRowHeight = 100.0
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.tableFooterView = UIView()
     }
     
 }
@@ -38,7 +49,12 @@ class FAQViewController: UITableViewController {
 extension FAQViewController {
  
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        switch typeFAQ {
+        case .titleFAQ:
+            return 1
+        case .detailFAQ:
+            return (faqContent?.count)!
+        }
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -46,9 +62,44 @@ extension FAQViewController {
         case .titleFAQ:
             return viewModel.data.count
         case .detailFAQ:
-            return 4
+            return 1
         }
     }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        
+        guard typeFAQ == .detailFAQ else {
+            return ""
+        }
+
+        return faqContent![section]["q"]
+    }
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+
+        //Create label and autoresize it
+        let headerLabel = UILabel(frame: CGRect(x: 30, y: 10, width: tableView.frame.width - 30, height: 2000))
+        headerLabel.font = UIFont(name: "SourceSansPro-Regular", size: 14)
+        headerLabel.text = self.tableView(self.tableView, titleForHeaderInSection: section)
+        headerLabel.numberOfLines = 0
+        headerLabel.sizeToFit()
+        
+        //Adding Label to existing headerView
+        let headerView = UIView()
+        headerView.addSubview(headerLabel)
+        
+        return headerView
+    }
+    
+    
+
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        guard typeFAQ == .detailFAQ else {
+            return 0.01
+        }
+        return UITableViewAutomaticDimension;
+    }
+
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
@@ -64,9 +115,9 @@ extension FAQViewController {
             return cell
         case .detailFAQ:
             let cell = tableView.dequeueReusableCell(withIdentifier: cellNameDetail, for: indexPath) as! CaraHitungCell
-//            let text = faqContent![indexPath.row]["a"]
-//            cell.configContent(text!)
-            cell.textLabel?.text = "assoo"
+            let text = faqContent![indexPath.section]["a"]
+            cell.configContent(text!)
+            cell.selectionStyle = .none
             return cell
         }
 
@@ -74,7 +125,6 @@ extension FAQViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let data = viewModel.data[indexPath.row]["content"]
-        print(data!)
         guard typeFAQ == .titleFAQ else {
             return
         }
