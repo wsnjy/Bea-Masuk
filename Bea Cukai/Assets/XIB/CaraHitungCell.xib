@@ -39,7 +39,7 @@
                         <rect key="frame" x="66" y="8" width="230" height="73.5"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <string key="text">Masukkan data, gunakan tanda titik (.) untuk memasukkan angka yang memiliki nilai koma. *Jangan pisahkan angka ribuan dan atau jutaan dengan tanda titik/koma.</string>
-                        <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="12"/>
+                        <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="13"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     </textView>
                 </subviews>

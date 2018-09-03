@@ -78,8 +78,8 @@ extension FAQViewController {
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
 
         //Create label and autoresize it
-        let headerLabel = UILabel(frame: CGRect(x: 30, y: 10, width: tableView.frame.width - 30, height: 2000))
-        headerLabel.font = UIFont(name: "SourceSansPro-Regular", size: 14)
+        let headerLabel = UILabel(frame: CGRect(x: 30, y: 5, width: tableView.frame.width - 30, height: 2000))
+        headerLabel.font = UIFont(name: "SourceSansPro-Medium", size: 13)
         headerLabel.text = self.tableView(self.tableView, titleForHeaderInSection: section)
         headerLabel.numberOfLines = 0
         headerLabel.sizeToFit()
