@@ -15,7 +15,7 @@ class APIManager: NSObject {
     
     let baseURL = "https://api.exchangeratesapi.io/latest"
     static let currentyEndPoint = "?base="
-    static let currencyParams = "&symbols=CNY,EUR,GBP,HKD,JPY,SAR,SGD,IDR,AUD,MYR"
+    static let currencyParams = "&symbols=CNY,EUR,GBP,HKD,JPY,SGD,IDR,AUD,MYR"
 
     func getCurrency(base:String, completion:@escaping(_ result: JSON,_ error:Bool) ->())  {
         

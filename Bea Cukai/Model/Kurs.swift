@@ -66,6 +66,8 @@ extension Kurs {
         }
         let inRupiah:Double = Double(truncating: oneDollar as NSNumber)/Double(truncating: value as NSNumber)
         return Decimal(round(inRupiah))
+        
     }
     
 }
+

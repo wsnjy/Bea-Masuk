@@ -74,7 +74,6 @@ class KursViewController: UIViewController, BottomBackground {
         
         for (_,value) in data {
             
-            print(value.valueInRupiah)
             let kursView = KursInStack.loadFromXib() as KursInStack
             
             if i < halfSide{

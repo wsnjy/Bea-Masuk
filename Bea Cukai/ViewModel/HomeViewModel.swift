@@ -20,7 +20,7 @@ extension HomeViewModel {
     }
     
     func currencyLabel(_ currency:Decimal) -> String{
-        return "IDR \(currency)"
+        return "IDR \(formatter)"
     }
     
     func symbol(_ type:typeRates) -> String {
