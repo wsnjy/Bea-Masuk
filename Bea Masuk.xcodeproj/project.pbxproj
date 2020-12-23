@@ -71,6 +71,7 @@
 		65ED8AC81F9A590F0082C46D /* KursInStack.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65ED8AC71F9A590F0082C46D /* KursInStack.xib */; };
 		65F1F4F61F7AB76D0062F63F /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F1F4F51F7AB76D0062F63F /* UILabel.swift */; };
 		65F5CB661F751A46005432D8 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65F5CB651F751A46005432D8 /* Launch.storyboard */; };
+		BD732DE825939BC600022080 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD732DE725939BC600022080 /* Home.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,7 +111,7 @@
 		653AD00F1F93A31C00733876 /* ResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCell.swift; sourceTree = "<group>"; };
 		653AD0101F93A31C00733876 /* ResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultCell.xib; sourceTree = "<group>"; };
 		653AD0131F93A68C00733876 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
-		654222A61F63E66A00CE3A84 /* Bea Cukai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bea Cukai.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		654222A61F63E66A00CE3A84 /* Bea Masuk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bea Masuk.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		654222A91F63E66A00CE3A84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		654222B51F63E66A00CE3A84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		654222BD1F646DA400CE3A84 /* Biaya.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Biaya.swift; sourceTree = "<group>"; };
@@ -126,7 +127,7 @@
 		6560156A1F9CA0E3001A00C4 /* GuideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideViewController.swift; sourceTree = "<group>"; };
 		6560156E1F9CFBCB001A00C4 /* Pengaduan.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Pengaduan.xib; sourceTree = "<group>"; };
 		656015701F9D0727001A00C4 /* GuideViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideViewModel.swift; sourceTree = "<group>"; };
-		656E6DE11FBF0C620091A4F9 /* Bea CukaiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bea CukaiUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		656E6DE11FBF0C620091A4F9 /* Bea MasukUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bea MasukUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		656E6DE31FBF0C620091A4F9 /* Bea_CukaiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bea_CukaiUITests.swift; sourceTree = "<group>"; };
 		656E6DE51FBF0C620091A4F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		657AA3941F7D65F8004F3CA6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -156,6 +157,7 @@
 		65F1F4F51F7AB76D0062F63F /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		65F5CB651F751A46005432D8 /* Launch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
 		66FEB98BAA00F6C7FB43A4EE /* Pods-Bea Cukai.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bea Cukai.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bea Cukai/Pods-Bea Cukai.release.xcconfig"; sourceTree = "<group>"; };
+		BD732DE725939BC600022080 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +222,7 @@
 		6542229D1F63E66A00CE3A84 = {
 			isa = PBXGroup;
 			children = (
+				BD732DE625939BB300022080 /* BeaMasuk */,
 				654222A81F63E66A00CE3A84 /* Bea Cukai */,
 				654222A71F63E66A00CE3A84 /* Products */,
 				C62126F3666F440AFA70473D /* Pods */,
@@ -231,8 +234,8 @@
 		654222A71F63E66A00CE3A84 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				654222A61F63E66A00CE3A84 /* Bea Cukai.app */,
-				656E6DE11FBF0C620091A4F9 /* Bea CukaiUITests.xctest */,
+				654222A61F63E66A00CE3A84 /* Bea Masuk.app */,
+				656E6DE11FBF0C620091A4F9 /* Bea MasukUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -374,6 +377,14 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		BD732DE625939BB300022080 /* BeaMasuk */ = {
+			isa = PBXGroup;
+			children = (
+				BD732DE725939BC600022080 /* Home.swift */,
+			);
+			path = BeaMasuk;
+			sourceTree = "<group>";
+		};
 		C62126F3666F440AFA70473D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -386,9 +397,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		654222A51F63E66A00CE3A84 /* Bea Cukai */ = {
+		654222A51F63E66A00CE3A84 /* Bea Masuk */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 654222B81F63E66A00CE3A84 /* Build configuration list for PBXNativeTarget "Bea Cukai" */;
+			buildConfigurationList = 654222B81F63E66A00CE3A84 /* Build configuration list for PBXNativeTarget "Bea Masuk" */;
 			buildPhases = (
 				8AA67B05E2D6EE6472B87F94 /* [CP] Check Pods Manifest.lock */,
 				654222A21F63E66A00CE3A84 /* Sources */,
@@ -400,14 +411,14 @@
 			);
 			dependencies = (
 			);
-			name = "Bea Cukai";
+			name = "Bea Masuk";
 			productName = "Bea Cukai";
-			productReference = 654222A61F63E66A00CE3A84 /* Bea Cukai.app */;
+			productReference = 654222A61F63E66A00CE3A84 /* Bea Masuk.app */;
 			productType = "com.apple.product-type.application";
 		};
-		656E6DE01FBF0C620091A4F9 /* Bea CukaiUITests */ = {
+		656E6DE01FBF0C620091A4F9 /* Bea MasukUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 656E6DEA1FBF0C620091A4F9 /* Build configuration list for PBXNativeTarget "Bea CukaiUITests" */;
+			buildConfigurationList = 656E6DEA1FBF0C620091A4F9 /* Build configuration list for PBXNativeTarget "Bea MasukUITests" */;
 			buildPhases = (
 				656E6DDD1FBF0C620091A4F9 /* Sources */,
 				656E6DDE1FBF0C620091A4F9 /* Frameworks */,
@@ -418,9 +429,9 @@
 			dependencies = (
 				656E6DE71FBF0C620091A4F9 /* PBXTargetDependency */,
 			);
-			name = "Bea CukaiUITests";
+			name = "Bea MasukUITests";
 			productName = "Bea CukaiUITests";
-			productReference = 656E6DE11FBF0C620091A4F9 /* Bea CukaiUITests.xctest */;
+			productReference = 656E6DE11FBF0C620091A4F9 /* Bea MasukUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -445,7 +456,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 654222A11F63E66A00CE3A84 /* Build configuration list for PBXProject "Bea Cukai" */;
+			buildConfigurationList = 654222A11F63E66A00CE3A84 /* Build configuration list for PBXProject "Bea Masuk" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -458,8 +469,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				654222A51F63E66A00CE3A84 /* Bea Cukai */,
-				656E6DE01FBF0C620091A4F9 /* Bea CukaiUITests */,
+				654222A51F63E66A00CE3A84 /* Bea Masuk */,
+				656E6DE01FBF0C620091A4F9 /* Bea MasukUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -567,6 +578,7 @@
 				6536A3651F885BA400A06D59 /* KursViewModel.swift in Sources */,
 				655A3C041F76092A0015000B /* ViewInStack.swift in Sources */,
 				65B6A0601FB36C72006BB8A7 /* FAQ.swift in Sources */,
+				BD732DE825939BC600022080 /* Home.swift in Sources */,
 				652940DB1F75FF8800B2B660 /* ViewShadow.swift in Sources */,
 				65F1F4F61F7AB76D0062F63F /* UILabel.swift in Sources */,
 				65DAAE521F9F7F63005ABB1D /* CaraHitungViewModel.swift in Sources */,
@@ -605,7 +617,7 @@
 /* Begin PBXTargetDependency section */
 		656E6DE71FBF0C620091A4F9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 654222A51F63E66A00CE3A84 /* Bea Cukai */;
+			target = 654222A51F63E66A00CE3A84 /* Bea Masuk */;
 			targetProxy = 656E6DE61FBF0C620091A4F9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -663,7 +675,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				GENERATE_PROFILING_CODE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "Bea Masuk";
@@ -720,7 +732,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				GENERATE_PROFILING_CODE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "Bea Masuk";
@@ -741,7 +753,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = ZLGTH5V8T3;
 				INFOPLIST_FILE = "Bea Cukai/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wsnjy.BeaMasuk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -766,7 +778,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = ZLGTH5V8T3;
 				INFOPLIST_FILE = "Bea Cukai/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wsnjy.BeaMasuk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -814,7 +826,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		654222A11F63E66A00CE3A84 /* Build configuration list for PBXProject "Bea Cukai" */ = {
+		654222A11F63E66A00CE3A84 /* Build configuration list for PBXProject "Bea Masuk" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				654222B61F63E66A00CE3A84 /* Debug */,
@@ -823,7 +835,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		654222B81F63E66A00CE3A84 /* Build configuration list for PBXNativeTarget "Bea Cukai" */ = {
+		654222B81F63E66A00CE3A84 /* Build configuration list for PBXNativeTarget "Bea Masuk" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				654222B91F63E66A00CE3A84 /* Debug */,
@@ -832,7 +844,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		656E6DEA1FBF0C620091A4F9 /* Build configuration list for PBXNativeTarget "Bea CukaiUITests" */ = {
+		656E6DEA1FBF0C620091A4F9 /* Build configuration list for PBXNativeTarget "Bea MasukUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				656E6DE81FBF0C620091A4F9 /* Debug */,
